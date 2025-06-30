@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Mentor Secondary School</title>
+    <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+
+        /*small phone-header*/
+
+        .staff-profiles h2{
+            margin: 3% 20%;
+        }
+        .staff-profiles h2 span{
+            color: red;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            height: 80px;
+            width: 60px;
+            border-radius: 50%;
+           
+        }
+
+        .logo h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        
+
+        /* FAQ Hero Section */
+        .faq-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/students.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .faq-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease both;
+        }
+
+        .faq-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        /* FAQ Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .faq-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .faq-intro img {
+            max-width: 350px;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-intro h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .faq-intro p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            position: relative;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            font-size: 1rem;
+            padding-right: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .search-container button {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .faq-container {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--secondary-color);
+        }
+
+        .faq-question::after {
+            content: '\002B';
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '\2212';
+            color: var(--accent-color);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: var(--text-light);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-answer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+
+        .faq-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+
+        .category-btn {
+            background: white;
+            border: 1px solid var(--secondary-color);
+            color: var(--secondary-color);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .contact-promo {
+            background: var(--light-color);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .contact-promo h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-promo p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .contact-btn {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+       /* Footer Styles */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+
+        .footer-column p {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column ul li a {
+            color: var(--light-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links-footer {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: yellow;
+            transition: all 0.3s ease;
+        }
+
+        .social-links-footer a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .quick-links a {
+            color: var(--light-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .quick-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+          
+            .home-page1 {
+                padding: 4rem 1rem;
+            }
+
+            .home-page1 h2 {
+                font-size: 1.8rem;
+            }
+
+            .homepage2 {
+                flex-direction: column;
+                padding: 2rem;
+            }
+
+            .homepage2 img,
+            .homepage2 .content {
+                width: 100%;
+            }
+
+            .welcome-message {
+                padding: 2rem;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-column h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .social-links-footer {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+         
+            .motto {
+                grid-template-columns: 1fr;
+            }
+
+            .home-pictures {
+                grid-template-columns: 1fr;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .faq-hero {
+                padding: 4rem 1rem;
+            }
+
+            .faq-hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+          
+
+            .faq-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .faq-question {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+        }
+        @media (min-width:600px) {
+    .logo{
+            display: flex;
+            align-items: center;
+          margin-top: -20px;
+        }
+        .logo img{
+            width: 65px;
+            height: 85px;
+            border-radius: 50px;
+            margin: 5% 5%;
+            margin-bottom: 10%;
+            object-fit: cover;
+            object-position: top;
+        }
+/*animation*/
+.links nav ul li::after{
+    content: '';
+    display: block;
+    background-color: orange;
+    height: 2px;
+    width: 0%;
+    transition: 0.5s;
+}
+.links nav ul li:hover::after{
+    width: 100%;
+}
+
+
+  /*footer design*/
+    .badge img{
+    width: 150px;
+   object-fit: cover;
+margin: 2% 40%;
+    }
+
+    .social-links-footer {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            
+           
+        }
+
+        .social-links-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+           
+            color:yellow;
+            transition: all 0.3s ease;
+        }
+        
+    .disturbed{
+        margin-left: 38%;
+    }
+
+}
+@media (max-width:599px) {
+    .badge img{
+    width: 120px;
+   object-fit: cover;
+}
+
+}
+.contact-btn a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+@media (max-width:599px) {
+            
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+    /*badge*/
+    .badge img{
+        width: 120px;
+       object-fit: cover;
+    }
+    
+                .phone-view{
+               display: grid;
+               grid-template-columns: 1fr 1fr;
+               height: 90px;
+                background-color: var(--primary-color);
+               
+              
+            }
+            .logo{
+                display: flex;
+                align-items: center;
+              margin-top: -20px;
+            }
+            .logo img{
+                width: 60px;
+                height: 86px;
+                border-radius: 40px;
+                margin: 5% 5%;
+                margin-bottom: 10%;
+                object-fit: cover;
+                object-position: top;
+            }
+    
+            .btn{
+                margin: 17% 70%;
+            }
+            .btn button{
+           font-size: 35px;
+           color: yellow;
+           border: none;
+           background-color: var(--primary-color);
+           }
+            .links{
+                display: none;
+                background-color: white;
+                margin: 0 10%;
+                height: 300px;
+                margin: -30px 120%;
+               transition: 3s ease;
+             
+            }
+           
+            .links nav ul li{
+                list-style: none;
+                padding: 3% 3%;
+                margin: 3% 1%;
+            }
+            .links nav ul a{
+                text-decoration: none;
+                color: var(--text-light);
+                font-size: 16px;
+                font-weight: 600;
+               
+              
+            }
+    
+    /*animation*/
+    .links nav ul li::after{
+        content: '';
+        display: block;
+       
+        height: 2px;
+        width: 0%;
+        transition: 0.5s;
+    }
+    .links nav ul li:hover::after{
+        width: 40%;
+    }
+    
+            .show{
+                display: inline-block;
+                z-index: 2;
+                width: 100%;
+                transition: 3s ease;
+            
+              
+            }
+           .logo h2{
+                color: white;
+                margin: auto 5%;
+            }
+            .logo h3{
+                display: none;
+            }
+            
+            }
+
+       /*big phone links*/
+       
+       @media (min-width:600px) {
+    .btn{
+        display: none;
+    }   
+        .phone-view{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--primary-color);
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+        .logo img{
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+        }
+        .links nav .show li{
+            list-style: none;
+            margin: 0 1%;
+            display: inline-block;
+        }
+        .links nav .show li a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .links nav .show li a i{
+            display: none;
+        }
+        .logo h2{
+            display: none;
+        }
+        .logo h3{
+          color: white;
+          font-size: 20px;
+          margin: 0 3%;
+        }
+
+
+}
+
+
+.profile-info{
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: left;
+            transition: transform 0.3s ease;
+            flex-wrap: wrap;
+            border: 1px solid rgb(235, 223, 223);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.09);
+            transition: transform 0.3s ease;
+            width: 80%;
+            margin: 5% 10%;
+            color:#333;
+
+        }
+        
+.profile-info p{
+    
+color: var(--text-light);
+}
+        .profile-info:hover {
+            transform: translateY(-10px);
+        }
+        .profile-info  span{
+            text-align: left;  
+            color: var(--text-light);
+
+        }
+
+        .profile-info:hover {
+            transform: translateY(-10px);
+        }
+
+        .staff-profiles h4 {
+            font-size: 1.4rem;
+            padding: 1.5rem 1.5rem 0.5rem;
+            color: skyblue;
+        }
+        .buttons{
+            margin: 0 0%;
+        }
+        .buttons button{
+            background-color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 5px;
+            margin: 1% 0%;
+          
+        }
+        .buttons .prev{
+            margin-left: 20%;
+        }
+        .buttons .next{
+            margin-left: 36%;
+        }
+        .buttons button i{
+            color: rgb(14, 4, 4);
+            font-weight: bold;
+            font-size: 35px;
+        }
+        .btn button{
+           
+            border: none;
+            background-color: var(--primary-color);
+        }
+        .btn button i{
+            color: orange;
+            font-size: 35px;
+        }
+       #faqSearch{
+        outline: none;
+        border: none;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="phone-view">
+       
+        <div class="logo">
+<img src="images/badge.png" alt="">
+
+<h3>Pallisa Progressive Secondary School</h3>
+        </div>
+       
+        <div class="btn">
+            <button class="buttonElement"> <i class='bx bx-menu'></i></button>
+        </div>
+        <div class="links">
+            <nav>
+                <ul class="show">
+                    <li><a href="index.html"> <i class='bx bx-home'></i> Home</a></li>
+                    <li><a href="profile.html"> <i class='bx bx-user'></i> Staff Profile</a></li>
+                    <li><a href="gallery.html"> <i class='bx bxs-grid-alt'></i> Gallery</a></li>
+                    <li><a href="contact.html"><i class='bx bx-phone' ></i> Contact</a></li>
+                    <li><a href="faq.html"><i class='bx bx-search-alt-2'></i> FAQs</a></li>
+                </ul>
+            </nav>
+        </div>
+
+</div>
+
+
+
+    <div class="faq-hero">
+        <h1>Frequently Asked Questions</h1>
+        <p>Find answers to common questions about Pallisa Progressive Secondary School</p>
+    </div>
+
+    <main>
+        <div class="faq-intro">
+            <img src="images/faqs.png" alt="Students in classroom">
+            <h2>How Can We Help You?</h2>
+            <p>Browse through our frequently asked questions below. If you can't find what you're looking for, feel free
+                to contact us directly.</p>
+        </div>
+
+        <div class="search-container">
+            <input type="text" placeholder="Search FAQs..." id="faqSearch">
+            <button type="button"><i class='bx bx-search'></i></button>
+        </div>
+
+        <div class="faq-categories">
+            <button class="category-btn active" data-category="all">All Questions</button>
+            <button class="category-btn" data-category="admissions">Admissions</button>
+            <button class="category-btn" data-category="academics">Academics</button>
+            <button class="category-btn" data-category="facilities">Facilities</button>
+            <button class="category-btn" data-category="other">Other</button>
+        </div>
+
+        <div class="faq-container">
+            <!-- Admissions -->
+            <div class="faq-item" data-category="admissions">
+                <div class="faq-question">What is the admission process for Pallisa Progressive Secondary School?</div>
+                <div class="faq-answer">
+                    <p>Our admission process involves the following steps:</p>
+                    <ol>
+                        <li>Complete the online application form available on our website</li>
+                        <li>Submit required documents (birth certificate, previous school reports)</li>
+                        <li>Attend an entrance assessment (for certain classes)</li>
+                        <li>Participate in an interview with the admissions committee</li>
+                        <li>Receive admission decision within 2 weeks of assessment</li>
+                    </ol>
+                    <p>For more details, please visit our Admissions Office or contact us at <a
+                            href="mailto:admissions@mentorschool.org">admissions@ppschool.org</a></p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="admissions">
+                <div class="faq-question">What are the requirements for enrollment?</div>
+                <div class="faq-answer">
+                    <p>To enroll at Pallisa progressive Secondary School, you'll need:</p>
+                    <ul>
+                        <li>Completed application form</li>
+                        <li>Copy of birth certificate</li>
+                        <li>Two recent passport photographs</li>
+                        <li>Previous school reports (for transfers)</li>
+                        <li>Medical examination report</li>
+                        <li>Recommendation letter from previous school (if applicable)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Academics -->
+            <div class="faq-item" data-category="academics">
+                <div class="faq-question">What curriculum does Pallisa Progressive Secondary School follow?</div>
+                <div class="faq-answer">
+                    <p>We follow the Uganda National Curriculum with enhancements in:</p>
+                    <ul>
+                        <li>STEM (Science, Technology, Engineering, Mathematics) programs</li>
+                        <li>Entrepreneurship and vocational training</li>
+                        <li>ICT integration across all subjects</li>
+                        <li>Critical thinking and problem-solving skills development</li>
+                    </ul>
+                    <p>Our curriculum prepares students for both national examinations and global competitiveness.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="academics">
+                <div class="faq-question">What co-curricular activities are available?</div>
+                <div class="faq-answer">
+                    <p>We offer a wide range of co-curricular activities including:</p>
+                    <ul>
+                        <li><strong>Sports:</strong> Football, basketball, volleyball, athletics, swimming</li>
+                        <li><strong>Clubs:</strong> Debate, science, journalism, environmental club</li>
+                        <li><strong>Arts:</strong> Music, drama, dance, visual arts</li>
+                        <li><strong>Leadership:</strong> Student council, peer mentoring</li>
+                        <li><strong>Community Service:</strong> Outreach programs, volunteering</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Facilities -->
+            <div class="faq-item" data-category="facilities">
+                <div class="faq-question">What facilities does the school have?</div>
+                <div class="faq-answer">
+                    <p>Our campus features state-of-the-art facilities including:</p>
+                    <ul>
+                        <li>Modern, well-equipped classrooms</li>
+                        <li>Science and computer laboratories</li>
+                        <li>Library with extensive print and digital resources</li>
+                        <li>Sports complex with playing fields and courts</li>
+                        <li>Auditorium for performances and events</li>
+                        <li>Dining hall serving nutritious meals</li>
+                        <li>Safe and comfortable boarding facilities</li>
+                        <li>Medical clinic with trained staff</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="facilities">
+                <div class="faq-question">Where is Pallisa Progressive Secondary School located?</div>
+                <div class="faq-answer">
+                    <p>PPSS is located at Kalaaka village, along Olok Road in Pallisa District.
+                        Our physical address is:</p>
+                    <p><strong>P.O Box 520, Pallisa (Uganda)</strong></p>
+                    <p>You can view our location on <a href="contact.html#map">our interactive map</a> or get directions
+                        through <a
+                            href="https://satellites.pro/Google_plan/Pallisa_map"
+                            target="_blank">Google Maps</a>.</p>
+                </div>
+            </div>
+
+            <!-- Other -->
+            <div class="faq-item" data-category="other">
+                <div class="faq-question">Who is the current head teacher?</div>
+                <div class="faq-answer">
+                    <p>Our current head teacher is Mr.Waiswa Fred , an experienced educator with over 15 years of
+                        leadership in secondary education. You can learn more about our administrative team on our <a
+                            href="profile.html">Staff Profile page</a>.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="other">
+                <div class="faq-question">What is the school's mission and vision?</div>
+                <div class="faq-answer">
+                    <p><strong>Our Vision:</strong> To be a center of excellence producing all-round achievers who are
+                        prepared for the challenges of the 21st century.</p>
+                    <p><strong>Our Mission:</strong> To provide quality education that nurtures academic excellence,
+                        moral values, and practical skills in a supportive environment.</p>
+                    <p><strong>Our Motto:</strong> "Building Destiny Solutions"</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="other">
+                <div class="faq-question">How can I contact the school?</div>
+                <div class="faq-answer">
+                    <p>You can reach us through multiple channels:</p>
+                    <ul>
+                        <li><strong>Phone:</strong>+256 754391008 (Office hours: 8:00 AM - 5:00 PM)</li>
+                        <li><strong>Email:</strong> info@ppsschool.org (General inquiries)</li>
+                        <li><strong>Admissions:</strong> admissions@ppsschool.org</li>
+                        <li><strong>Visit:</strong> Kalaaka, Olok Road, Pallisa District</li>
+                    </ul>
+                    <p>For more contact options, please visit our <a href="contact.html">Contact Us page</a>.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="other">
+                <div class="faq-question">Does the school offer boarding facilities?</div>
+                <div class="faq-answer">
+                    <p>Yes, we offer both boarding and day school options. Our boarding facilities include:</p>
+                    <ul>
+                        <li>Safe and secure dormitories</li>
+                        <li>24/7 supervision by qualified house parents</li>
+                        <li>Comfortable study areas</li>
+                        <li>Regular medical check-ups</li>
+                        <li>Balanced meals prepared by our nutritionist and cooks</li>
+                    </ul>
+                    <p>Boarding students benefit from structured study time and participate in evening and morning prep sessions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="other">
+                <div class="faq-question">What makes Pallisa Progressive Secondary School unique?</div>
+                <div class="faq-answer">
+                    <p>Pallisa Progressive Secondary School stands out because of our:</p>
+                    <ul>
+                        <li>Holistic approach to education balancing academics, character and skills</li>
+                        <li>Highly qualified and dedicated teaching staff</li>
+                        <li>Modern facilities that enhance learning</li>
+                        <li>Strong emphasis on STEM education</li>
+                        <li>Vibrant co-curricular program</li>
+                        <li>Commitment to values and discipline</li>
+                        <li>Proven track record of academic excellence</li>
+                        <li>Alumni network of successful professionals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-promo">
+            <h3>Still Have Questions?</h3>
+            <p>If you didn't find the answer you were looking for, our team is ready to help you.</p>
+            <button class="contact-btn"><a href="tel:+256 775391008"><i class='bx bx-phone' ></i> Contact Us</a></button>
+        </div>
+    </main>
+
+    <section class="staff-profiles">
+        <h2>What <span>people</span> say </h2>
+        <div class="profiles-grid">
+            <div class="profile-card">
+               
+                <div class="profile-info">
+                    <p class="quotes"><i class='bx bxs-quote-alt-left'></i></p>
+                    <h4 class="text"> Mr. Emurwon Robert</h4>
+                    <p class="title">The school prioritizes individual attention
+                        and support to each student.It has a diverse and inclusive
+                        atmosphere.
+                    </p>
+                </div>
+               
+            </div>
+            <div class="buttons">
+                <button class="prev"> 
+                    <i class='bx bx-chevron-left'></i>
+                  
+                    </button>
+                <button class="next">
+                    <i class='bx bx-chevron-right'></i>
+                </button>
+            </div>
+            
+    </section>
+
+
+
+
+
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-column">
+                    
+                       <div class="badge">
+                        <img src="images/badge.png" alt="">
+                       </div>
+                        <div class="social-links-footer">
+                            <a href="https://www.facebook.com/profile.php?id=100089438504646" aria-label="Facebook" class="disturbed"><i
+                                    class='bx bxl-facebook'></i></a>
+                            <a href="https://x.com/mentorss2015?t=zbt3mx17e9wGjoDXv2odHA&s=08" aria-label="Twitter"><i
+                                    class='bx bxl-twitter'></i></a>
+                            <a href="https://www.instagram.com" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                            <a href="https://www.youtube.com" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
+                        </div>
+                    </div>
+            </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // FAQ Accordion Functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const faqItem = question.parentElement;
+                    faqItem.classList.toggle('active');
+
+                    // Close other open items
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        if (item !== faqItem && item.classList.contains('active')) {
+                            item.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            // FAQ Search Functionality
+            const faqSearch = document.getElementById('faqSearch');
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqSearch.addEventListener('input', () => {
+                const searchTerm = faqSearch.value.toLowerCase();
+
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question').textContent.toLowerCase();
+                    const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+
+                    if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                        item.style.display = 'block';
+                        item.classList.add('active'); // Open matching items
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+
+            // FAQ Category Filter
+            const categoryButtons = document.querySelectorAll('.category-btn');
+
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const category = button.dataset.category;
+
+                    // Filter items
+                    faqItems.forEach(item => {
+                        if (category === 'all' || item.dataset.category === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Open FAQ item if URL has hash matching question ID
+            if (window.location.hash) {
+                const targetQuestion = document.querySelector(window.location.hash);
+                if (targetQuestion && targetQuestion.classList.contains('faq-item')) {
+                    targetQuestion.classList.add('active');
+                    targetQuestion.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+
+            // Header animation on scroll
+            const header = document.querySelector('header');
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+
+                if (currentScroll <= 0) {
+                    header.style.transform = 'translateY(0)';
+                    return;
+                }
+
+                if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+                    header.style.transform = 'translateY(-100%)';
+                } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+                    header.style.transform = 'translateY(0)';
+                }
+
+                lastScroll = currentScroll;
+            });
+        });
+
+        //toggle
+
+ let buttonElement=document.querySelector('.btn');
+let links=document.querySelector('.links');
+buttonElement.addEventListener('click',function(){
+links.classList.toggle('show');
+
+});
+
+//what people say?
+
+let content=[
+        {
+            id:1,
+           
+            title:' The school performs consistently well in exams,many students qualify for good institutions after completing here',
+           
+            text:"Mrs. Aanyu Stella"
+
+        }
+        ,
+        {
+            id:1,
+            title:' My child feels happy and safe at school.The teachers and staff are approachable.',
+
+            
+            text:"Mr.Okiror Micheal"
+        },
+        {
+            id:1,
+            title:'The school has a strong sense of discipline,They teach not just academics but also respect and responsibility.',
+
+            text:"Mr Epaja John"
+        },
+        {
+            id:1,
+         
+            title:'PPS is improving every year , you can see the development in academics,sports and infrastructure',
+
+
+            text:"Mr Kambo Geofrey"
+        },
+       
+        ];
+
+      
+      let title=document.querySelector('.title');
+      let text=document.querySelector('.text');
+      let prevButton=document.querySelector('.prev');
+      let nextButton=document.querySelector('.next');
+      
+      let current=0;
+      //load windows
+      window.addEventListener('DOMContentLoaded',function(){
+        showMe();
+      });
+
+      function showMe(){
+        let item=content[current];
+        title.textContent=item.title;
+        text.textContent=item.text;
+
+
+      }
+      nextButton.addEventListener('click',function(){
+        current++;
+        if(current>content.length-1){
+            current=0;  
+        }
+        showMe();
+
+      });
+
+      prevButton.addEventListener('click',function(){
+        current++;
+        if(current<0){
+            current=content.length-1;  
+        }
+        showMe();
+
+      });
+
+
+    </script>
+</body>
+
+</html>

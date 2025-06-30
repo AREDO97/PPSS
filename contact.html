@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location & Contact - Mentor Secondary School</title>
+    <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+    :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #3498db;
+        --accent-color: #e74c3c;
+        --light-color: #ecf0f1;
+        --dark-color: #2c3e50;
+        --text-color: #333;
+        --text-light: #7f8c8d;
+    }
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            padding-top: 80px;
+            
+        }
+
+     
+@media (max-width:599px) {
+    .badge img{
+    width: 120px;
+   object-fit: cover;
+}
+}
+       
+@media (max-width:599px) {
+            
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+    /*badge*/
+    .badge img{
+        width: 120px;
+       object-fit: cover;
+    }
+    
+                .phone-view{
+               display: grid;
+               grid-template-columns: 1fr 1fr;
+               height: 90px;
+                background-color: var(--primary-color);
+                margin-top: -80px;
+              
+            }
+            .logo{
+                display: flex;
+                align-items: center;
+              margin-top: -10px;
+            }
+            .logo img{
+                width: 60px;
+                height: 5;
+                border-radius: 40px;
+                margin: 5% 5%;
+                margin-bottom: 10%;
+                object-fit: cover;
+                object-position: top;
+            }
+    
+            .btn{
+                margin: 17% 70%;
+            }
+            .links{
+                display: none;
+                background-color: white;
+                margin: 0 10%;
+                height: 300px;
+                margin: -40px 120%;
+               transition: 3s ease;
+             
+            }
+           
+            .links nav ul li{
+                list-style: none;
+                padding: 3% 3%;
+                margin: 3% 1%;
+            }
+            .links nav ul a{
+                text-decoration: none;
+                color: var(--text-light);
+                font-size: 16px;
+                font-weight: 600;
+               
+              
+            }
+    
+    /*animation*/
+    .links nav ul li::after{
+        content: '';
+        display: block;
+        background-color: orange;
+        height: 2px;
+        width: 0%;
+        transition: 0.5s;
+    }
+    .links nav ul li:hover::after{
+        width: 40%;
+    }
+    
+            .show{
+                display: inline-block;
+                z-index: 2;
+                width: 100%;
+                transition: 3s ease;
+            
+              
+            }
+           .logo h2{
+                color: white;
+                margin: auto 5%;
+            }
+            .logo h3{
+                display: none;
+            }
+
+
+            .buttons{
+            margin: 0 26%;
+        }
+        .buttons button{
+            background-color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 5px;
+            margin: 1% 10%;
+          
+        }
+        .buttons button i{
+            color: rgb(14, 4, 4);
+            font-weight: bold;
+            font-size: 35px;
+        }
+        .btn button{
+           
+            border: none;
+            background-color: var(--primary-color);
+        }
+        .btn button i{
+            color: orange;
+            font-size: 35px;
+        }
+
+        /*social-links*/
+        .social-links{
+            color: skyblue;
+        }
+            }
+    
+    
+
+    /* Contact Hero Section */
+    .contact-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.6),
+         rgba(0, 0, 0, 0.6)), url('images/Contact-Us.png');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 6rem 2rem;
+        margin-bottom: 3rem;
+        background-attachment: fixed;
+    }
+
+    .contact-hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        animation: fadeInUp 1s ease both;
+    }
+
+    .contact-hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+        opacity: 0;
+        animation: fadeInUp 1s ease 0.3s both;
+    }
+
+    /* Contact Content */
+    .contact-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem 4rem;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    .contact-details {
+        flex: 1;
+        min-width: 300px;
+        background: white;
+        padding: 2.5rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease;
+    }
+
+    .contact-details.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .contact-details h2 {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        position: relative;
+    }
+
+    .contact-details h2::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 70px;
+        height: 3px;
+        background-color: var(--secondary-color);
+    }
+
+    .contact-info-item {
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .contact-info-item i {
+        font-size: 1.5rem;
+        color: var(--secondary-color);
+        margin-right: 1.5rem;
+        margin-top: 3px;
+    }
+
+    .contact-info-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.3rem;
+        color: var(--primary-color);
+    }
+
+    .contact-info-content p,
+    .contact-info-content a {
+        color: var(--text-light);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .contact-info-content a:hover {
+        color: var(--secondary-color);
+    }
+
+    .social-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--light-color);
+        color: rgb(42, 122, 153);
+        transition: all 0.3s ease;
+        border: 1px solid skyblue;
+    }
+
+    .social-links a:hover {
+        background-color: var(--secondary-color);
+        color: white;
+        transform: translateY(-3px);
+    }
+
+    .contact-form {
+        flex: 1;
+        min-width: 300px;
+        background: white;
+        padding: 2.5rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease 0.2s;
+    }
+
+    .contact-form.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        color: var(--primary-color);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-family: 'Poppins', sans-serif;
+        transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+        outline: none;
+        border-color: var(--secondary-color);
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .submit-btn {
+        background-color: var(--secondary-color);
+        color: white;
+        border: none;
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .submit-btn:hover {
+        background-color: var(--primary-color);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Map Section */
+    .map-section {
+        margin-bottom: 4rem;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease 0.4s;
+    }
+
+    .map-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .map-section h2 {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+    }
+
+    .map-section p {
+        color: var(--text-light);
+        margin-bottom: 2rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .map-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    /* Business Hours */
+    .hours-section {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        margin-bottom: 4rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease 0.6s;
+    }
+
+    .hours-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .hours-section h2 {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        position: relative;
+    }
+
+    .hours-section h2::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 70px;
+        height: 3px;
+        background-color: var(--secondary-color);
+    }
+
+    .hours-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .hour-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        background: var(--light-color);
+        border-radius: 5px;
+    }
+
+    .hour-item.active {
+        background: var(--secondary-color);
+        color: white;
+    }
+
+    .hour-item.active .day {
+        font-weight: 600;
+    }
+
+    /* Emergency Contact */
+    .emergency-contact {
+        background: var(--accent-color);
+        color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        margin-bottom: 4rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease 0.8s;
+    }
+
+    .emergency-contact.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .emergency-contact h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .emergency-contact p {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .emergency-btn {
+        background: white;
+        color: var(--accent-color);
+        border: none;
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        border-radius: 50px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .emergency-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+   /* Footer Styles */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,
+             minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+
+        .footer-column p {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+
+        .social-links-footer {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: yellow;
+            transition: all 0.3s ease;
+        }
+
+        .social-links-footer a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .quick-links a {
+            color: var(--light-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .quick-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .logo {
+                margin-bottom: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .home-page1 {
+                padding: 4rem 1rem;
+            }
+
+            .home-page1 h2 {
+                font-size: 1.8rem;
+            }
+
+            .homepage2 {
+                flex-direction: column;
+                padding: 2rem;
+            }
+
+            .homepage2 img,
+            .homepage2 .content {
+                width: 100%;
+            }
+
+            .welcome-message {
+                padding: 2rem;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-column h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .social-links-footer {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .motto {
+                grid-template-columns: 1fr;
+            }
+
+            .home-pictures {
+                grid-template-columns: 1fr;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column;
+            padding: 1rem;
+        }
+
+        .logo {
+            margin-bottom: 1rem;
+        }
+
+        nav ul {
+            gap: 1rem;
+        }
+
+        .contact-hero {
+            padding: 4rem 1rem;
+        }
+
+        .contact-hero h1 {
+            font-size: 2rem;
+        }
+
+        .contact-info {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .map-section h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-hero h1 {
+            font-size: 1.8rem;
+        }
+
+        .contact-details,
+        .contact-form {
+            padding: 1.5rem;
+        }
+
+        .hours-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+
+    @media (min-width:600px) {
+        
+  /*footer design*/
+    .badge img{
+    width: 150px;
+   object-fit: cover;
+margin: 2% 40%;
+    }
+
+    .social-links-footer {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            
+           
+        }
+
+        .social-links-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:yellow;
+            transition: all 0.3s ease;
+        }
+        
+    .disturbed{
+        margin-left: 38%;
+    }
+
+    }
+
+          /*pict big screen*/
+          @media (min-width:600px) {
+    .btn{
+        display: none;
+    }
+
+
+    .badge img{
+    width: 150px;
+   object-fit: cover;
+}   
+        .phone-view{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--primary-color);
+            margin-top: -80px;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+        .logo img{
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+        }
+        .links nav .show li{
+            list-style: none;
+            margin: 0 2%;
+            display: inline-block;
+        }
+        .links nav .show li a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .links nav .show li a i{
+            display: none;
+        }
+        .logo h2{
+            display: none;
+        }
+        .logo h3{
+          color: white;
+          font-size: 20px;
+          margin: 0 3%;
+        }
+
+
+}
+    
+    </style>
+
+</head>
+
+<body>
+    <div class="phone-view">
+       
+        <div class="logo">
+<img src="images/badge.png" alt="">
+
+<h3>Pallisa Progressive Secondary School</h3>
+        </div>
+       
+        <div class="btn">
+            <button class="buttonElement"> <i class='bx bx-menu'></i></button>
+        </div>
+        <div class="links">
+            <nav>
+                <ul class="show">
+                    <li><a href="index.html"> <i class='bx bx-home'></i> Home</a></li>
+                    <li><a href="profile.html"> <i class='bx bx-user'></i> Staff Profile</a></li>
+                    <li><a href="gallery.html"> <i class='bx bxs-grid-alt'></i> Gallery</a></li>
+                    <li><a href="contact.html"><i class='bx bx-phone' ></i> Contact</a></li>
+                    <li><a href="faq.html"><i class='bx bx-search-alt-2'></i> FAQs</a></li>
+                </ul>
+            </nav>
+        </div>
+
+</div>
+
+        
+    <div class="contact-hero">
+        <h1>Visit Us Today</h1>
+        <p>We'd love to hear from you. Contact us for inquiries
+             or visit our campus for a tour.</p>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="contact-details">
+                <h2>Contact Information</h2>
+
+                <div class="contact-info-item">
+                    <i class='bx bx-map'></i>
+                    <div class="contact-info-content">
+                        <h3>Address</h3>
+                        <p>Kalaaka , Olok Road<br>
+                            P.O Box 511, Pallisa (U)</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <i class='bx bx-phone'></i>
+                    <div class="contact-info-content">
+                        <h3>Phone</h3>
+                        <p><a href="tel:+256772830581">+256 754391008/
+                            +256 775391008</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <i class='bx bx-envelope'></i>
+                    <div class="contact-info-content">
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@ppschool.org">
+                            ppss2025@gmail.com</a></p>
+                        <p><a href="mailto:headteacher@mppschool.org">
+                            headteacher@mentorss.org</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <i class='bx bx-time'></i>
+                    <div class="contact-info-content">
+                        <h3>Office Hours</h3>
+                        <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                        <p>Saturday: 9:00 AM - 1:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100089438504646" aria-label="Facebook"><i
+                            class='bx bxl-facebook'></i></a>
+                    <a href="https://x.com/mentorss2015?t=zbt3mx17e9wGjoDXv2odHA&s=08" aria-label="Twitter"><i
+                            class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.youtube.com" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm" action="https://formsubmit.co/aredoivan9@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Contact Form Submission">
+                    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="general">General Inquiry</option>
+                            <option value="admission">Admission Inquiry</option>
+                            <option value="feedback">Feedback/Suggestion</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="map-section">
+            <h2>Our Location</h2>
+            <p>Ready to pay us a visit? Follow the map below to find our campus.</p>
+<!--
+   <iframe
+                    src="https://satellites.pro/Google_plan/Pallisa_map"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>         
+-->
+            <div class="map-container">
+                <iframe
+                    src="https://satellites.pro/Google_plan/Pallisa_map"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <div class="hours-section">
+            <h2>Business Hours</h2>
+            <div class="hours-grid">
+                <div class="hour-item">
+                    <span class="day">Monday</span>
+                    <span class="time">8:00 AM - 5:00 PM</span>
+                </div>
+                <div class="hour-item">
+                    <span class="day">Tuesday</span>
+                    <span class="time">8:00 AM - 5:00 PM</span>
+                </div>
+                <div class="hour-item">
+                    <span class="day">Wednesday</span>
+                    <span class="time">8:00 AM - 5:00 PM</span>
+                </div>
+                <div class="hour-item">
+                    <span class="day">Thursday</span>
+                    <span class="time">8:00 AM - 5:00 PM</span>
+                </div>
+                <div class="hour-item">
+                    <span class="day">Friday</span>
+                    <span class="time">8:00 AM - 5:00 PM</span>
+                </div>
+                <div class="hour-item">
+                    <span class="day">Saturday</span>
+                    <span class="time">9:00 AM - 4:30 PM</span>
+                </div>
+                <div class="hour-item active">
+                    <span class="day">Sunday</span>
+                    <span class="time">12:00 AM - 4:00PM</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="emergency-contact">
+            <h2>Emergency Contact</h2>
+            <p>For urgent matters outside of business hours, please call:</p>
+            <button class="emergency-btn"><a href="tel:+256 754391008">+256 754391008</a></button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+            
+               <div class="badge">
+                <img src="images/badge.png" alt="">
+               </div>
+                <div class="social-links-footer">
+                    <a href="https://www.facebook.com/profile.php?id=100089438504646" aria-label="Facebook" class="disturbed"><i
+                            class='bx bxl-facebook'></i></a>
+                    <a href="https://x.com/mentorss2015?t=zbt3mx17e9wGjoDXv2odHA&s=08" aria-label="Twitter"><i
+                            class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.youtube.com" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+    </footer>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Scroll animations
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll(
+                '.contact-details, .contact-form, .map-section, .hours-section, .emergency-contact');
+
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementPosition < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+
+        // Run once on load
+        animateOnScroll();
+
+        // Run on scroll
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+
+                // Here you would typically send the form data to a server
+                // For demonstration, we'll just show an alert
+                alert(
+                    `Thank you, ${name}! Your message about "${subject}" has been received. We'll contact you at ${email} soon.`
+                );
+
+                // Reset form
+                contactForm.reset();
+            });
+        }
+
+        // Highlight current day in business hours
+        const highlightCurrentDay = () => {
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const today = new Date().getDay();
+            const currentDay = days[today];
+
+            const hourItems = document.querySelectorAll('.hour-item');
+            hourItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.querySelector('.day').textContent === currentDay) {
+                    item.classList.add('active');
+                }
+            });
+        };
+
+        highlightCurrentDay();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+         // Header scroll behavior
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+        const headerHeight = header.offsetHeight;
+
+        window.addEventListener('scroll', function () {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll <= 0) { // At top of page, always show header
+                header.classList.remove('hidden'); return;
+            } if (currentScroll > lastScroll &&
+                !header.classList.contains('hidden')) {
+                // Scrolling down
+                header.classList.add('hidden');
+            } else if (currentScroll < lastScroll && header.classList.contains('hidden')) { // Scrolling
+                upheader.classList.remove('hidden');
+            } lastScroll = currentScroll;
+        });
+    }); 
+    
+
+    
+      //toggle
+let buttonElement=document.querySelector('.btn');
+let links=document.querySelector('.links');
+buttonElement.addEventListener('click',function(){
+links.classList.toggle('show');
+
+});
+    </script>
+</body>
+
+</html>

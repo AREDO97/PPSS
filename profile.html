@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Profile - Mentor Secondary School</title>
+    <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        @media (max-width:599px) {
+            .phone-view{
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+           height: 85px;
+            background-color: var(--primary-color);
+          
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            margin-top: -15px;
+        }
+        .logo img{
+            width: 60px;
+           
+            border-radius: 40px;
+            margin: 6% 5%;
+            margin-bottom: 12%;
+            object-position: top;
+            object-fit: cover;
+        }
+        
+        .btn{
+            margin: 12% 70%;
+        }
+
+        
+
+        .links{
+            display: none;
+            background-color: white;
+            margin: 0 10%;
+            height: 300px;
+            margin: -30px 120%;
+           transition: 3s ease;
+         
+        }
+       
+        .links nav ul li{
+            list-style: none;
+            padding: 3% 3%;
+            margin: 3% 1%;
+        }
+        .links nav ul a{
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 16px;
+            font-weight: 600;
+           
+          
+        }
+        .show{
+            display: inline-block;
+            z-index: 2;
+            width: 100%;
+            transition: 3s ease;
+        
+          
+        }
+       .logo h2{
+            color: white;
+            margin: auto 5%;
+        }
+        .logo h3{
+            display: none;
+        }
+
+        .badge img{
+      width: 150px;
+      object-fit: cover;
+}  
+
+
+/*button challenge*/
+
+.buttons{
+            margin: 0 0%;
+            width: 100%;
+        }
+        .buttons button{
+            background-color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 5px;
+           
+          
+        }
+       
+        .buttons button i{
+            color: rgb(14, 4, 4);
+            font-weight: bold;
+            font-size: 40px;
+        }
+        .buttons .next{
+            margin-left: 50%;
+        }
+        .buttons .prev{
+            margin-left: 8%;
+        }
+        }
+/*big screen header*/
+
+@media (min-width:600px) {
+    .btn{
+        display: none;
+    }   
+        .phone-view{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--primary-color);
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+        .logo img{
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+        }
+        .links nav .show li{
+            list-style: none;
+            margin: 0 2%;
+            display: inline-block;
+        }
+        .links nav .show li a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .links nav .show li a i{
+            display: none;
+        }
+        .logo h2{
+            display: none;
+        }
+        .logo h3{
+          color: white;
+          font-size: 20px;
+          margin: 0 3%;
+        }
+
+
+}
+      
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7),
+             rgba(0, 0, 0, 0.7)), url('images/adimBlock.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding: 8rem 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            position: relative;
+            animation: fadeInUp 1s ease both;
+        }
+
+        .staff-profiles {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .profiles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .profile-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.5s ease;
+        }
+
+        .profile-card:hover .profile-image img {
+            transform: scale(1.05);
+        }
+
+        .profile-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .profile-info h2 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-info p {
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+
+        .footer-column p {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column ul li a {
+            color: var(--light-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links-footer {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: yellow;
+            transition: all 0.3s ease;
+        }
+
+        .social-links-footer a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .quick-links a {
+            color: var(--light-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .quick-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            
+
+            .home-page1 {
+                padding: 4rem 1rem;
+            }
+
+            .home-page1 h2 {
+                font-size: 1.8rem;
+            }
+
+            .homepage2 {
+                flex-direction: column;
+                padding: 2rem;
+            }
+
+            .homepage2 img,
+            .homepage2 .content {
+                width: 100%;
+            }
+
+            .welcome-message {
+                padding: 2rem;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-column h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .social-links-footer {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .motto {
+                grid-template-columns: 1fr;
+            }
+
+            .home-pictures {
+                grid-template-columns: 1fr;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            .badge img{
+    width: 150px;
+   object-fit: cover;
+}  
+
+
+
+
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+          
+
+            .hero {
+                padding: 6rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .profiles-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+           
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .profiles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .btn button{
+           
+            border: none;
+            background-color: var(--primary-color);
+        }
+        .btn button i{
+            color: yellow;
+            font-size: 35px;
+        }
+        @media (min-width:600px) {
+/*profile*/
+
+.staff-profiles {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .profiles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+            min-width: 120vh;
+            margin: 2% 50%;
+        }
+
+        .profile-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.5s ease;
+        }
+
+        .profile-card:hover .profile-image img {
+            transform: scale(1.05);
+        }
+
+        .profile-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .profile-info h2 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-info p {
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+.buttons{
+    margin: 2% 36%;
+}
+
+
+    .logo{
+            display: flex;
+            align-items: center;
+          margin-top: -20px;
+        }
+        .logo img{
+            width: 70px;
+            height: 100px;
+            border-radius: 50px;
+            margin: 10% 5%;
+            margin-bottom: 10%;
+            object-fit: cover;
+            object-position: top;
+        }
+/*animation*/
+.links nav ul li::after{
+    content: '';
+    display: block;
+    background-color: orange;
+    height: 2px;
+    width: 0%;
+    transition: 0.5s;
+}
+.links nav ul li:hover::after{
+    width: 100%;
+}
+
+
+  /*footer design*/
+    .badge img{
+    width: 150px;
+   object-fit: cover;
+margin: 2% 40%;
+    }
+
+    .social-links-footer {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            
+           
+        }
+
+        .social-links-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:yellow;
+            transition: all 0.3s ease;
+        }
+        
+    .disturbed{
+        margin-left: 38%;
+    }
+
+
+    /*button challenge*/
+
+    .buttons{
+            margin: 0 0%;
+            width: 100%;
+        }
+        .buttons button{
+            background-color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 5px;
+           
+          
+        }
+       
+        .buttons button i{
+            color: rgb(14, 4, 4);
+            font-weight: bold;
+            font-size: 40px;
+        }
+        .buttons .next{
+            margin-left: 68%;
+        }
+        .buttons .prev{
+            margin-left: 8%;
+        }
+}
+
+    </style>
+</head>
+<!--
+<box-icon type='logo' name='bootstrap'></box-icon>
+<i class='bx bxl-c-plus-plus'></i>
+<i class='bx bx-time-five' ></i>
+
+<i class='bx bx-mobile-landscape' ></i>
+<i class='bx bx-face' ></i>
+<i class='bx bx-male' ></i>
+<i class='bx bx-meh-alt' ></i>
+<i class='bx bx-wink-tongue' ></i>
+<i class='bx bx-bell' ></i>
+<i class='bx bx-camera' ></i>
+<i class='bx bx-camera-off' ></i>
+<i class='bx bx-key' ></i>
+<i class='bx bx-hide' ></i>
+<i class='bx bx-error-circle' ></i>
+<i class='bx bx-down-arrow-circle' ></i>
+<i class='bx bx-up-arrow-circle' ></i>
+<i class='bx bx-phone' ></i>
+<i class='bx bx-layer' ></i>
+<i class='bx bx-home' ></i>
+<i class='bx bx-wifi' ></i>
+<i class='bx bx-power-off' ></i>
+<i class='bx bx-star' ></i>
+<i class='bx bx-trash' ></i>
+<i class='bx bx-merge'></i>
+<i class='bx bx-chevron-left-circle'></i>
+<i class='bx bx-registered'></i>
+<i class='bx bx-question-mark' ></i>
+<i class='bx bx-bell-off' ></i>
+<i class='bx bx-book-reader' ></i>
+<i class='bx bx-arrow-to-bottom' ></i>
+<i class='bx bx-like' ></i>
+<i class='bx bx-command' ></i>
+<i class='bx bx-help-circle' ></i>
+<i class='bx bx-select-multiple' ></i>
+<i class='bx bx-message-rounded' ></i>
+<i class='bx bx-alarm' ></i>
+<i class='bx bxl-jsfiddle' ></i>
+<i class='bx bx-vertical-bottom'></i>
+<i class='bx bx-vertical-top'></i>
+<i class='bx bxs-shield-plus'></i>
+<i class='bx bxs-leaf' ></i>
+<i class='bx bxs-party' ></i>
+<i class='bx bx-message-dots' ></i>
+<i class='bx bxl-mastercard' ></i>
+<i class='bx bxl-squarespace' ></i>
+
+*/
+-->
+<!--
+
+
+
+ <i class='bx bx-search-alt-2'></i>
+            <i class='bx bxs-left-arrow'></i>
+            <i class='bx bxs-right-arrow' ></i>
+            <i class='bx bxs-quote-alt-left'></i>
+            <i class='bx bxs-quote-alt-right'></i>
+            <i class='bx bxs-hand-down'></i>
+            <i class='bx bx-chevron-left'></i>
+            <i class='bx bx-chevron-right'></i>
+            <i class='bx bx-align-left'></i>
+            <i class='bx bx-menu'></i>
+            <i class='bx bx-lock-open'></i>
+            <i class='bx bx-lock'></i>
+            <i class='bx bx-user'></i>
+            <i class='bx bx-downvote'></i>
+            <i class='bx bx-upvote'></i>
+            <i class='bx bxs-download'></i>
+            <i class='bx bxs-home'></i>
+            <i class='bx bxs-grid-alt'></i>
+            <i class='bx bx-check-double'></i>
+            <i class='bx bxs-user-badge'></i>
+            <i class='bx bxs-chevron-right-circle'></i>
+            <i class='bx bxs-chevron-left-circle'></i>
+ 
+            -->
+           
+            
+           
+<body>
+    <div class="phone-view">
+       
+            <div class="logo">
+    <img src="images/badge.png" alt="">
+    
+    <h3>Pallisa Progressive Secondary School</h3>
+            </div>
+           
+            <div class="btn">
+                <button class="buttonElement"> <i class='bx bx-menu'></i></button>
+            </div>
+            <div class="links">
+                <nav>
+                    <ul class="show">
+                        <li><a href="index.html"> <i class='bx bx-home'></i> Home</a></li>
+                        <li><a href="profile.html"> <i class='bx bx-user'></i> Staff Profile</a></li>
+                        <li><a href="gallery.html"> <i class='bx bxs-grid-alt'></i> Gallery</a></li>
+                        <li><a href="contact.html"><i class='bx bx-phone' ></i> Contact</a></li>
+                        <li><a href="faq.html"><i class='bx bx-search-alt-2'></i> FAQs</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+    </div>
+    
+    
+    <div class="hero">
+        <h1>Our Dedicated Staff Members</h1>
+    </div>
+
+    <section class="staff-profiles">
+        <div class="profiles-grid">
+            <div class="profile-card">
+                <div class="profile-image">
+                    <img src="images/dos.jpeg" alt="Head Teacher" class="image">
+                </div>
+                <div class="profile-info">
+                    <h2 class="text">John Okware Agustus</h2>
+                    <p class="title">Head Teacher</p>
+                </div>
+                <div class="buttons">
+                    <button class="prev"> 
+                        <i class='bx bx-chevron-left'></i>
+                      
+                        </button>
+                    <button class="next">
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
+                </div>
+            </div>
+          
+    </section>
+<section class="apply">
+    <button>
+        <a href=""></a>
+    </button>
+</section>
+<footer>
+    <div class="footer-container">
+        <div class="footer-column">
+        
+           <div class="badge">
+            <img src="images/badge.png" alt="">
+           </div>
+            <div class="social-links-footer">
+                <a href="https://www.facebook.com/profile.php?id=100089438504646" aria-label="Facebook" class="disturbed"><i
+                        class='bx bxl-facebook'></i></a>
+                <a href="https://x.com/mentorss2015?t=zbt3mx17e9wGjoDXv2odHA&s=08" aria-label="Twitter"><i
+                        class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.youtube.com" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+     
+</footer>
+
+    <script>
+        // Scroll animation for profile cards
+        document.addEventListener('DOMContentLoaded', function () {
+            const profileCards = document.querySelectorAll('.profile-card');
+
+            // Intersection Observer for scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, index * 150);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            // Observe all profile cards
+            profileCards.forEach(card => {
+                observer.observe(card);
+            });
+
+            // Header animation
+            const header = document.querySelector('header');
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+
+                if (currentScroll <= 0) {
+                    header.style.transform = 'translateY(0)';
+                    return;
+                }
+
+                if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+                    header.style.transform = 'translateY(-100%)';
+                } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+                    header.style.transform = 'translateY(0)';
+                }
+
+                lastScroll = currentScroll;
+            });
+
+            // Hero text animation
+            const heroText = document.querySelector('.hero h1');
+            if (heroText) {
+                heroText.style.opacity = '0';
+                setTimeout(() => {
+                    heroText.style.opacity = '1';
+                }, 500);
+            }
+        });
+
+
+        //windows
+ let content=[
+        
+           
+        {
+            id:1,
+            img:"images/cool (1).jpeg",
+            title:'Head-Teacher',
+            text:"Mr Waiswa Fred"
+        },
+
+        {
+            id:1,
+            img:"images/Contact-Us.png",
+            title:'Deputy Head-Teacher',
+            text:"Mr Maswe Charles"
+        },
+        {
+            id:1,
+            img:"images/cool (2).jpeg",
+            title:' DOS Olevel',
+            text:"Mr Mubale Andrew"
+        },
+        {
+            id:1,
+            img:"images/cool (3).jpeg",
+            title:' DOS Alevel',
+            text:"Mr Sisye "
+        },
+
+        {
+            id:1,
+            img:"images/lab.jpeg",
+            title:' H.O.D Chemistry',
+            text:"Mr Mwesigwa Musa "
+        },
+
+        {
+            id:1,
+            img:"images/cool7.jpeg",
+            title:' H.O.D Biology',
+            text:"Mr Oluka Ignatius"
+        },
+
+        {
+            id:1,
+            img:"images/cool6.jpeg",
+            title:'H.O.D English',
+            text:"Mr Kizito"
+        },
+        {
+            id:1,
+            img:"images/icons.jpg",
+            title:'H.O.D ICT',
+            text:"Mr Imalingant Alvin"
+        },
+        {
+            id:1,
+            img:"images/library 8.jpeg",
+            title:'H.O.D Geography',
+            text:"Mr Kambo Geofrey"
+        },
+        {
+            id:1,
+            img:"images/library 8.jpeg",
+            title:'H.O.D Agriculture',
+            text:"Mrs Amulen"
+        },
+        {
+            id:1,
+            img:"images/cool4.jpeg",
+            title:'H.O.D Physics',
+            text:"Mr Kisakye Denis",
+        },
+        {
+            id:1,
+            img:"images/cool5.jpeg",
+            title:'H.O.D Fine Art',
+            text:"Mr Omeleku John",
+        },
+        {
+            id:1,
+            img:"images/cool4.jpeg",
+            title:'H.O.D History',
+            text:"Mrs kawogo",
+        }
+        ,
+        {
+            id:1,
+            img:"images/cool5.jpeg",
+            title:'H.O.D Math',
+            text:"Mr Were Brian",
+        }
+
+        ];
+
+      let image=document.querySelector('.image');
+      let title=document.querySelector('.title');
+      let text=document.querySelector('.text');
+      let prevButton=document.querySelector('.prev');
+      let nextButton=document.querySelector('.next');
+      
+      let current=0;
+      //load windows
+      window.addEventListener('DOMContentLoaded',function(){
+        showMe();
+      });
+
+      function showMe(){
+        let item=content[current];
+        image.src=item.img;
+        title.textContent=item.title;
+        text.textContent=item.text;
+
+
+      }
+      nextButton.addEventListener('click',function(){
+        current++;
+        if(current>content.length-1){
+            current=0;  
+        }
+        showMe();
+
+      });
+
+      prevButton.addEventListener('click',function(){
+        current++;
+        if(current<0){
+            current=content.length-1;  
+        }
+        showMe();
+
+      });
+
+
+      //toggle
+let buttonElement=document.querySelector('.btn');
+let links=document.querySelector('.links');
+buttonElement.addEventListener('click',function(){
+links.classList.toggle('show');
+
+});
+    </script>
+</body>
+
+</html>

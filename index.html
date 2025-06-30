@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - PPSS</title>
+    <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            padding-top: 80px;
+            
+        }
+
+        @media (max-width:599px) {
+            
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+/*badge*/
+.badge img{
+    width: 120px;
+   object-fit: cover;
+}
+
+            .phone-view{
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+           height: 190px;
+            background-color: var(--primary-color);
+            margin-top: -190px;
+           
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+       
+        }
+        .logo img{
+            width: 60px;
+            height: 85px;
+            border-radius: 40px;
+            margin-top: 40%;
+            margin-left: 3%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .btn{
+            margin-left: 70%;
+            margin-top: 65%;
+        }
+        .links{
+            display: none;
+            background-color: white;
+            margin: 30% 10%;
+            height: 300px;
+            margin: 0px 120%;
+           transition: 3s ease;
+         
+        }
+       
+        .links nav ul li{
+            list-style: none;
+            padding: 3% 3%;
+            margin: 3% 1%;
+        }
+        .links nav ul a{
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 16px;
+            font-weight: 600;
+           
+          
+        }
+
+/*animation*/
+.links nav ul li::after{
+    content: '';
+    display: block;
+    background-color: orange;
+    height: 2px;
+    width: 0%;
+    transition: 0.5s;
+}
+.links nav ul li:hover::after{
+    width: 40%;
+}
+
+        .show{
+            display: inline-block;
+            z-index: 2;
+            width: 100%;
+            transition: 3s ease;
+        
+          
+        }
+       .logo h2{
+            color: white;
+            margin: auto 5%;
+        }
+        .logo h3{
+            display: none;
+        }
+        }
+
+        
+
+        
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .home-page1 {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), 
+            rgba(0, 0, 0, 0.5)), url('images/mentorGate.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+            padding: 8rem 4rem;
+            text-align: left;
+            min-height: 80vh;
+            margin-bottom: 4rem;
+            width: 100%;
+            transition: background-image 1s ease-in-out;
+        }
+
+        .home-page1 p {
+            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+            animation: fadeInUp 1s ease 0.3s both;
+            margin-left: 40px;
+        }
+        .home-page1 h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease 0.6s both;
+            margin-left: 40px;
+            margin-top: -50px;
+        }
+
+
+        .home-page1 h4 SPAN {
+            font-size: 2.0rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease 0.6s both;
+            color: rgb(59, 162, 202);
+        }
+
+        .home-content {
+            padding: 9rem 0 0 0;
+        }
+
+        .button1 {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeIn 1s ease 0.9s both;
+        }
+
+        .button1:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .button1 a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .motto {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .motto1 {
+            background-color: rgb(199, 223, 232);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .motto1:hover {
+            transform: translateY(-20px);
+        }
+
+        .motto1 i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .motto1 h1 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .motto1 p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+           font-weight: 900;
+        }
+
+        
+
+        .homepage2 {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            background-color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .homepage2 img {
+            width: 50%;
+            border-radius: 8px;
+            object-fit: cover;
+            height: 400px;
+        }
+
+        .homepage2 .content {
+            width: 50%;
+        }
+
+        .homepage2 h2 {
+            font-size: 2rem;
+            color: 
+            skyblue;
+            margin-bottom: 1.5rem;
+        }
+
+        .homepage2 p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .button2 {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 1% 25%;
+        }
+
+        .button2:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .button2 a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .homepage3 {
+            text-align: center;
+        }
+
+        .homepage3 h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .homepage3 p {
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .home-pictures {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+            /* rgb(247, 231, 231)*/
+        .pictures {
+            background: linear-gradient( white,
+            rgb(155, 202, 221));
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            flex-wrap: wrap;
+           
+
+        }
+        .pictures  span{
+            text-align: left;
+            color: black;
+        }
+
+        .pictures:hover {
+            transform: translateY(-10px);
+        }
+
+        .pictures img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .pictures h2 {
+            font-size: 1.4rem;
+            padding: 1.5rem 1.5rem 0.5rem;
+            color: skyblue;
+        }
+
+        .pictures span {
+            display: block;
+            padding: 0 1.5rem 1.5rem;
+            color:rgba(41, 38, 38, 0.911);
+            font-weight: 530;
+            color: var(--text-light);
+          
+        }
+        /*picture*/
+
+       
+            
+       
+    
+       
+        /*pict big screen*/
+    @media (min-width:600px) {
+    .btn{
+        display: none;
+    }
+
+
+    .badge img{
+    width: 150px;
+   object-fit: cover;
+}   
+        .phone-view{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--primary-color);
+            margin-top: -80px;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+        .logo img{
+            width: 60px;
+            height: 80px;
+            border-radius: 30px;
+        }
+        .links nav .show li{
+            list-style: none;
+            margin: 0 2%;
+            display: inline-block;
+        }
+        .links nav .show li a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .links nav .show li a i{
+            display: none;
+        }
+        .logo h2{
+            display: none;
+        }
+        .logo h3{
+          color: white;
+          font-size: 20px;
+          margin: 0 3%;
+        }
+
+
+}
+       
+        .hompage4 {
+            text-align: center;
+        }
+
+        .homepage4-text h2 {
+            font-size: 1.5rem;
+            color: skyblue;
+            margin-bottom: 1rem;
+        }
+        .homepage4-text h2 {
+            color: skyblue;
+        }
+        .homepage4-text p {
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .eduction-programs {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        .eduction-programs h2{
+            font-size: 1.2rem;
+            color: skyblue;
+        }
+/*program content*/
+
+.eduction-programs-content1{
+         background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+           
+            text-align: center;
+            color: var(--text-light);
+            padding: 1.5rem;
+}
+.eduction-programs-content1 span i{
+    color: skyblue;
+    font-size: 20px;
+    margin: 5% auto;
+}
+
+.eduction-programs-content1 .chanda{
+margin-top: 5%;
+}
+
+.eduction-programs-content1:hover{
+    transform: translateY(-10px);
+}
+.eduction-programs-content1 h4{
+    color: rgb(41, 39, 39);
+}
+
+.eduction-programs-content1 h5{
+    color: rgba(49, 46, 46, 0.863);
+}
+
+.homepage4-text h2 span{
+    border-left: 5px solid orangered;
+    padding: 2% 3%;
+}
+        .eduction-programs:hover {
+            transform: translateY(-10px);
+        }
+
+        .eduction-programs img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            
+        }
+        
+
+        .eduction-programs-content {
+            padding: 1.5rem;
+        }
+
+        .eduction-programs-content h2 {
+            font-size: 1.2rem;
+            color: skyblue;
+            margin-bottom: 1rem;
+        }
+
+        .eduction-programs-content p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+
+        .footer-column p {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column ul li a {
+            color: var(--light-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links-footer {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-links-footer a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+/*footer new style*/
+
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .quick-links a {
+            color: var(--light-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .quick-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+         
+
+            .home-page1 {
+                padding: 4rem 1rem;
+            }
+
+            .home-page1 h2 {
+                font-size: 1.8rem;
+            }
+
+            .homepage2 {
+                flex-direction: column;
+                padding: 2rem;
+            }
+
+            .homepage2 img,
+            .homepage2 .content {
+                width: 100%;
+            }
+
+          
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-column h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .social-links-footer {
+                justify-content: center;
+            }
+            .social-links-footer a i{
+                color: orange;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding-top: 120px;
+                /* Adjusted for mobile header height */
+            }
+
+            
+
+            .motto {
+                grid-template-columns: 1fr;
+            }
+
+            .home-pictures {
+                grid-template-columns: 1fr;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+       .read{
+            border: none;
+            outline: none;
+            border-radius: 12px;
+            background-color:  #3498db;
+            color: white;
+            padding: 10px;
+           
+        }
+        .pictures span .hide{
+            display: none;
+            margin-left: -22px;
+        } 
+        
+        .buttons{
+            margin: 0 26%;
+        }
+        .buttons button{
+            background-color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 5px;
+            margin: 1% 10%;
+          
+        }
+        .buttons button i{
+            color: rgb(14, 4, 4);
+            font-weight: bold;
+            font-size: 35px;
+        }
+        .btn button{
+           
+            border: none;
+            background-color: var(--primary-color);
+        }
+        .btn button i{
+            color: orange;
+            font-size: 35px;
+        }
+
+        /*special script*/
+hr{
+    width: 15%;
+    margin: 2% 40%;
+}
+.content h2{
+    font-size: 1.2rem;
+    margin: 2% 20%;
+}
+
+@media (min-width:600px) {
+    .logo{
+            display: flex;
+            align-items: center;
+          margin-top: -20px;
+        }
+        .logo img{
+            width: 80px;
+            height: 100px;
+            border-radius: 50px;
+            margin: 5% 5%;
+            margin-bottom: 10%;
+            object-fit: cover;
+            object-position: top;
+        }
+/*animation*/
+.links nav ul li::after{
+    content: '';
+    display: block;
+    background-color: orange;
+    height: 2px;
+    width: 0%;
+    transition: 0.5s;
+}
+.links nav ul li:hover::after{
+    width: 100%;
+}
+
+
+  /*footer design*/
+    .badge img{
+    width: 150px;
+   object-fit: cover;
+margin: 2% 40%;
+    }
+
+    .social-links-footer {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            
+           
+        }
+
+        .social-links-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+           
+            color:yellow;
+            transition: all 0.3s ease;
+        }
+        
+    .disturbed{
+        margin-left: 38%;
+    }
+
+}
+
+/*picture*/
+
+.picture{
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: left;
+            transition: transform 0.3s ease;
+            flex-wrap: wrap;
+            border: 1px solid rgb(235, 223, 223);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.09);
+            transition: transform 0.3s ease;
+            width: 90%;
+            margin: 5% 5%;
+            color:#333;
+            
+        }
+        
+.picture p{
+    
+color: var(--text-light);
+}
+        .picture:hover {
+            transform: translateY(-10px);
+        }
+        .picture  span{
+            text-align: left;  
+            color: var(--text-light);
+
+        }
+
+        .picture:hover {
+            transform: translateY(-10px);
+        }
+
+        .picture h2 {
+            font-size: 1.4rem;
+            padding: 1.5rem 1.5rem 0.5rem;
+            color: skyblue;
+        }
+        .button2{
+            background:  #3498db;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="phone-view">
+       
+        <div class="logo">
+<img src="images/badge.png" alt="">
+
+<h3>Pallisa Progressive Secondary School</h3>
+        </div>
+       
+        <div class="btn">
+            <button class="buttonElement"> <i class='bx bx-menu'></i></button>
+        </div>
+        <div class="links">
+            <nav>
+                <ul class="show">
+                    <li><a href="index.html"> <i class='bx bx-home'></i> Home</a></li>
+                    <li><a href="profile.html"> <i class='bx bx-user'></i> Staff Profile</a></li>
+                    <li><a href="gallery.html"> <i class='bx bxs-grid-alt'></i> Gallery</a></li>
+                    <li><a href="contact.html"><i class='bx bx-phone' ></i> Contact</a></li>
+                    <li><a href="faq.html"><i class='bx bx-search-alt-2'></i> FAQs</a></li>
+                </ul>
+            </nav>
+        </div>
+
+</div>
+  
+  
+    <section class="home-page1 visible">
+        <div class="home-content">
+            <h4>WELCOME TO <span>PALLISA PROGRESSIVE SECONDARY SCHOOL</span></h4>
+            <p>Our school is dedicated to empowering students to become
+                 the architects of their <br>own futures,
+                providing the
+                knowledge and skills they need to succeed.</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="motto">
+            <div class="motto1">
+                <i class='bx bxl-telegram'></i>
+                <h1>SCHOOL MOTTO</h1>
+                <p>Building Destiny Solutions</p>
+            </div>
+
+            <div class="motto1">
+                <i class='bx bx-home'></i>
+                <h1>SCHOOL VISION</h1>
+                <P>To be a center of scientific 
+                    and technological excellence
+                 </P>
+            </div>
+            <div class="motto1">
+                <i class='bx bxs-star'></i>
+                <h1>SCHOOL MISSION</h1>
+                <p>To provide quality education that nurtures
+                     academic excellence, moral values, and 
+                     practical skills in
+                    a supportive
+                    environment.</p>
+            </div>
+            <div class="motto1">
+                <i class='bx bx-male-female'></i>
+                <h1>SCHOOL VALUES</h1>
+                <p>God Fearing, Discipline, Self-Drive,
+                     High self-esteem. </p>
+            </div>
+        </section>
+
+        <section class="welcome-message">
+           
+        </section>
+
+        <section class="homepage2">
+            <img src="images/science-fair.jpg" alt="Academic Excellence">
+
+            <div class="content">
+                <h2>Academic Excellence</h2>
+                <p>At Pallisa Progressive Secondary School,
+                     We prioritize high academic standards 
+                     ensuring that our students are well
+                    prepared for their future endeavors.
+                     Our dedicated faculty employs innovative teaching methods that
+                    foster a love for learning.</p>
+                <button class="button2"><a href="profile.html">Discover More</a></button>
+            </div>
+        </section>
+
+        <section class="homepage3">
+            
+
+            <div class="home-pictures">
+
+                <div class="picture">
+                    
+                    <h2> <i class='bx bxs-quote-alt-left'></i> Why join us today?</h2>
+                    <span>
+                        Pallisa Progressive is a beacon of educational 
+                        excellence. Renowned 
+                        for its commitment to high academic standards,
+                        character development, and student-centered 
+                        learning, the school is a nurturing and disciplined 
+                        environment where every learner
+                        is empowered to succeed.At PPSS students excel
+                         academically while developing
+                          essential life skills,leadership
+                        abilities and strong moral values-preparing 
+                        them to thrive in a competitive
+                        and ever-changing world.   
+                         <i class='bx bxs-quote-alt-right'></i>
+                     </span>
+                </div>
+                <div class="picture">
+                    
+                    <h2><i class='bx bxs-quote-alt-left'></i>
+                         Your Future Starts Here!</h2>
+                    <span>Join a learning environment that nurtures innovation,
+                        critical thinking, and real-world skills.Our 
+                        competency-based education 
+                        prepares you for success in academics,careers, and beyond. 
+                        Take the first step towards a brighter future with us!
+                        <i class='bx bxs-quote-alt-right'></i>
+                     </span>
+                </div>
+
+                <div class="pictures">
+                    
+                    <h2><i class='bx bxs-quote-alt-left'></i> Preparing Future Professionals</h2>
+                    <span>Unlock your potential with our hands-on,future 
+                        focused education.
+                        Our competency-based approach equips you with
+                         real world skills,critical 
+                        thinking,and industry expertise-preparing you 
+                        to lead,innovate,and thrive in a
+                         competitive world.Your success starts here!
+                         <button class="read" onclick="showMe()">Read more</button>
+                        <span class="hide">We are committed to preparing future 
+                            professionals by offering a holistic education
+                            that blends academics,skills development,
+                            and character building.
+                            Our mission is to nurture career-ready 
+                            minds equipped to thrive
+                            in any field they pursue.
+
+                        </span>
+                    </span>
+                </div>
+
+                <div class="pictures">
+                    <img src="images/science-fair.jpg" alt="Science Fair" class="path">
+                    
+                    <span>
+                        Our school is equipped with essential learning facilities
+                        that support student's academic growth.The library provides a quiet and resourceful place for 
+                        reading <br>
+                        Our science laboratory provides students with hands-on
+                        experience to explore scientific concepts through practical experiments
+                        <br>
+                        In addition,our computer lab is equipped with modern computers
+                        and internet access,giving students the opportunity to develope digital skills 
+                        and conduct research.
+                    </span>
+                </div>
+            </div>
+
+            
+        </section>
+
+        <section class="hompage4">
+            <div class="homepage4-text">
+                <h2>Innovative Education Programs   <i class='bx bxs-hand-down'></i></h2>
+                <p>Explore the diverse range of programs designed 
+                    to enhance learning and personal growth</p>
+            </div>
+
+            <div class="main-content">
+                <div class="eduction-programs">
+                    <img src="images/culture.jpg" alt="Arts and Culture">
+                    <div class="eduction-programs-content">
+                        <h2>Arts and Culture</h2>
+                        <p>The arts and culture program encourage creativity
+                             and artistic expression. Students
+                            participate in various disciplines, 
+                            including music, drama, visual arts, 
+                            promoting cultural
+                            awareness and self confidence through
+                             performances and exhibitions.</p>
+                    </div>
+                </div>
+
+                <div class="eduction-programs">
+                    <img src="images/playground1.jpeg" alt="Sports and Wellness">
+                    <div class="eduction-programs-content">
+                        <h2>Sports and Wellness</h2>
+                        <p>Our sports and wellness program focuses on 
+                            physical health and team work. Regular
+                             physical
+                            activities, competitions and wellness workshops
+                             cultivate a healthy lifestyle and teach the
+                            value of discipline, respect and sportsmanship.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!--
+        what our students say-->
+        <section class="hompage4">
+            <div class="homepage4-text">
+                <h2> <span></span> Voice of the Students</h2>
+
+            </div>
+
+            <div class="main-content">
+              
+                    <div class="eduction-programs-content1">
+                        <span><i class='bx bxs-quote-alt-left'></i></span>
+                        <p>Pallisa Progressive is definitely one of those schools that
+                             I will always hold dear 
+                            to me .Good values,reconnected me to God & 
+                            it was worth all it in the end.
+                        </p>
+                        <span class="under"></span><hr>
+                        <h4 class="chanda">Chanda Henry</h4>
+                        <h5>2019-2022</h5>
+
+
+                </div>
+
+                <div class="eduction-programs-content1">
+                    <span><i class='bx bxs-quote-alt-left'></i></span>
+                    <p>Here,education is more than just books; its About
+                        embracing diversity and preparing for a bright future.
+                    </p>
+                    <span class="under"></span><hr>
+                        <h4 class="chanda">Omoding Peter</h4>
+                        <h5>2022-2025</h5>
+                        
+              
+                </div>
+            </div>
+        </section>
+        <!--
+        <img src="images/lib3.jpeg" alt="">
+        <img src="images/library 8.jpeg" alt="">
+        <img src="images/library6.jpeg" alt="">
+        -->
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+            
+               <div class="badge">
+                <img src="images/badge.png" alt="">
+               </div>
+                <div class="social-links-footer">
+                    <a href="https://www.facebook.com/profile.php?id=100089438504646" aria-label="Facebook" class="disturbed"><i
+                            class='bx bxl-facebook'></i></a>
+                    <a href="https://x.com/mentorss2015?t=zbt3mx17e9wGjoDXv2odHA&s=08" aria-label="Twitter"><i
+                            class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.youtube.com" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+            <!--
+<img src="images/Library.jpeg" alt="">
+
+<img src="images/lab2.jpeg" alt="">
+<img src="images/lab4.jpeg" alt="">     
+
+            -->
+     
+                
+    </footer>
+
+    <script>
+        // Background Image Rotation
+        const backgroundImages = [
+            " url('images/mentorGate.jpg')", "url('images/science-fair.jpg')", "url('images/art-class.jpeg')"]; let
+                currentImageIndex = 0; const heroSection = document.querySelector('.home-page1'); function
+            changeBackgroundImage() {
+                currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+            heroSection.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    ${backgroundImages[currentImageIndex]}`;
+        } // Change image every 10 seconds
+        setInterval(changeBackgroundImage, 5000); // Scroll animation for sections
+        document.addEventListener('DOMContentLoaded', function () {
+            const
+            sections = document.querySelectorAll('section'); // Initially hide all sections except the first one
+            sections.forEach((section, index) => {
+                if (index !== 0) {
+                    section.classList.remove('visible');
+                }
+            });
+
+            // Intersection Observer for scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            });
+
+            // Observe all sections
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Text animation for welcome message
+            const welcomeMessage = document.querySelector('.welcome-message p');
+            if (welcomeMessage) {
+                const text = welcomeMessage.textContent;
+                welcomeMessage.textContent = '';
+
+                for (let i = 0; i < text.length; i++) {
+                    setTimeout(() => {
+                        welcomeMessage.textContent += text[i];
+                    }, i * 20);
+                }
+            }
+
+            // Hover animation for buttons
+            const buttons = document.querySelectorAll('.button1, .button2');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', () => {
+                    button.style.transform = 'translateY(-3px)';
+                    button.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.2)';
+                });
+
+                button.addEventListener('mouseleave', () => {
+                    button.style.transform = 'translateY(0)';
+                    button.style.boxShadow = 'none';
+                });
+            });
+
+            // Animation for motto cards
+            const mottoCards = document.querySelectorAll('.motto1');
+            mottoCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+
+            // Header scroll behavior
+            let lastScroll = 0;
+            const header = document.querySelector('header');
+            const headerHeight = header.offsetHeight;
+
+            window.addEventListener('scroll', function () {
+                const currentScroll = window.pageYOffset;
+
+                if (currentScroll <= 0) { // At top of page, always show header
+                    header.classList.remove('hidden'); return;
+                } if (currentScroll > lastScroll &&
+                    !header.classList.contains('hidden')) {
+                    // Scrolling down
+                    header.classList.add('hidden');
+                } else if (currentScroll < lastScroll && header.classList.contains('hidden')) { // Scrolling
+                                upheader.classList.remove('hidden');
+                } lastScroll = currentScroll;
+            });
+        }); 
+
+        let hide=document.querySelector('.hide');
+        let buttonElements=document.querySelector('.read');
+        function showMe(){
+            if (hide.style.display==="none"){
+                hide.style.display='inline-block';
+                buttonElements.style.display='none';
+            }
+            else{
+                hide.style.display='none';
+                buttonElements.display='block';
+            }
+        }
+
+
+        
+      //toggle
+let buttonElement=document.querySelector('.btn');
+let links=document.querySelector('.links');
+buttonElement.addEventListener('click',function(){
+links.classList.toggle('show');
+
+});
+
+let myImages=["images/library6.jpeg",
+  "images/pp4.jpeg", "images/library 8.jpeg","images/lab4.jpeg",
+  "images/lib3.jpeg",
+"images/lab2.jpeg"
+];
+ let path=document.querySelector('.path');
+ let index=0;
+ function changeImage(){
+index=(index+1)%myImages.length;
+path.src=myImages[index];
+
+ }
+ setInterval(changeImage,5000);
+        </script>
+</body>
+
+</html>
