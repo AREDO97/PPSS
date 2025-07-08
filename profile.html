@@ -37,6 +37,85 @@
             background-color: #f9f9f9;
         }
         @media (max-width:599px) {
+/*staff-profile 1*/
+/*profile*/
+
+.staff-profiles1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .profiles-grid1 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .profile-card1 {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+            min-width: 120vh;
+            margin: 2% 50%;
+        }
+
+        .profile-card1.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .profile-card1:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile-image1 {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .profile-image1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.5s ease;
+        }
+
+        .profile-card1:hover .profile-image img {
+            transform: scale(1.05);
+        }
+
+        .profile-info1 {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .profile-info1 h2 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-info1 p {
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+
+
+
+/*staff-profile1*/
+
+
+
             .phone-view{
            display: grid;
            grid-template-columns: 1fr 1fr;
@@ -139,6 +218,32 @@
         }
 /*big screen header*/
 
+.buttons1{
+            margin: 0 0%;
+            width: 100%;
+        }
+        .buttons1 button{
+            background-color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 5px;
+           
+          
+        }
+       
+        .buttons1 button i{
+            color: rgb(14, 4, 4);
+            font-weight: bold;
+            font-size: 40px;
+        }
+        .buttons1 .next1{
+            margin-left: 60%;
+        }
+        .buttons1 .prev1{
+            margin-left: 8%;
+        }
+
+        /*1*/
 @media (min-width:600px) {
     .btn{
         display: none;
@@ -343,7 +448,8 @@
             height: 40px;
             border-radius: 50%;
             background-color: rgba(255, 255, 255, 0.1);
-            color: yellow;
+            color: maroon;
+            font-weight: bold;
             transition: all 0.3s ease;
         }
 
@@ -514,7 +620,7 @@
             background-color: var(--primary-color);
         }
         .btn button i{
-            color: yellow;
+            color: maroon;
             font-size: 35px;
         }
         @media (min-width:600px) {
@@ -564,7 +670,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: top;
+            object-position: center;
             transition: transform 0.5s ease;
         }
 
@@ -641,7 +747,7 @@ margin: 2% 40%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color:yellow;
+            color:maroon;
             transition: all 0.3s ease;
         }
         
@@ -676,99 +782,52 @@ margin: 2% 40%;
         .buttons .prev{
             margin-left: 8%;
         }
-}
 
+        /*1*/
+        
+    .buttons1{
+            margin: 0 0%;
+            width: 100%;
+        }
+        .buttons1 button{
+            background-color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 5px;
+           
+          
+        }
+       
+        .buttons1 button i{
+            color: rgb(14, 4, 4);
+            font-weight: bold;
+            font-size: 40px;
+        }
+        .buttons1 .next1{
+            margin-left: 68%;
+        }
+        .buttons1 .prev1{
+            margin-left: 8%;
+        }
+
+        /*1*/
+}
+.admin{
+    font-size: 20px;
+    margin: 2% 30%;
+}
     </style>
 </head>
-<!--
-<i class='bx bxl-tiktok'></i>
-<box-icon type='logo' name='bootstrap'></box-icon>
-<i class='bx bxl-c-plus-plus'></i>
-<i class='bx bx-time-five' ></i>
 
-<i class='bx bx-mobile-landscape' ></i>
-<i class='bx bx-face' ></i>
-<i class='bx bx-male' ></i>
-<i class='bx bx-meh-alt' ></i>
-<i class='bx bx-wink-tongue' ></i>
-<i class='bx bx-bell' ></i>
-<i class='bx bx-camera' ></i>
-<i class='bx bx-camera-off' ></i>
-<i class='bx bx-key' ></i>
-<i class='bx bx-hide' ></i>
-<i class='bx bx-error-circle' ></i>
-<i class='bx bx-down-arrow-circle' ></i>
-<i class='bx bx-up-arrow-circle' ></i>
-<i class='bx bx-phone' ></i>
-<i class='bx bx-layer' ></i>
-<i class='bx bx-home' ></i>
-<i class='bx bx-wifi' ></i>
-<i class='bx bx-power-off' ></i>
-<i class='bx bx-star' ></i>
-<i class='bx bx-trash' ></i>
-<i class='bx bx-merge'></i>
-<i class='bx bx-chevron-left-circle'></i>
-<i class='bx bx-registered'></i>
-<i class='bx bx-question-mark' ></i>
-<i class='bx bx-bell-off' ></i>
-<i class='bx bx-book-reader' ></i>
-<i class='bx bx-arrow-to-bottom' ></i>
-<i class='bx bx-like' ></i>
-<i class='bx bx-command' ></i>
-<i class='bx bx-help-circle' ></i>
-<i class='bx bx-select-multiple' ></i>
-<i class='bx bx-message-rounded' ></i>
-<i class='bx bx-alarm' ></i>
-<i class='bx bxl-jsfiddle' ></i>
-<i class='bx bx-vertical-bottom'></i>
-<i class='bx bx-vertical-top'></i>
-<i class='bx bxs-shield-plus'></i>
-<i class='bx bxs-leaf' ></i>
-<i class='bx bxs-party' ></i>
-<i class='bx bx-message-dots' ></i>
-<i class='bx bxl-mastercard' ></i>
-<i class='bx bxl-squarespace' ></i>
-
-*/
--->
-<!--
-
-
-
- <i class='bx bx-search-alt-2'></i>
-            <i class='bx bxs-left-arrow'></i>
-            <i class='bx bxs-right-arrow' ></i>
-            <i class='bx bxs-quote-alt-left'></i>
-            <i class='bx bxs-quote-alt-right'></i>
-            <i class='bx bxs-hand-down'></i>
-            <i class='bx bx-chevron-left'></i>
-            <i class='bx bx-chevron-right'></i>
-            <i class='bx bx-align-left'></i>
-            <i class='bx bx-menu'></i>
-            <i class='bx bx-lock-open'></i>
-            <i class='bx bx-lock'></i>
-            <i class='bx bx-user'></i>
-            <i class='bx bx-downvote'></i>
-            <i class='bx bx-upvote'></i>
-            <i class='bx bxs-download'></i>
-            <i class='bx bxs-home'></i>
-            <i class='bx bxs-grid-alt'></i>
-            <i class='bx bx-check-double'></i>
-            <i class='bx bxs-user-badge'></i>
-            <i class='bx bxs-chevron-right-circle'></i>
-            <i class='bx bxs-chevron-left-circle'></i>
- 
-            -->
-           
             
-           
-<body>
+  
+
     <div class="phone-view">
        
             <div class="logo">
     <img src="images/badge.png" alt="">
     
-    <h3>Pallisa Progressive Secondary School</h3>
+    <h3>Grace Christian Nursery and Primary School</h3>
             </div>
            
             <div class="btn">
@@ -792,7 +851,7 @@ margin: 2% 40%;
     <div class="hero">
         <h1>Our Dedicated Staff Members</h1>
     </div>
-
+        
     <section class="staff-profiles">
         <div class="profiles-grid">
             <div class="profile-card">
@@ -805,21 +864,20 @@ margin: 2% 40%;
                 </div>
                 <div class="buttons">
                     <button class="prev"> 
-                        <i class='bx bx-chevron-left'></i>
-                      
+                       
+                        <i class='bx bxs-chevrons-left'></i>
                         </button>
                     <button class="next">
-                        <i class='bx bx-chevron-right'></i>
+                        <i class='bx bxs-chevrons-right'></i>
+                      
                     </button>
                 </div>
-            </div>
-          
+           
     </section>
-<section class="apply">
-    <button>
-        <a href=""></a>
-    </button>
-</section>
+
+  
+
+    </div>                
 <footer>
     <div class="footer-container">
         <div class="footer-column">
@@ -896,100 +954,78 @@ margin: 2% 40%;
 
 
         //windows
- let content=[
-        
+ 
+
+        let content=[
+        {
+            img:"images/cool (3).jpeg",
+            title:"RESIDENT DIRECTOR",
+            text:"Odeke john"
+        },
            
         {
             id:1,
-            img:"images/cool (1).jpeg",
-            title:'Head-Teacher',
-            text:"Mr Waiswa Fred"
+            img:"images/cool (3).jpeg",
+            title:'HEAD-TEACHER',
+            text:"Waisa Fred"
         },
 
         {
             id:1,
-            img:"images/Contact-Us.png",
-            title:'Deputy Head-Teacher',
-            text:"Mr Maswe Charles"
-        },
-        {
-            id:1,
-            img:"images/cool (2).jpeg",
-            title:' DOS Olevel',
-            text:"Mr Mubale Andrew"
+            img:"images/cool (3).jpeg",
+            title:'DEPUTY HEAD-TEACHER',
+            text:"Oluka Ignatius"
         },
         {
             id:1,
             img:"images/cool (3).jpeg",
-            title:' DOS Alevel',
-            text:"Mr Sisye "
+            title:' DOS A LEVEL',
+            text:"Mr Sisye Samson"
+        },
+        {
+            id:1,
+            img:"images/cool (3).jpeg",
+            title:'DOS O LEVEL',
+            text:"Mr Mubale Andrew"
         },
 
         {
             id:1,
-            img:"images/lab.jpeg",
-            title:' H.O.D Chemistry',
-            text:"Mr Mwesigwa Musa "
+            img:"images/cool (3).jpeg",
+            title:'SENIOR WOMAN TEACHER',
+            text:"Mrs Nusura "
         },
 
         {
             id:1,
-            img:"images/cool7.jpeg",
-            title:' H.O.D Biology',
-            text:"Mr Oluka Ignatius"
+            img:"images/cool (3).jpeg",
+            title:'H.O.D MATHEMATICS',
+            text:"Mr Maswe Charles"
         },
-
         {
             id:1,
-            img:"images/cool6.jpeg",
-            title:'H.O.D English',
+            img:"images/cool (3).jpeg",
+            title:'H.O.D ENGLISH',
             text:"Mr Kizito"
         },
         {
             id:1,
-            img:"images/icons.jpg",
-            title:'H.O.D ICT',
-            text:"Mr Imalingant Alvin"
+            img:"images/cool (3).jpeg",
+            title:'H.O.D CHEMISTRY',
+            text:"Mr. MWESIGWA MUSA"
+        },{
+            id:1,
+            img:"images/cool (3).jpeg",
+            title:'H.O.D PHYSICS',
+            text:"Mr. Kisakye Denis"
         },
         {
             id:1,
-            img:"images/library 8.jpeg",
-            title:'H.O.D Geography',
-            text:"Mr Kambo Geofrey"
+            img:"images/cool (3).jpeg",
+            title:'H.O.D GEOGRAPHY',
+            text:"Mr.Kambo Geofrey "
         },
-        {
-            id:1,
-            img:"images/library 8.jpeg",
-            title:'H.O.D Agriculture',
-            text:"Mrs Amulen"
-        },
-        {
-            id:1,
-            img:"images/cool4.jpeg",
-            title:'H.O.D Physics',
-            text:"Mr Kisakye Denis",
-        },
-        {
-            id:1,
-            img:"images/cool5.jpeg",
-            title:'H.O.D Fine Art',
-            text:"Mr Omeleku John",
-        },
-        {
-            id:1,
-            img:"images/cool4.jpeg",
-            title:'H.O.D History',
-            text:"Mrs kawogo",
-        }
-        ,
-        {
-            id:1,
-            img:"images/cool5.jpeg",
-            title:'H.O.D Math',
-            text:"Mr Were Brian",
-        }
-
-        ];
+    ];
 
       let image=document.querySelector('.image');
       let title=document.querySelector('.title');
@@ -1037,6 +1073,10 @@ buttonElement.addEventListener('click',function(){
 links.classList.toggle('show');
 
 });
+
+
+ 
+ 
     </script>
 </body>
 

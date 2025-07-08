@@ -898,8 +898,8 @@ margin: 2% 40%;
                     <i class='bx bx-map'></i>
                     <div class="contact-info-content">
                         <h3>Address</h3>
-                        <p>Kalaaka , Olok Road<br>
-                            P.O Box 511, Pallisa (U)</p>
+                        <p>Komolo 'A',Olok Road<br>
+                            P.O Box 179, Pallisa (U)</p>
                     </div>
                 </div>
 
@@ -907,8 +907,8 @@ margin: 2% 40%;
                     <i class='bx bx-phone'></i>
                     <div class="contact-info-content">
                         <h3>Phone</h3>
-                        <p><a href="tel:+256772830581">+256 754391008/
-                            +256 775391008</a></p>
+                        <p><a href="tel:+256 782620783">+256 754391008/
+                            +256 782620783</a></p>
                     </div>
                 </div>
 
@@ -916,10 +916,10 @@ margin: 2% 40%;
                     <i class='bx bx-envelope'></i>
                     <div class="contact-info-content">
                         <h3>Email</h3>
-                        <p><a href="mailto:info@ppschool.org">
-                            ppss2025@gmail.com</a></p>
-                        <p><a href="mailto:headteacher@mppschool.org">
-                            headteacher@mentorss.org</a></p>
+                        <p><a href="mailto:pallisaprogressivess@gmail.com">
+                            pallisaprogressivess@gmail.com</a></p>
+                        <p><a href="mailto:pallisaprogressivess@gmail.com">
+                            Odekejohn29@gmail.com</a></p>
                     </div>
                 </div>
 
@@ -942,48 +942,49 @@ margin: 2% 40%;
                 </div>
             </div>
 
+          <section>
             <div class="contact-form">
                 <h2>Send Us a Message</h2>
-                <form id="contactForm" action="https://formsubmit.co/aredoivan9@gmail.com" method="POST">
-                    <input type="hidden" name="_subject" value="New Contact Form Submission">
-                    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-                    <input type="hidden" name="_captcha" value="false">
-
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <select id="subject" name="subject">
-                            <option value="general">General Inquiry</option>
-                            <option value="admission">Admission Inquiry</option>
-                            <option value="feedback">Feedback/Suggestion</option>
-                            <option value="complaint">Complaint</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
+                <div class="contact-form">
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="general">General Inquiry</option>
+                                <option value="admission">Admission Inquiry</option>
+                                <option value="feedback">Feedback/Suggestion</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                
+                        <button type="submit" class="submit-btn">Send Message via WhatsApp</button>
+                    </form>
+                </div>
         </div>
+
+          </section>
 
         <div class="map-section">
             <h2>Our Location</h2>
@@ -1084,27 +1085,47 @@ margin: 2% 40%;
         window.addEventListener('scroll', animateOnScroll);
 
         // Form submission
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
+         //form script
+         const contactForm = document.getElementById('contactForm');
 
-                // Get form values
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const subject = document.getElementById('subject').value;
-                const message = document.getElementById('message').value;
+contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-                // Here you would typically send the form data to a server
-                // For demonstration, we'll just show an alert
-                alert(
-                    `Thank you, ${name}! Your message about "${subject}" has been received. We'll contact you at ${email} soon.`
-                );
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value.trim();
 
-                // Reset form
-                contactForm.reset();
-            });
-        }
+    // Build the WhatsApp message
+    const whatsappMessage = `
+        *New Contact Form Submission*
+        👤 Name: ${name}
+        📧 Email: ${email}
+        📱 Phone: ${phone || "N/A"}
+        📝 Subject: ${subject}
+        💬 Message: ${message}
+    `.trim();
+
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+
+    // Replace leading zero with country code (assumed Kenya +254)
+    const rawPhone = "0701705888".replace(/^0/, "256");
+
+    const whatsappURL = `https://wa.me/${rawPhone}?text=${encodedMessage}`;
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappURL, '_blank');
+
+    // Optional: Reset the form
+    contactForm.reset();
+});
+
+
+        //form script  
+
+
+        //form
 
         // Highlight current day in business hours
         const highlightCurrentDay = () => {
