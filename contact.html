@@ -31,6 +31,7 @@
             line-height: 1.6;
             background-color: #f9f9f9;
             padding-top: 80px;
+            min-height: 100vh;
             
         }
 
@@ -60,7 +61,7 @@
                display: grid;
                grid-template-columns: 1fr 1fr;
                height: 90px;
-                background-color: var(--primary-color);
+                background-color:white;
                 margin-top: -80px;
               
             }
@@ -70,7 +71,8 @@
               margin-top: -10px;
             }
             .logo img{
-                width: 60px;
+                width: 75px;
+                height: 88px;
                 height: 5;
                 border-radius: 40px;
                 margin: 5% 5%;
@@ -155,10 +157,10 @@
         .btn button{
            
             border: none;
-            background-color: var(--primary-color);
+            background-color: white;
         }
         .btn button i{
-            color: orange;
+            color: blue;
             font-size: 35px;
         }
 
@@ -289,9 +291,10 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background-color:  rgb(94, 94, 228);
+       background: transparent;
+       font-weight: bold;
+       color: blue;
        
-        color: white;
         transition: all 0.3s ease;
         border: 1px solid skyblue;
     }
@@ -402,7 +405,7 @@
         position: relative;
         padding-bottom: 56.25%;
         /* 16:9 aspect ratio */
-        height: 0;
+        height: 400px;
         overflow: hidden;
         border-radius: 10px;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -519,8 +522,70 @@
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
 
-   /* Footer Styles */
-        footer {
+   /* 
+   
+    .social-links-footer {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            
+           
+        }
+
+        .social-links-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:white;
+            transition: all 0.3s ease;
+        }
+
+       
+         footer {
+            background-color: rgb(236, 233, 233);
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+
+        
+        .social-links-footer {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .social-links-footer a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+   
+   //
+   
+   Footer Styles footer {
             background-color: var(--primary-color);
             color: white;
             padding: 3rem 2rem;
@@ -537,29 +602,7 @@
             text-align: left;
         }
 
-        .footer-column h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--secondary-color);
-        }
-
-        .footer-column p {
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
+       
 
         .social-links-footer {
             display: flex;
@@ -584,32 +627,28 @@
             transform: translateY(-3px);
         }
 
-        .copyright {
-            text-align: center;
-            padding-top: 2rem;
-            margin-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-        }
-
-        .quick-links {
+   //insane alone
+     .social-links-footer {
             display: flex;
-            flex-wrap: wrap;
             gap: 1rem;
             margin-top: 1rem;
+            
+           
         }
 
-        .quick-links a {
-            color: var(--light-color);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
+        .social-links-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:yellow;
+            transition: all 0.3s ease;
         }
+          
 
-        .quick-links a:hover {
-            color: var(--secondary-color);
-        }
-
+        //width
+        
+*/
+        
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -673,16 +712,35 @@
                 text-align: center;
             }
 
-            .footer-column h3::after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
+         
 
             .social-links-footer {
                 justify-content: center;
             }
         }
+/*iframe*/
+@media (min-width:600px) {
+     .map-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        /* 16:9 aspect ratio */
+        height: 600px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
 
+    .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+}
+
+/*iframe*/
         @media (max-width: 480px) {
             nav ul {
                 flex-direction: column;
@@ -777,22 +835,7 @@
 margin: 2% 40%;
     }
 
-    .social-links-footer {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-            
-           
-        }
-
-        .social-links-footer a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color:yellow;
-            transition: all 0.3s ease;
-        }
-        
+  
     .disturbed{
         margin-left: 38%;
     }
@@ -851,7 +894,315 @@ margin: 2% 40%;
 
 
 }
+
+/*footer*/
+@media (min-width:600px) {
+    .btn{
+        display: none;
+    }   
+        .phone-view{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            height: 95px;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            margin-top: 10%;
+        }
+        .logo img{
+            width: 75px;
+            height: 88px;
+            border-radius: 30px;
+            
+            margin-top: 15%;
+        }
+        .links nav .show li{
+            list-style: none;
+            margin: 0 2%;
+            display: inline-block;
+        }
+        .links nav .show li a{
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .links nav .show li a i{
+            display: none;
+        }
+        .logo h2{
+            display: none;
+        }
+        .logo h3{
+          color: black;
+          font-size: 20px;
+          margin: 0 3%;
+        }
+
+
+}
+/*   .social-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+     
+    }
+
+    .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+       background: transparent;
+       font-weight: bold;
+       color: skyblue;
+       
+        transition: all 0.3s ease;
+        border: 1px solid skyblue;
+       
+    }
+
+    .social-links a:hover {
+        background-color: var(--secondary-color);
+        color: white;
+        transform: translateY(-3px);
+    }
+@media (min-width:600px) {
+ 
+  
+}
+
+
+    footer {
+            background-color:rgb(233, 226, 226) ;
+            color: black;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            width: 100%;
+            max-width: 200vh;
+         
+           
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+
+        
+
+        .social-links-footer {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #3498db;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-links-footer a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+  /*removevar(--primary-color)*/
+@media (max-width:599px) {
+ 
+.badge{
+    margin: 2% 30%;
+}
+
+
+/*footer new style*/
+ 
+}  
+
+/*footer */
+
+@media (min-width:600px) {
+    .logo{
+            display: flex;
+            align-items: center;
+          margin-top: -20px;
+        }
+        .logo img{
+            width: 80px;
+            height: 100px;
+            border-radius: 50px;
+            margin: 5% 5%;
+            margin-bottom: 10%;
+            object-fit: cover;
+            object-position: top;
+        }
+/*animation*/
+.links nav ul li::after{
+    content: '';
+    display: block;
+    background-color: #3498db;
+    height: 2px;
+    width: 0%;
+    transition: 0.5s;
+}
+.links nav ul li:hover::after{
+    width: 100%;
+}
+
+
+  /*footer design*/
+    .badge img{
+    width: 150px;
+   object-fit: cover;
+margin: 2% 40%;
+    }
+
+   
+}
     
+/*footer  #3498db*/
+
+/*enhanced css*/
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;         /* ensures full viewport height at minimum */
+  display: flex;
+  flex-direction: column;    /* positions content in a vertical stack */
+}
+
+main {
+  flex-grow: 1;              /* pushes footer to bottom when space is available */
+}
+body{
+    height: 100vh;
+}
+/* Footer styling to span full width */
+footer {
+  width: 100%;
+  background-color:white;  /* or your chosen color * #ece9e9/
+  color: #333;
+  padding: 2rem 1rem;
+  margin-top: auto;  
+  margin-bottom: -80px;
+ 
+ 
+    /* ensures it stays at bottom when content is short */
+}
+
+/* Footer container layout */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  text-align: left;
+}
+
+.badge img {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+}
+
+.social-links-footer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links-footer a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s, transform 0.3s;
+}
+
+.social-links-footer a:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+/* Responsive mobile footer adjustments */
+@media (max-width: 767px) {
+  .footer-container {
+    text-align: center;
+  }
+}
+/*enhanced*/
+
+
+/*emergency*/
+@media (min-width:600px) {
+      .emergency-contact {
+        background: var(--accent-color);
+        color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        margin-bottom: 4rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease 0.8s;
+        margin: 2% 30%;
+    }
+    .social-links-footer a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s, transform 0.3s;
+  
+}
+
+.social-links-footer{
+    display: none;
+    position:absolute;
+    margin: 2% 32%;
+}
+
+}
+/*emergence  footer-container*/
+@media (min-width:600px) {
+    iframe{
+        height: 800px;
+    }
+    .social-links{
+        display: none;
+    }
+}
     </style>
 
 </head>
@@ -860,7 +1211,7 @@ margin: 2% 40%;
     <div class="phone-view">
        
         <div class="logo">
-<img src="images/badge.png" alt="">
+<img src="images/logo1-removebg.png" alt="">
 
 <h3>Pallisa Progressive Secondary School</h3>
         </div>
@@ -903,6 +1254,8 @@ margin: 2% 40%;
                     </div>
                 </div>
 
+                
+
                 <div class="contact-info-item">
                     <i class='bx bx-phone'></i>
                     <div class="contact-info-content">
@@ -932,6 +1285,16 @@ margin: 2% 40%;
                     </div>
                 </div>
 
+                <!--uneb centre-->
+            <div class="contact-info-item">
+                 <i class='bx bx-home'></i>
+                    <div class="contact-info-content">
+                        <h3>Uneb Centre</h3>
+                        <p>U4050,Selection Code:3776</p>
+                    </div>
+                </div>
+                <!--uneb centre-->
+                
                 <div class="social-links">
                     <a href="https://www.facebook.com/profile.php?id=100066400460286" aria-label="Facebook" class="disturbed"><i
                         class='bx bxl-facebook'></i></a>
@@ -989,11 +1352,7 @@ margin: 2% 40%;
         <div class="map-section">
             <h2>Our Location</h2>
             <p>Ready to pay us a visit? Follow the map below to find our campus.</p>
-<!--
-   <iframe
-                    src="https://satellites.pro/Google_plan/Pallisa_map"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>         
--->
+
             <div class="map-container">
                 <iframe
                     src="https://satellites.pro/Google_plan/Pallisa_map"
@@ -1042,154 +1401,28 @@ margin: 2% 40%;
         </div>
     </div>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-            
-               <div class="badge">
-                <img src="images/badge.png" alt="">
-               </div>
-                <div class="social-links-footer">
-                    <a href="https://www.facebook.com/profile.php?id=100066400460286" aria-label="Facebook" class="disturbed"><i
-                        class='bx bxl-facebook'></i></a>
-                <a href="https://wa.me/256701705888" target="_blank"><i class='bx bxl-whatsapp'></i>
-                    <a href="https://youtu.be/2wmHz4-qH4Y?si=HnfLzBJw8lEXqULo" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
+<!--footer-->
+<footer>
+    <div class="footer-container">
+        <div class="footer-column">
+        
+           <div class="badge">
+            <img src="images/logo1-removebg.png" alt="">
+           </div>
+            <div class="social-links-footer">
+             <a href="https://www.facebook.com/profile.php?id=100066400460286" aria-label="Facebook" class="disturbed"><i
+                    class='bx bxl-facebook'></i></a>
+            <a href="https://wa.me/256701705888" target="_blank"><i class='bx bxl-whatsapp'></i>
+                <a href="https://youtu.be/2wmHz4-qH4Y?si=HnfLzBJw8lEXqULo" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
 
-                <a href="https://www.tiktok.com/@pallisa.prog..sec?is_from_webapp=1&sender_device=pc"><i class='bx bxl-tiktok'></i></a>
-                </div>
+            <a href="https://www.tiktok.com/@pallisa.prog..sec?is_from_webapp=1&sender_device=pc"><i class='bx bxl-tiktok'></i></a>
             </div>
-    </footer>
+        </div>
+     
+</footer>
 
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Scroll animations
-        const animateOnScroll = () => {
-            const elements = document.querySelectorAll(
-                '.contact-details, .contact-form, .map-section, .hours-section, .emergency-contact');
-
-            elements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-
-                if (elementPosition < windowHeight - 100) {
-                    element.classList.add('visible');
-                }
-            });
-        };
-
-        // Run once on load
-        animateOnScroll();
-
-        // Run on scroll
-        window.addEventListener('scroll', animateOnScroll);
-
-        // Form submission
-         //form script
-         const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value.trim();
-
-    // Build the WhatsApp message
-    const whatsappMessage = `
-        *New Contact Form Submission*
-        👤 Name: ${name}
-        📧 Email: ${email}
-        📱 Phone: ${phone || "N/A"}
-        📝 Subject: ${subject}
-        💬 Message: ${message}
-    `.trim();
-
-    const encodedMessage = encodeURIComponent(whatsappMessage);
-
-    // Replace leading zero with country code (assumed Kenya +254)
-    const rawPhone = "0701705888".replace(/^0/, "256");
-
-    const whatsappURL = `https://wa.me/${rawPhone}?text=${encodedMessage}`;
-
-    // Open WhatsApp in a new tab
-    window.open(whatsappURL, '_blank');
-
-    // Optional: Reset the form
-    contactForm.reset();
-});
-
-
-        //form script  
-
-
-        //form
-
-        // Highlight current day in business hours
-        const highlightCurrentDay = () => {
-            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-            const today = new Date().getDay();
-            const currentDay = days[today];
-
-            const hourItems = document.querySelectorAll('.hour-item');
-            hourItems.forEach(item => {
-                item.classList.remove('active');
-                if (item.querySelector('.day').textContent === currentDay) {
-                    item.classList.add('active');
-                }
-            });
-        };
-
-        highlightCurrentDay();
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-         // Header scroll behavior
-        let lastScroll = 0;
-        const header = document.querySelector('header');
-        const headerHeight = header.offsetHeight;
-
-        window.addEventListener('scroll', function () {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll <= 0) { // At top of page, always show header
-                header.classList.remove('hidden'); return;
-            } if (currentScroll > lastScroll &&
-                !header.classList.contains('hidden')) {
-                // Scrolling down
-                header.classList.add('hidden');
-            } else if (currentScroll < lastScroll && header.classList.contains('hidden')) { // Scrolling
-                upheader.classList.remove('hidden');
-            } lastScroll = currentScroll;
-        });
-    }); 
-    
-
-    
-      //toggle
-let buttonElement=document.querySelector('.btn');
-let links=document.querySelector('.links');
-buttonElement.addEventListener('click',function(){
-links.classList.toggle('show');
-
-});
+<!--footer-->
+    <script src="contact.js">
     </script>
 </body>
 

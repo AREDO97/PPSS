@@ -145,7 +145,7 @@
 
         /* Footer Styles */
         footer {
-            background-color: var(--primary-color);
+            background-color: rgb(224, 215, 215);
             color: white;
             padding: 3rem 2rem;
             margin-top: 4rem;
@@ -160,47 +160,7 @@
             text-align: left;
         }
 
-        .footer-column h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--secondary-color);
-        }
-
-        .footer-column p {
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-column ul li a {
-            color: var(--light-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-column ul li a:hover {
-            color: var(--secondary-color);
-        }
-
+    
         .social-links-footer {
             display: flex;
             gap: 1rem;
@@ -214,7 +174,7 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: #3498db;
             color: white;
             transition: all 0.3s ease;
         }
@@ -381,7 +341,7 @@
            display: grid;
            grid-template-columns: 1fr 1fr;
            height: 85px;
-        background-color: var(--primary-color);
+        background-color: white;
           
         }
         .logo{
@@ -390,8 +350,8 @@
             margin-top: -15px;
         }
         .logo img{
-            width: 60px;
-         
+            width: 75px;
+            height: 88px;
             border-radius: 40px;
             margin: 6% 5%;
             margin-bottom: 12%;
@@ -406,10 +366,10 @@
         .btn button{
            
            border: none;
-           background-color: var(--primary-color);
+           background-color: white;
        }
        .btn button i{
-           color: yellow;
+           color: blue;
            font-size: 35px;
        }
 
@@ -431,7 +391,7 @@
         }
         .links nav ul a{
             text-decoration: none;
-            color: var(--text-light);
+            color: black;
             font-size: 16px;
             font-weight: 600;
            
@@ -462,7 +422,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color:yellow;
+            color:white;
             transition: all 0.3s ease;
         }
 }
@@ -484,7 +444,7 @@
             width: 65px;
             height: 85px;
             border-radius: 50px;
-            margin: 5% 5%;
+            margin: 10% 5%;
             margin-bottom: 10%;
             object-fit: cover;
             object-position: top;
@@ -493,7 +453,7 @@
 .links nav ul li::after{
     content: '';
     display: block;
-    background-color: orange;
+    background-color:#3498db ;
     height: 2px;
     width: 0%;
     transition: 0.5s;
@@ -522,7 +482,7 @@ margin: 2% 40%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color:yellow;
+            color:white;
             transition: all 0.3s ease;
         }
         
@@ -539,7 +499,8 @@ margin: 2% 40%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: var(--primary-color);
+            background-color: rgb(248, 238, 238);
+            height: 90px;
         }
        
         .links nav ul li{
@@ -549,7 +510,7 @@ margin: 2% 40%;
         }
         .links nav ul li a{
             text-decoration: none;
-            color: white;
+            color: black;
             font-size: 20px;
             font-weight: 600;
         }
@@ -560,7 +521,7 @@ margin: 2% 40%;
             display: none;
         }
         .logo h3{
-          color: white;
+          color: black;
           font-size: 20px;
           margin: 0 3%;
         }
@@ -576,7 +537,7 @@ margin: 2% 40%;
     <div class="phone-view">
        
         <div class="logo">
-<img src="images/badge.png" alt="">
+<img src="images/logo1-removebg.png" alt="">
 
 <h3>Pallisa Progressive Secondary School</h3>
         </div>
@@ -625,13 +586,13 @@ margin: 2% 40%;
 
             <!-- Event Images -->
             <div class="gallery-item" data-category="events">
-                <img src="images/science-fair.jpg" alt="Annual Science Fair">
+                <img src="images/event-scroll.jpg" alt="Annual Science Fair">
             </div>
             <div class="gallery-item" data-category="events">
-                <img src="images/adimBlock.jpg" alt="Graduation Ceremony">
+                <img src="images/science-lab.jpeg" alt="Science Practical">
             </div>
             <div class="gallery-item" data-category="events">
-                <img src="images/culture.jpg" alt="Cultural Day">
+                <img src="images/scroll2.jpg" alt="Cultural Day">
             </div>
 
             <!-- Sports Images -->
@@ -658,7 +619,7 @@ margin: 2% 40%;
 
             <!-- Additional Images -->
             <div class="gallery-item" data-category="events">
-                <img src="images/cool4.jpeg" alt="Prize Giving Day">
+                <img src="images/music-festival.jpeg" alt="Prize Giving Day">
             </div>
             <div class="gallery-item" data-category="campus">
                 <img src="images/dormitories2.jpeg" alt="School Dormitories">
@@ -670,7 +631,7 @@ margin: 2% 40%;
                 <img src="images/art-class.jpeg" alt="Art Class">
             </div>
             <div class="gallery-item" data-category="events">
-                <img src="images/music-fest.jpeg" alt="Music Festival">
+                <img src="images/scroll1.jpg" alt="Music Festival">
             </div>
         </div>
     </section>
@@ -680,7 +641,7 @@ margin: 2% 40%;
         <div class="footer-column">
         
            <div class="badge">
-            <img src="images/badge.png" alt="">
+            <img src="images/logo1-removebg.png" alt="">
            </div>
             <div class="social-links-footer">
             <a href="https://www.facebook.com/profile.php?id=100066400460286" aria-label="Facebook" class="disturbed"><i

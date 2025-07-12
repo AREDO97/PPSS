@@ -45,7 +45,7 @@
             box-sizing: border-box;
         }
 
-/*badge*/
+/*badge var(--primary-color)*/
 .badge img{
     width: 120px;
    object-fit: cover;
@@ -55,7 +55,7 @@
            display: grid;
            grid-template-columns: 1fr 1fr;
            height: 180px;
-            background-color: var(--primary-color);
+            background-color: rgb(255, 255, 255);
             margin-top: -190px;
            
         }
@@ -65,8 +65,8 @@
        
         }
         .logo img{
-            width: 60px;
-            height: 85px;
+            width: 75px;
+            height: 88px;
             border-radius: 40px;
             margin-top: 40%;
             margin-left: 3%;
@@ -78,6 +78,7 @@
             margin-left: 70%;
             margin-top: 58%;
         }
+        
         .links{
             display: none;
             background-color: white;
@@ -106,7 +107,7 @@
 .links nav ul li::after{
     content: '';
     display: block;
-    background-color: orange;
+    background-color:#3498db;
     height: 2px;
     width: 0%;
     transition: 0.5s;
@@ -135,9 +136,6 @@
         
         }
 
-        
-
-        
 
         main {
             max-width: 1200px;
@@ -158,7 +156,7 @@
         }
 
         .home-page1 {
-            background: linear-gradient(rgba(0, 0, 0, 0.9), 
+            background: linear-gradient(rgba(0, 0, 0, 0.7), 
             rgba(0, 0, 0, 0.8)), url('images/mentorGate.jpg');
             background-size: cover;
             background-attachment: fixed;
@@ -166,7 +164,7 @@
             color: white;
             padding: 8rem 4rem;
             text-align: left;
-            min-height: 80vh;
+            min-height: 20vh;
             margin-bottom: 4rem;
             width: 100%;
             transition: background-image 1s ease-in-out;
@@ -183,7 +181,7 @@
             margin-bottom: 1rem;
             animation: fadeInUp 1s ease 0.6s both;
             margin-left: 50px;
-            margin-top: -90px;
+            margin-top: -120px;
         }
 
 
@@ -404,16 +402,17 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: var(--primary-color);
-            margin-top: -80px;
+            background-color: rgb(247, 242, 242);
+            margin-top: -72px;
+            height: 90px;
         }
         .logo{
             display: flex;
             align-items: center;
         }
         .logo img{
-            width: 60px;
-            height: 80px;
+            width: 65px;
+            height: 88px;
             border-radius: 30px;
         }
         .links nav .show li{
@@ -423,7 +422,7 @@
         }
         .links nav .show li a{
             text-decoration: none;
-            color: white;
+            color: black;
             font-size: 20px;
             font-weight: 600;
         }
@@ -434,7 +433,7 @@
             display: none;
         }
         .logo h3{
-          color: white;
+          color: black;
           font-size: 20px;
           margin: 0 3%;
         }
@@ -474,6 +473,7 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
+            
         }
         .eduction-programs h2{
             font-size: 1.2rem;
@@ -548,7 +548,7 @@ margin-top: 5%;
 
         /* Footer Styles */
         footer {
-            background-color: var(--primary-color);
+            background-color: rgb(199, 199, 199);
             color: white;
             padding: 3rem 2rem;
             margin-top: 4rem;
@@ -563,53 +563,7 @@ margin-top: 5%;
             text-align: left;
         }
 
-        .footer-column h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--secondary-color);
-        }
-
-        .footer-column p {
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-column ul li a {
-            color: var(--light-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-column ul li a:hover {
-            color: var(--secondary-color);
-        }
-
-        .social-links-footer {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
+      
         .social-links-footer a {
             display: flex;
             align-items: center;
@@ -617,11 +571,11 @@ margin-top: 5%;
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white;
+            color: white;         
+            background-color:#3498db ;      
             transition: all 0.3s ease;
         }
-
+        
         .social-links-footer a:hover {
             background-color: var(--secondary-color);
             transform: translateY(-3px);
@@ -630,31 +584,7 @@ margin-top: 5%;
 /*footer new style*/
 
 
-        .copyright {
-            text-align: center;
-            padding-top: 2rem;
-            margin-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-        }
-
-        .quick-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .quick-links a {
-            color: var(--light-color);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-
-        .quick-links a:hover {
-            color: var(--secondary-color);
-        }
+       
 
         @keyframes fadeIn {
             from {
@@ -716,10 +646,37 @@ margin-top: 5%;
                 justify-content: center;
             }
             .social-links-footer a i{
-                color: orange;
+                color: white;
             }
         }
+@media (max-width:599px) {
+    .social-links-footer {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
 
+        .social-links-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: white;         
+            background-color:#3498db ;      /* #3498db  var(--secondary-color)*/
+            transition: all 0.3s ease;
+        }
+         .social-links-footer a{
+            color: white;
+         }
+        
+        .social-links-footer a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+}
         @media (max-width: 480px) {
             body {
                 padding-top: 120px;
@@ -773,13 +730,12 @@ margin-top: 5%;
         .btn button{
            
             border: none;
-            background-color: var(--primary-color);
+            background-color: white;
         }
         .btn button i{
-            color: orange;
+            color: blue;
             font-size: 35px;
         }
-
         /*special script*/
 hr{
     width: 15%;
@@ -809,7 +765,7 @@ hr{
 .links nav ul li::after{
     content: '';
     display: block;
-    background-color: orange;
+    background-color: #3498db;
     height: 2px;
     width: 0%;
     transition: 0.5s;
@@ -838,9 +794,7 @@ margin: 2% 40%;
             display: flex;
             align-items: center;
             justify-content: center;
-           
-           
-            color:yellow;
+            color:white;
             transition: all 0.3s ease;
         }
         
@@ -1030,14 +984,312 @@ color: var(--text-light);
   color: #333;
 } 
       /*old*/  
+
+   
+
+
+/*SLIDER*/
+.carousel-container {
+  width: 100%;
+  overflow: hidden; /* hide overflow */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.slide {
+  width: 96%;        /* each slide fills container */
+  flex-shrink: 0;     /* prevent shrinking */
+  object-fit: cover;
+  height: 400px;      /* adjust to taste */
+  border-radius: 5%;
+  margin: 2% 2%;         /* optional spacing */
+}
+
+/* Example: smaller height on narrow screens */
+@media (max-width: 599px) {
+  .slide {
+    height: 300px;
+  }
+}
+@media (min-width:600px) {
+    .slide {
+    height: 420px;
+    border-radius: 1%;
+  }
+}
+@media (max-width:599px) {
+    .main-content1{
+      background-color: rgb(199, 223, 232);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+            height: 380px;
+            width: 90%;
+            overflow: hidden;
+}
+}
+@media (min-width:600px) {
+    .main-content1{
+      background-color: rgb(199, 223, 232);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+            
+            overflow: hidden;
+              width: 90%;
+          max-width: 700px;
+      height: 330px;
+      overflow: hidden;
+      border-radius: 15px;
+           
+}
+
+}
+/*welcome*/
+@media (max-width:599px) {
+    .homepage9 {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            background-color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+           
+        }
+
+        
+        .homepage9 .content {
+            width: 100%;
+        }
+
+        .homepage9 h2 {
+            font-size: 1.2rem;
+            color: 
+            skyblue;
+            margin-bottom: 1.5rem;
+        }
+
+        .homepage9 p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+        .welcomed{
+            display: none;
+        }
+}
+@media (min-width:600px) {
+      .homepage9 {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            background-color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+           
+        }
+
+        
+        .homepage9 .content {
+            width: 100%;
+        }
+
+        .homepage9 h2 {
+            font-size: 1.2rem;
+            color: 
+            skyblue;
+            margin-bottom: 1.5rem;
+        }
+
+        .homepage9 p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+}
+/*our services*/
+
+    #ourservices-slideshow {
+      position: relative;
+      width: 60%;
+      max-width: 700px;
+      height: 330px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+      background: #fff;
+      margin: 1% 0%;
+    }
+
+    .ourservices-slide {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 30px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      transition: opacity 0.8s ease;
+    }
+
+    .ourservices-slide h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .ourservices-slide p {
+      font-size: 1rem;
+      line-height: 1.5;
+      max-width: 90%;
+    }
+
+    /* Unique Backgrounds */
+    #ourservices-health { background-color: #9C27B0; }
+    #ourservices-entertainment { background-color: #FF5722; }
+    #ourservices-boarding { background-color: #3F51B5; }
+    #ourservices-internet { background-color: #009688; }
+    #ourservices-security { background-color: #4CAF50; }
+
+    .ourservices-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      background: rgba(0, 0, 0, 0.3);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    .ourservices-nav-btn:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    #ourservices-prev { left: 15px; }
+    #ourservices-next { right: 15px; }
+/*our services*/
+@media (max-width:599px) {
+      #ourservices-slideshow {
+      position: relative;
+      width: 90%;
+      max-width: 700px;
+      height: 330px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+      background: #fff;
+      margin: 1% 4%;
+    }
+
+}
+/*contains-two*/
+@media (min-width:600px) {
+   .contains-two{
+    display: flex;
+   vertical-align: top;
+} 
+}
+/*h2*/
+@media (max-width:599px) {
+    .my-h2{
+    margin: 2% 24%;
+}
+}
+
+
+@media (min-width:600px) {
+    .my-h2{
+    display: none;
+}
+}
+/*2*/
+
+/*3*/
+@media (max-width:599px) {
+    .my-h3{
+    margin: 2% 10%;
+    margin-top: 10%;
+}
+}
+
+@media (min-width:600px) {
+    .my-h3{
+    display: none;
+}
+}
+/*first background*/
+@media (min-width:600px) {
+    .home-content p{
+        margin: 2% 30%;
+    }
+    .home-content h4{
+        margin: 2% 30%;
+    }
+    .spans{
+         margin: 2% 30%;
+    }
+}
+@media (min-width:600px) {
+      .home-page1 {
+min-height: 20vh;
+      }
+       .home-page1 p {
+            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+            animation: fadeInUp 1s ease 0.3s both;
+            margin-left: 120px;
+        }
+        .home-page1 h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease 0.6s both;
+            margin-left: 120px;
+            margin-top: -120px;
+        }
+
+
+        .home-page1 h4 SPAN {
+            font-size: 2.0rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease 0.6s both;
+            color: rgb(59, 162, 202);
+        }
+}
+
+/*footer again*/
+@media (max-width:599px) {
+     .social-links-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:white;
+            transition: all 0.3s ease;
+        }
+        
+}
     </style>
 </head>
+
 
 <body>
     <div class="phone-view">
        
         <div class="logo">
-<img src="images/badge.png" alt="">
+<img src="images/logo1-removebg.png" alt="">
 
 <h3>Pallisa Progressive Secondary School</h3>
         </div>
@@ -1085,18 +1337,15 @@ color: var(--text-light);
             <div class="motto1">
                 <i class='bx bx-home'></i>
                 <h1>SCHOOL VISION</h1>
-                <P>To be a center of scientific 
-                    and technological excellence
+                <P>
+                    To provide innovative,scientific,comprehensive integral and global career
                  </P>
             </div>
             <div class="motto1">
                 <i class='bx bxs-graduation'></i>
                 <h1>SCHOOL MISSION</h1>
-                <p>To provide quality education that nurtures
-                     academic excellence, moral values, and 
-                     practical skills in
-                    a supportive
-                    environment.</p>
+                <p>To be a center of scientific 
+                    and technological excellence of high quality education</p>
             </div>
             <div class="motto1">
                 <i class='bx bxs-bible'></i>
@@ -1105,11 +1354,38 @@ color: var(--text-light);
                      High self-esteem. </p>
             </div>
         </section>
+        
+<!--sliding images-->
+<div class="carousel-container">
+  <div class="carousel-track">
+    <img src="images/pp4.jpeg" alt="" class="slide">
+    <img src="images/scroll1.jpg" class="slide">
+    <img src="images/scroll2.jpg" class="slide">
+    <img src="images/scroll3.jpg" class="slide">
 
-        <section class="welcome-message">
-           
+  </div>
+</div>
+<!--sliding images-->
+
+
+       <!--welcome text-->
+         <section class="homepage9">
+            <div class="content">
+                <h2>WELCOME TO PPSS</h2>
+                <p>Welcome to Pallisa Progressive Secondary School,
+                    an institution dedicated to academic excellence and holistic 
+                    student development.Our school provides a safe,supportive,and inspiring 
+                    environment where every learner is empowered to grow academically,socially 
+                    and morally. <span class="welcomed">
+                        Your journey with us begins now.
+                        Explore the opportunities that lie ahead, connect with our vibrant traditions 
+                    and values, and join us in building a legacy of excellence.
+                    </span>
+                    
+                    </p>
+            </div>
         </section>
-
+<!--welcome text-->
         <section class="homepage2">
             <img src="images/science-fair.jpg" alt="Academic Excellence" class="gud">
 
@@ -1126,15 +1402,7 @@ color: var(--text-light);
         </section>
 
         <section class="homepage3">
-              <!--
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <i class='bx bxs-bible'></i>
-     <i class='bx bxs-graduation'></i>
-     //old
-       <i class='bx bx-male-female'></i>
-        <i class='bx bxs-star'></i>
-        -->
+        
 
             <div class="home-pictures">
 
@@ -1166,48 +1434,7 @@ color: var(--text-light);
                         <i class='bx bxs-quote-alt-right'></i>
                      </span>
                 </div>
-<!--
-             <div class="pictures">
-                    
-                    <h2><i class='bx bxs-quote-alt-left'></i> Preparing Future Professionals</h2>
-                    <span>Unlock your potential with our hands-on,future 
-                        focused education.
-                        Our competency-based approach equips you with
-                         real world skills,critical 
-                        thinking,and industry expertise-preparing you 
-                        to lead,innovate,and thrive in a
-                         competitive world.Your success starts here!
-                         <button class="read" onclick="showMe()">Read more</button>
-                        <span class="hide">We are committed to preparing future 
-                            professionals by offering a holistic education
-                            that blends academics,skills development,
-                            and character building.
-                            Our mission is to nurture career-ready 
-                            minds equipped to thrive
-                            in any field they pursue.
 
-                        </span>
-                    </span>
-                </div>   
-                //facilities
-
-                 <div class="pictures">
-                    <img src="images/science-fair.jpg" alt="Science Fair" class="path">
-                    
-                    <span>
-                        Our school is equipped with essential learning facilities
-                        that support student's academic growth.The library provides a quiet and resourceful place for 
-                        reading <br>
-                        Our science laboratory provides students with hands-on
-                        experience to explore scientific concepts through practical experiments
-                        <br>
-                        In addition,our computer lab is equipped with modern computers
-                        and internet access,giving students the opportunity to develope digital skills 
-                        and conduct research.
-                    </span>
-                </div>
-            </div>
-                -->
             
         </section>
 
@@ -1265,14 +1492,75 @@ color: var(--text-light);
                             value of discipline, respect and sportsmanship.</p>
                     </div>
                 </div>
+
             </div>
         </section>
 
+                <!--others-->
+         <section class="hompage4">
+           
+            <div class="main-content">
+                <div class="eduction-programs">
+                    <img src="images/debate.jpg" alt="DEBATES IMAGE">
+                    <div class="eduction-programs-content">
+                        <h2>School Debates</h2>
+                        <p>These helps students to learn through friendly competitions,
+                            examine controversial topics and strengthen skills in the areas
+                            of leadership,team building and verbal presentation.</p>
+                    </div>
+                </div>
+
+                <div class="eduction-programs">
+                    <img src="images/lab2.jpeg" alt="School Media">
+                    <div class="eduction-programs-content">
+                        <h2>School Media</h2>
+                        <p>The school media club promotes creativity and communication by engaging students 
+                            in digital content creation.It plays a vital role in documenting school activities and 
+                            producing media content.</p>
+                    </div>
+                </div>
+                </section>
+             <!--our services-->
+
+             <div class="contains-two" >
+ <h2 style="color: #009688;" class="my-h2"> Our services</h2>
+   
+         <div id="ourservices-slideshow">
+    <div class="ourservices-slide" id="ourservices-health">
+      <h2>Health</h2>
+      <p>We operate a well-established and fully equipped sick bay, staffed by a qualified healthcare professional who is available throughout the school day.</p>
+    </div>
+
+    <div class="ourservices-slide" id="ourservices-entertainment">
+      <h2>Entertainment</h2>
+      <p>Students enjoy access to music, drama, sports and co-curricular clubs to promote creativity, teamwork, and relaxation.</p>
+    </div>
+
+    <div class="ourservices-slide" id="ourservices-boarding">
+      <h2>Boarding</h2>
+      <p>Our clean and secure dormitories provide a comfortable home-away-from-home, with meals and supervision included.</p>
+    </div>
+
+    <div class="ourservices-slide" id="ourservices-internet">
+      <h2>Internet</h2>
+      <p>Students benefit from fast and safe internet access in our computer lab for research, digital learning, and assignments.</p>
+    </div>
+
+    <div class="ourservices-slide" id="ourservices-security">
+      <h2>Security</h2>
+      <p>The school maintains a robust and well-structured security system to ensure safety of all students, staff and visitors.</p>
+    </div>
+
+    <button class="ourservices-nav-btn" id="ourservices-prev">&#10094;</button>
+    <button class="ourservices-nav-btn" id="ourservices-next">&#10095;</button>
+  </div>
+
+             <!--our services-->
 <!--
         what our students say-->
         <section class="hompage4">
             <div class="homepage4-text">
-                <h2> <span></span> Voice of the Students</h2>
+                <h2 class="my-h3"> Voice of the Students</h2>
                 <div class="main-content1">
                     <div class="education-programs-content">
                       <span class="quote-icon"><i class='bx bxs-quote-alt-left'></i></span>
@@ -1292,7 +1580,16 @@ color: var(--text-light);
 
           
         </section>
-      
+             </div>
+               
+        
+
+<!--
+<img src="images/pp4.jpeg" alt="">
+"images/lab4.jpeg",
+  "images/lib3.jpeg",
+"images/lab2.jpeg"
+-->
 
     </main>
 
@@ -1301,7 +1598,7 @@ color: var(--text-light);
             <div class="footer-column">
             
                <div class="badge">
-                <img src="images/badge.png" alt="">
+                <img src="images/logo1-removebg.png" alt="">
                </div>
                 <div class="social-links-footer">
                     <a href="https://www.facebook.com/profile.php?id=100066400460286" aria-label="Facebook" class="disturbed"><i
@@ -1319,11 +1616,11 @@ color: var(--text-light);
     <script>
         // Background Image Rotation
         const backgroundImages = [
-            " url('images/mentorGate.jpg')", "url('images/science-fair.jpg')", "url('images/art-class.jpeg')"]; let
+            " url('images/pp4.jpeg')", "url('images/science-fair.jpg')", "url('images/art-class.jpeg')"]; let
                 currentImageIndex = 0; const heroSection = document.querySelector('.home-page1'); function
             changeBackgroundImage() {
                 currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
-            heroSection.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+            heroSection.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
                     ${backgroundImages[currentImageIndex]}`;
         } // Change image every 10 seconds
         setInterval(changeBackgroundImage, 10000); // Scroll animation for sections
@@ -1433,9 +1730,9 @@ links.classList.toggle('show');
 });
 
 let myImages=["images/library6.jpeg",
-  "images/pp4.jpeg", "images/library 8.jpeg","images/lab4.jpeg",
-  "images/lib3.jpeg",
-"images/lab2.jpeg"
+  "images/lib2.jpeg", "images/library 8.jpeg","images/lab4.jpeg",
+  "images/lib3.jpeg"
+
 ];
  let path=document.querySelector('.path');
  let index=0;
@@ -1502,22 +1799,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
  //welcome page
 
- //what students say
- document.addEventListener('DOMContentLoaded', () => {
+
+ //what kids say
+document.addEventListener('DOMContentLoaded', () => {
   const quotes = [
     {
       text: "Here, education is more than just books; it's about embracing diversity and preparing for a bright future.",
       author: "Emurwon Robert"
     },
     {
-      text: "Being at PPSS was a life changing experience,Teachers are supportive and the environment is welcoming.",
-      author: "Odele John "
+      text: "Being at PPSS was a life changing experience, Teachers are supportive and the environment is welcoming.",
+      author: "Odele John"
     },
     {
-      text: "Pallisa Progressive is definitely one of those schools that  I will always hold dear to me .Good values,reconnected me to God &  it was worth all it in the end"
-                           
-                           ,
-                            
+      text: "Pallisa Progressive is definitely one of those schools that I will always hold dear to me. Good values, reconnected me to God & it was worth all it in the end",
       author: "Alutia Collins"
     }
   ];
@@ -1527,6 +1822,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const authorElem = content.querySelector('.author-name');
   const dots = document.querySelectorAll('.navigation-dots .dot');
 
+  let currentIndex = 0;
+
   function showQuote(index) {
     const q = quotes[index];
     quoteElem.textContent = q.text;
@@ -1535,15 +1832,98 @@ document.addEventListener('DOMContentLoaded', () => {
     dots.forEach((d, i) => d.classList.toggle('active', i === index));
   }
 
+  // Initialize with the first quote
+  showQuote(currentIndex);
+
+  // Add click event listeners to dots for manual navigation
   dots.forEach(dot => {
     dot.addEventListener('click', () => {
       const idx = parseInt(dot.dataset.index, 10);
-      showQuote(idx);
+      currentIndex = idx;
+      showQuote(currentIndex);
     });
   });
+
+  // Automatically change quotes every 5 seconds
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % quotes.length;
+    showQuote(currentIndex);
+  }, 9000);
 });
- 
- //what students say
+
+//what kids say last
+
+//new slider
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  
+  let slideWidth = track.clientWidth; // size of each slide
+  let currentIndex = 0;
+
+  function moveToSlide(index) {
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+  }
+
+  window.addEventListener('resize', () => {
+    slideWidth = track.clientWidth;
+    moveToSlide(currentIndex); // adjust position on resize
+  });
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    moveToSlide(currentIndex);
+  }, 5000);
+});
+
+
+//our services
+
+ const ourservicesSlides = document.querySelectorAll('.ourservices-slide');
+    const ourservicesPrevBtn = document.getElementById('ourservices-prev');
+    const ourservicesNextBtn = document.getElementById('ourservices-next');
+
+    let ourservicesIndex = 0;
+    let ourservicesInterval;
+
+    function showOurservicesSlide(index) {
+      ourservicesSlides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? 'flex' : 'none';
+      });
+    }
+
+    function nextOurservicesSlide() {
+      ourservicesIndex = (ourservicesIndex + 1) % ourservicesSlides.length;
+      showOurservicesSlide(ourservicesIndex);
+    }
+
+    function prevOurservicesSlide() {
+      ourservicesIndex = (ourservicesIndex - 1 + ourservicesSlides.length) % ourservicesSlides.length;
+      showOurservicesSlide(ourservicesIndex);
+    }
+
+    function startOurservicesAutoSlide() {
+      ourservicesInterval = setInterval(nextOurservicesSlide, 8000); // 5 seconds
+    }
+
+    function resetOurservicesAutoSlide() {
+      clearInterval(ourservicesInterval);
+      startOurservicesAutoSlide();
+    }
+
+    ourservicesNextBtn.addEventListener('click', () => {
+      nextOurservicesSlide();
+      resetOurservicesAutoSlide();
+    });
+
+    ourservicesPrevBtn.addEventListener('click', () => {
+      prevOurservicesSlide();
+      resetOurservicesAutoSlide();
+    });
+
+    // Initialize
+    showOurservicesSlide(ourservicesIndex);
+    startOurservicesAutoSlide();
         </script>
 </body>
 
