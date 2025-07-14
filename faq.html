@@ -282,6 +282,7 @@
             color: white;
             padding: 3rem 2rem;
             margin-top: 4rem;
+            background: linear-gradient(to right,white,pink);
         }
 
         .footer-container {
@@ -476,7 +477,7 @@
             object-position: top;
         }
 /*animation*/
-.links nav ul li::after{
+.links nav ul li::before{
     content: '';
     display: block;
     background-color:  #3498db;
@@ -487,7 +488,21 @@
 .links nav ul li:hover::after{
     width: 100%;
 }
+/*animation*/
 
+/*animation*/
+.links nav ul li::after{
+    content: '';
+    display: block;
+    background-color:#3498db;
+    height: 2px;
+    width: 0%;
+    transition: 0.5s;
+}
+.links nav ul li:hover::after{
+    width: 40%;
+}
+/*animation*/
 
   /*footer design*/
     .badge img{
@@ -553,6 +568,7 @@ margin: 2% 40%;
                grid-template-columns: 1fr 1fr;
                height: 90px;
                 background-color: white;
+                background: linear-gradient(to right,white,pink);
                
               
             }
@@ -578,7 +594,7 @@ margin: 2% 40%;
            font-size: 35px;
            color: blue;
            border: none;
-           background-color: white;
+           background-color: rgb(230, 161, 172);
            }
             .links{
                 display: none;
@@ -614,7 +630,7 @@ margin: 2% 40%;
         transition: 0.5s;
     }
     .links nav ul li:hover::after{
-        width: 40%;
+        width: 100%;
     }
     
             .show{
@@ -647,6 +663,7 @@ margin: 2% 40%;
             align-items: center;
             background-color: white;
             height: 95px;
+            background: linear-gradient(white,pink);
         }
         .logo{
             display: flex;
@@ -680,7 +697,18 @@ margin: 2% 40%;
           font-size: 20px;
           margin: 0 3%;
         }
-
+/*animation*/
+.links nav ul li::after{
+    content: '';
+    display: block;
+    background-color:#3498db;
+    height: 2px;
+    width: 0%;
+    transition: 0.5s;
+}
+.links nav ul li:hover::after{
+    width: 100%;
+}
 
 }
 
@@ -749,7 +777,7 @@ color: var(--text-light);
         .btn button{
            
             border: none;
-            background-color: var(--primary-color);
+            background-color: pink;
         }
         .btn button i{
             color: orange;
@@ -764,18 +792,20 @@ color: var(--text-light);
            font-size: 35px;
            color: blue;
            border: none;
-           background-color: white;
+           background-color:rgb(252, 194, 203);
            }
             .btn button i{
            font-size: 35px;
            color: blue;
            border: none;
-           background-color: white;
+          
            }
           
           }
             
-       }
+       }/*small*/
+       /*animation*/
+
     </style>
 </head>
 
@@ -1028,37 +1058,6 @@ color: var(--text-light);
             <button class="contact-btn"><a href="tel:+256 775391008"><i class='bx bx-phone' ></i> Contact Us</a></button>
         </div>
     </main>
-
-    <section class="staff-profiles">
-        <h2>What <span>people</span> say </h2>
-        <div class="profiles-grid">
-            <div class="profile-card">
-               
-                <div class="profile-info">
-                    <p class="quotes"><i class='bx bxs-quote-alt-left'></i></p>
-                    <h4 class="text"> Mr. Emurwon Robert</h4>
-                    <p class="title">The school prioritizes individual attention
-                        and support to each student.It has a diverse and inclusive
-                        atmosphere.
-                    </p>
-                </div>
-               
-            </div>
-            <div class="buttons">
-                <button class="prev"> 
-                    <i class='bx bx-chevron-left'></i>
-                  
-                    </button>
-                <button class="next">
-                    <i class='bx bx-chevron-right'></i>
-                </button>
-            </div>
-            
-    </section>
-
-
-
-
 
             <footer>
                 <div class="footer-container">

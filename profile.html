@@ -112,7 +112,7 @@
 
 
 
-/*staff-profile1*/
+/*staff-profile1      background-color: rgb(252, 252, 252);*/
 
 
 
@@ -120,8 +120,8 @@
            display: grid;
            grid-template-columns: 1fr 1fr;
            height: 85px;
-            background-color: rgb(252, 252, 252);
-          
+       
+            background: linear-gradient(to right,white,pink);
         }
         .logo{
             display: flex;
@@ -164,9 +164,20 @@
             color: var(--text-light);
             font-size: 16px;
             font-weight: 600;
-           
-          
         }
+/*animation*/
+.links nav ul li::after{
+    content: '';
+    display: block;
+    background-color:#3498db;
+    height: 2px;
+    width: 0%;
+    transition: 0.5s;
+}
+.links nav ul li:hover::after{
+    width: 40%;
+}
+
         .show{
             display: inline-block;
             z-index: 2;
@@ -252,7 +263,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: white;
+         background: linear-gradient(white,pink);
             height: 95px;
         }
         .logo{
@@ -379,7 +390,8 @@
         }
         /* Footer Styles */
         footer {
-            background-color: rgb(236, 233, 233);
+           background: linear-gradient(to right,white,pink);
+
             color: white;
             padding: 3rem 2rem;
             margin-top: 4rem;
@@ -556,7 +568,7 @@
         .btn button{
            
             border: none;
-            background-color: white;
+              background:rgba(255, 198, 208, 0.801);
         }
         .btn button i{
             color:blue;
@@ -756,10 +768,12 @@ margin: 2% 40%;
     margin: 2% 30%;
 }
 
-/*remove*/
+/*remove    background-color: rgb(199, 199, 199);*/
 @media (max-width:599px) {
      footer {
-            background-color: rgb(199, 199, 199);
+          
+            background: linear-gradient(to right,white,pink);
+
             color: white;
             padding: 3rem 2rem;
             margin-top: 4rem;
@@ -977,6 +991,8 @@ background: transparent;
 <!--<img src="images/imalingat.jpg" alt="">
 -->
 
+
+
      
     <div class="phone-view">
        
@@ -1062,7 +1078,6 @@ background: transparent;
             <a href="https://www.tiktok.com/@pallisa.prog..sec?is_from_webapp=1&sender_device=pc"><i class='bx bxl-tiktok'></i></a>
             </div>
         </div>
-     
 
 </footer>
 
@@ -1127,14 +1142,14 @@ background: transparent;
 
         let content=[
         {
-            img:"images/odeke5.jpg",
+            img:"images/odeke-tall.jpg",
             title:"RESIDENT DIRECTOR",
             text:"Odeke john"
         },
            
         {
             id:1,
-            img:"images/waiswa2.jpg",
+            img:"images/waiswa4.jpg",
             title:'HEAD-TEACHER',
             text:"Waisa Fred"
         },
@@ -1231,7 +1246,7 @@ const staffProfiles = [
   {
     name: "Mr. Mwesiga Musa",
     title: "H.OD CHEMISTRY",
-    image: "https://via.placeholder.com/150?text=Alan+Brown"
+    image: "images/musa1.jpg"
   },
   {
     name: "Ms. Gashudo Muhamad",

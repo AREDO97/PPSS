@@ -27,7 +27,69 @@
             padding: 0;
             box-sizing: border-box;
         }
+/*new*/
+header { margin-top: -80px;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    padding: 0.5rem; 
+    background: linear-gradient(to right, white, pink);
+}
+@media (min-width:600px) {
+    header { margin-top: -80px;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    padding: 0.5rem; 
+    background: linear-gradient( white, pink);
+    height: 100px;
+}
 
+}
+/* Logo */
+.logo { display: flex; align-items: center; }
+.logo img { width: 75px; height: 88px; border-radius: 80%; object-fit: cover; object-position: top; margin-right: 0.5rem; }
+.logo h2 { font-size: 1.2rem; color: #333; }
+
+/* Hamburger Button */
+.menu-button { display: none; background: none; border: none; cursor: pointer; }
+.menu-button .bar { display: block; width: 25px; height: 3px; margin: 4px 0; background-color: #333; transition: transform 0.3s ease; }
+
+/* Navigation Menu (hidden by default) */
+.nav-menu {z-index: 2;
+     position: fixed; top: 0; left: 0; height: 70%; width: 0; overflow: hidden;
+      visibility: hidden;
+       background: rgba(255,255,255,0.95);
+        transition: width 0.4s ease, visibility 0.4s; 
+        padding-top: 6rem; }
+.nav-menu.visible { width: 250px; visibility: visible; }
+.nav-menu ul { list-style: none; padding: 0 1rem; }
+.nav-menu li { margin: 1rem 0; }
+.nav-menu a { text-decoration: none; color: #333; font-size: 1.1rem; }
+
+/* Close Button */
+.close-button { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 2rem; }
+
+/* Hover underline animation */
+.nav-menu a::after {
+  content: ''; display: block; height: 2px; width: 0; background: #3498db; transition: width 0.5s;
+}
+.nav-menu li:hover a::after { width: 40%; }
+@media (min-width:600px) {
+    .nav-menu li:hover a::after { width: 100%; }
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-button { display: block; }
+  .logo h2 { display: none; }
+}
+@media (min-width: 769px) {
+  .nav-menu { position: static; width: auto; visibility: visible; display: flex; background: none; padding: 0; }
+  .nav-menu ul { display: flex; gap: 1rem; }
+  .menu-button, .close-button { display: none; }
+}
+
+/*new*/
         body {
             font-family: 'Poppins', sans-serif;
             color: var(--text-color);
@@ -45,92 +107,11 @@
             box-sizing: border-box;
         }
 
-/*badge var(--primary-color)*/
+/*badge var(--primary-color) rgb(255, 255, 255)*/
 .badge img{
     width: 120px;
    object-fit: cover;
 }
-
-            .phone-view{
-           display: grid;
-           grid-template-columns: 1fr 1fr;
-           height: 180px;
-            background-color: rgb(255, 255, 255);
-            margin-top: -190px;
-           
-        }
-        .logo{
-            display: flex;
-            align-items: center;
-       
-        }
-        .logo img{
-            width: 75px;
-            height: 88px;
-            border-radius: 40px;
-            margin-top: 40%;
-            margin-left: 3%;
-            object-fit: cover;
-            object-position: top;
-        }
-
-        .btn{
-            margin-left: 70%;
-            margin-top: 58%;
-        }
-        
-        .links{
-            display: none;
-            background-color: white;
-            margin: 30% 10%;
-            height: 300px;
-            margin: 0px 120%;
-           transition: 3s ease;
-         
-        }
-       
-        .links nav ul li{
-            list-style: none;
-            padding: 3% 3%;
-            margin: 3% 1%;
-        }
-        .links nav ul a{
-            text-decoration: none;
-            color: var(--text-light);
-            font-size: 16px;
-            font-weight: 600;
-           
-          
-        }
-
-/*animation*/
-.links nav ul li::after{
-    content: '';
-    display: block;
-    background-color:#3498db;
-    height: 2px;
-    width: 0%;
-    transition: 0.5s;
-}
-.links nav ul li:hover::after{
-    width: 40%;
-}
-
-        .show{
-            display: inline-block;
-            z-index: 2;
-            width: 100%;
-            transition: 3s ease;
-        
-          
-        }
-       .logo h2{
-            color: white;
-            margin: auto 5%;
-        }
-        .logo h3{
-            display: none;
-        }
 
        
         
@@ -225,7 +206,8 @@
             gap: 2rem;
             margin-bottom: 4rem;
         }
-
+/* background: linear-gradient(to right,white,pink);*/
+/* background-color: rgb(199, 223, 232);*/
         .motto1 {
             background-color: rgb(199, 223, 232);
             padding: 2rem;
@@ -233,6 +215,7 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             text-align: center;
             transition: transform 0.3s ease;
+            margin: 2% 5%;
         }
 
         .motto1:hover {
@@ -264,7 +247,7 @@
             align-items: center;
             gap: 3rem;
             background-color: white;
-            padding: 3rem;
+            padding: 0rem;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
            
@@ -387,7 +370,7 @@
        
     
        
-        /*pict big screen*/
+        /*pict big screen    */
     @media (min-width:600px) {
     .btn{
         display: none;
@@ -398,46 +381,8 @@
     width: 150px;
    object-fit: cover;
 }   
-        .phone-view{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: rgb(247, 242, 242);
-            margin-top: -72px;
-            height: 90px;
-        }
-        .logo{
-            display: flex;
-            align-items: center;
-        }
-        .logo img{
-            width: 65px;
-            height: 88px;
-            border-radius: 30px;
-        }
-        .links nav .show li{
-            list-style: none;
-            margin: 0 2%;
-            display: inline-block;
-        }
-        .links nav .show li a{
-            text-decoration: none;
-            color: black;
-            font-size: 20px;
-            font-weight: 600;
-        }
-        .links nav .show li a i{
-            display: none;
-        }
-        .logo h2{
-            display: none;
-        }
-        .logo h3{
-          color: black;
-          font-size: 20px;
-          margin: 0 3%;
-        }
-
+/*  background-color: rgb(247, 242, 242);*/
+        
 
 }
        
@@ -546,9 +491,9 @@ margin-top: 5%;
             text-align: left;
         }
 
-        /* Footer Styles */
+        /* Footer Styles   background-color: rgb(199, 199, 199); */
         footer {
-            background-color: rgb(199, 199, 199);
+            background: linear-gradient(to right,white,pink);
             color: white;
             padding: 3rem 2rem;
             margin-top: 4rem;
@@ -626,7 +571,7 @@ margin-top: 5%;
 
             .homepage2 img,
             .homepage2 .content {
-                width: 115%;
+                width: 100%;
                 object-fit: cover;
             }
 
@@ -637,11 +582,7 @@ margin-top: 5%;
                 text-align: center;
             }
 
-            .footer-column h3::after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
+         
             .social-links-footer {
                 justify-content: center;
             }
@@ -730,7 +671,7 @@ margin-top: 5%;
         .btn button{
            
             border: none;
-            background-color: white;
+            background-color:rgb(253, 199, 208);
         }
         .btn button i{
             color: blue;
@@ -1013,12 +954,14 @@ color: var(--text-light);
 @media (max-width: 599px) {
   .slide {
     height: 300px;
+    object-fit: cover;
   }
 }
 @media (min-width:600px) {
     .slide {
-    height: 420px;
+    height: 450px;
     border-radius: 1%;
+    object-fit: cover;
   }
 }
 @media (max-width:599px) {
@@ -1268,6 +1211,10 @@ min-height: 20vh;
             animation: fadeInUp 1s ease 0.6s both;
             color: rgb(59, 162, 202);
         }
+
+        #omoding{
+            display: none;
+        }
 }
 
 /*footer again*/
@@ -1279,39 +1226,116 @@ min-height: 20vh;
             color:white;
             transition: all 0.3s ease;
         }
+
+        /*no padding*/
+          .homepage2 {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background-color: white;
+            padding: 0rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+           
+           
+        }
         
+}
+
+/*testimonial*/
+ .testimonial-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.testimonial {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+
+.quote {
+  font-style: italic;
+  color: #555;
+}
+
+.author {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+  .testimonial {
+    flex: 0 0 48%;
+  }
+}
+
+@media (min-width: 900px) {
+  .testimonial {
+    flex: 0 0 30%;
+  }
+}
+@media (max-width:599px) {
+    .what-people{
+        color: skyblue;
+        margin: 2% 15%;
+    }
+}
+@media (min-width:600px) {
+    .what-people{
+        color: skyblue;
+        margin: 2% 30%;
+    }
+ .my-icons{
+    display: none;
+ }
 }
     </style>
 </head>
 
 
 <body>
-    <div class="phone-view">
-       
-        <div class="logo">
-<img src="images/logo1-removebg.png" alt="">
+  <!--header-->
+<header>
+  <div class="logo">
+    <img src="images/logo1-removebg.png" alt="Pallisa Progressive Secondary School logo">
+    <h2>Pallisa Progressive Secondary School</h2>
+  </div>
 
-<h3>Pallisa Progressive Secondary School</h3>
-        </div>
-       
-        <div class="btn">
-            <button class="buttonElement"> <i class='bx bx-menu'></i></button>
-        </div>
-        <div class="links">
-            <nav>
-                <ul class="show">
-                    <li><a href="index.html"> <i class='bx bx-home'></i> Home</a></li>
-                    <li><a href="profile.html"> <i class='bx bx-user'></i> Staff Profile</a></li>
-                    <li><a href="gallery.html"> <i class='bx bxs-grid-alt'></i> Gallery</a></li>
-                    <li><a href="contact.html"><i class='bx bx-phone' ></i> Contact</a></li>
-                    <li><a href="faq.html"><i class='bx bx-search-alt-2'></i> FAQs</a></li>
-                </ul>
-            </nav>
-        </div>
+  <button id="nav-toggle" class="menu-button"
+          aria-label="Show navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-menu">
+    <span class="bar" aria-hidden="true"></span>
+    <span class="bar" aria-hidden="true"></span>
+    <span class="bar" aria-hidden="true"></span>
+  </button>
 
-</div>
-  
-  
+  <nav id="nav-menu" class="nav-menu" role="navigation" aria-labelledby="nav-toggle">
+    <button class="close-button" aria-label="Hide navigation menu">&times;</button>
+    <ul>
+       <li><a href="index.html"> <span class="my-icons"><i class='bx bx-home' ></i></span> Home</a></li>
+        <li><a href="profile.html"><span class="my-icons"> <i class='bx bx-user'></i> </span>Staff Profile</a></li>
+        <li><a href="gallery.html"> <span class="my-icons"><i class='bx bxs-grid-alt'></i></span> Gallery</a></li>
+        <li><a href="contact.html"> <span class="my-icons"><i class='bx bx-phone' ></i></span> Contact</a></li>
+        <li><a href="faq.html"><span class="my-icons"><i class='bx bx-search-alt-2'></i></span> FAQs</a></li>
+    </ul>
+  </nav>
+</header>  
+  <!--header-->
     <section class="home-page1 visible">
         <div class="home-content">
             <h4 class="text1"> PALLISA PROGRESSIVE SECONDARY SCHOOL</h4>
@@ -1338,7 +1362,7 @@ min-height: 20vh;
                 <i class='bx bx-home'></i>
                 <h1>SCHOOL VISION</h1>
                 <P>
-                    To provide innovative,scientific,comprehensive integral and global career
+                    To provide innovative,scientific,<br>comprehensive integral and global career
                  </P>
             </div>
             <div class="motto1">
@@ -1359,16 +1383,20 @@ min-height: 20vh;
 <div class="carousel-container">
   <div class="carousel-track">
     <img src="images/pp4.jpeg" alt="" class="slide">
+    <img src="images/alevel-students.jpg" alt="" class="slide" >
     <img src="images/scroll1.jpg" class="slide">
     <img src="images/scroll2.jpg" class="slide">
     <img src="images/scroll3.jpg" class="slide">
+    <img src="images/students.jpg" alt="" class="slide">
+   
 
   </div>
 </div>
 <!--sliding images-->
 
 
-       <!--welcome text-->
+       <!--welcome text               <img src="images/science-fair.jpg" alt="Academic Excellence" class="gud">
+-->
          <section class="homepage9">
             <div class="content">
                 <h2>WELCOME TO PPSS</h2>
@@ -1387,7 +1415,7 @@ min-height: 20vh;
         </section>
 <!--welcome text-->
         <section class="homepage2">
-            <img src="images/science-fair.jpg" alt="Academic Excellence" class="gud">
+            <img src="images/alevel-students.jpg" alt="Academic Excellence" class="gud">
 
             <div class="content">
                 <h2>Academic Excellence</h2>
@@ -1502,6 +1530,7 @@ min-height: 20vh;
             <div class="main-content">
                 <div class="eduction-programs">
                     <img src="images/debate.jpg" alt="DEBATES IMAGE">
+                    
                     <div class="eduction-programs-content">
                         <h2>School Debates</h2>
                         <p>These helps students to learn through friendly competitions,
@@ -1509,7 +1538,8 @@ min-height: 20vh;
                             of leadership,team building and verbal presentation.</p>
                     </div>
                 </div>
-
+<!--                  <img src="images/media.jpg" alt="">
+ -->
                 <div class="eduction-programs">
                     <img src="images/lab2.jpeg" alt="School Media">
                     <div class="eduction-programs-content">
@@ -1582,15 +1612,31 @@ min-height: 20vh;
         </section>
              </div>
                
-        
+        <h2 class="what-people">What People Say</h2>
+<!--what people say-->
+<div class="testimonial-slider">
+  <div class="testimonial">
+    <p class="quote">“The school prioritizes individual attention and support to each student. It has a diverse and inclusive atmosphere.”</p>
+    <h4 class="author">Mr. Omurwon Robert</h4>
+  </div>
+  <!-- Additional testimonials -->
+  <div class="testimonial">
+    <p class="quote">“The school performs consistently well in exams; many students qualify for good institutions after completing here.”</p>
+    <h4 class="author">Mrs. Aanyu Stella</h4>
+  </div>
+  <!--added-->
+<div class="testimonial">
+    <p class="quote">“Beyond academics,the school ensures 
+        student wellbeing through clean facilities and carefully planned meals.”</p>
+    <h4 class="author">Mr.Okurut Ivan</h4>
+  </div>
 
-<!--
-<img src="images/pp4.jpeg" alt="">
-"images/lab4.jpeg",
-  "images/lib3.jpeg",
-"images/lab2.jpeg"
--->
+  
+  <!--added-->
+  <!-- Add more testimonials as needed -->
+</div>
 
+<!--what people say-->
     </main>
 
     <footer>
@@ -1720,14 +1766,7 @@ min-height: 20vh;
         }
 
 
-        
-      //toggle
-let buttonElement=document.querySelector('.btn');
-let links=document.querySelector('.links');
-buttonElement.addEventListener('click',function(){
-links.classList.toggle('show');
-
-});
+    
 
 let myImages=["images/library6.jpeg",
   "images/lib2.jpeg", "images/library 8.jpeg","images/lab4.jpeg",
@@ -1805,7 +1844,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const quotes = [
     {
       text: "Here, education is more than just books; it's about embracing diversity and preparing for a bright future.",
-      author: "Emurwon Robert"
+      author: "Obeele Job"
     },
     {
       text: "Being at PPSS was a life changing experience, Teachers are supportive and the environment is welcoming.",
@@ -1924,6 +1963,49 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize
     showOurservicesSlide(ourservicesIndex);
     startOurservicesAutoSlide();
+    //toggle
+      document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-menu');
+  const closeBtn = menu.querySelector('.close-button');
+
+  function openMenu() {
+    toggle.setAttribute('aria-expanded', 'true');
+    menu.classList.add('visible');
+    closeBtn.focus();
+  }
+
+  function closeMenu() {
+    toggle.setAttribute('aria-expanded', 'false');
+    menu.classList.remove('visible');
+    toggle.focus();
+  }
+
+  toggle.addEventListener('click', () => {
+    menu.classList.contains('visible') ? closeMenu() : openMenu();
+  });
+
+  closeBtn.addEventListener('click', closeMenu);
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && menu.classList.contains('visible')) closeMenu();
+  });
+});
+
+//what people say
+  const slider = document.querySelector('.testimonial-slider');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+prevBtn.addEventListener('click', () => {
+  slider.scrollBy({ left: -slider.offsetWidth, behavior: 'smooth' });
+});
+
+nextBtn.addEventListener('click', () => {
+  slider.scrollBy({ left: slider.offsetWidth, behavior: 'smooth' });
+});
+
+//what people say
         </script>
 </body>
 

@@ -145,10 +145,12 @@
 
         /* Footer Styles */
         footer {
-            background-color: rgb(224, 215, 215);
+          
             color: white;
             padding: 3rem 2rem;
             margin-top: 4rem;
+            background: linear-gradient(to right,white,pink);
+
         }
 
         .footer-container {
@@ -184,32 +186,7 @@
             transform: translateY(-3px);
         }
 
-        .copyright {
-            text-align: center;
-            padding-top: 2rem;
-            margin-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-        }
-
-        .quick-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .quick-links a {
-            color: var(--light-color);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-
-        .quick-links a:hover {
-            color: var(--secondary-color);
-        }
-
+        
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -260,6 +237,7 @@
             .footer-container {
                 grid-template-columns: 1fr;
                 text-align: center;
+
             }
 
             .footer-column h3::after {
@@ -342,7 +320,8 @@
            grid-template-columns: 1fr 1fr;
            height: 85px;
         background-color: white;
-          
+        background: linear-gradient(to right,white,pink);
+
         }
         .logo{
             display: flex;
@@ -366,7 +345,7 @@
         .btn button{
            
            border: none;
-           background-color: white;
+           background-color: rgb(255, 204, 212);
        }
        .btn button i{
            color: blue;
@@ -391,7 +370,7 @@
         }
         .links nav ul a{
             text-decoration: none;
-            color: black;
+            color: #333;
             font-size: 16px;
             font-weight: 600;
            
@@ -501,6 +480,8 @@ margin: 2% 40%;
             align-items: center;
             background-color: rgb(248, 238, 238);
             height: 90px;
+            background: linear-gradient(white,pink);
+
         }
        
         .links nav ul li{
@@ -573,15 +554,15 @@ margin: 2% 40%;
         </div>
 
         <div class="gallery-grid">
-            <!-- Campus Images -->
+            <!-- Campus Images   -->
             <div class="gallery-item" data-category="campus">
-                <img src="images/adimBlock.jpg" alt="School Administration Block">
+                <img src="images/pp4.jpeg" alt="">
             </div>
             <div class="gallery-item" data-category="campus">
-                <img src="images/playground1.jpeg" alt="School Library">
+                <img src="images/alevel-students.jpg" alt="School Library">
             </div>
             <div class="gallery-item" data-category="campus">
-                <img src="images/playground.jpeg" alt="School Grounds">
+                <img src="images/Libra5.jpeg" alt="School Grounds">
             </div>
 
             <!-- Event Images -->
@@ -589,12 +570,20 @@ margin: 2% 40%;
                 <img src="images/event-scroll.jpg" alt="Annual Science Fair">
             </div>
             <div class="gallery-item" data-category="events">
-                <img src="images/science-lab.jpeg" alt="Science Practical">
+                <img src="images/dstv-students.jpg" alt="Science Practical">
             </div>
             <div class="gallery-item" data-category="events">
                 <img src="images/scroll2.jpg" alt="Cultural Day">
             </div>
 
+             <div class="gallery-item" data-category="events">
+                <img src="images/media.jpg" alt="Science Practical">
+            </div>
+
+
+            <div class="gallery-item" data-category="events">
+                <img src="images/debate.jpg" alt="Cultural Day">
+            </div>
             <!-- Sports Images -->
             <div class="gallery-item" data-category="sports">
                 <img src="images/playground1.jpeg" alt="Football Match">
@@ -608,10 +597,10 @@ margin: 2% 40%;
 
             <!-- Classroom Images -->
             <div class="gallery-item" data-category="classrooms">
-                <img src="images/science-lab.jpeg" alt="Science Lab">
+                <img src="images/library6.jpeg" alt="Science Lab">
             </div>
             <div class="gallery-item" data-category="classrooms">
-                <img src="images/adimBlock.jpg" alt="Computer Lab">
+                <img src="images/prefects.jpg" alt="Computer Lab">
             </div>
             <div class="gallery-item" data-category="classrooms">
                 <img src="images/Library.jpeg" alt="Classroom Session">
@@ -619,16 +608,20 @@ margin: 2% 40%;
 
             <!-- Additional Images -->
             <div class="gallery-item" data-category="events">
-                <img src="images/music-festival.jpeg" alt="Prize Giving Day">
+                <img src="images/student-events.jpg" alt="Prize Giving Day">
             </div>
             <div class="gallery-item" data-category="campus">
-                <img src="images/dormitories2.jpeg" alt="School Dormitories">
+                <img src="images/students4.jpg" alt="School Dormitories">
             </div>
             <div class="gallery-item" data-category="sports">
                 <img src="images/library 8.jpeg" alt="Swimming Competition">
             </div>
+
+            <div class="gallery-item" data-category="events">
+                <img src="images/debate-again.jpg" alt="Cultural Day">
+            </div>
             <div class="gallery-item" data-category="classrooms">
-                <img src="images/art-class.jpeg" alt="Art Class">
+                <img src="images/weThe.jpg" alt="Art Class">
             </div>
             <div class="gallery-item" data-category="events">
                 <img src="images/scroll1.jpg" alt="Music Festival">
