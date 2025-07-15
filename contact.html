@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Location & Contact - Mentor Secondary School</title>
+    <title>Location & Contact - pallisa progressive Secondary School</title>
     <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
@@ -383,7 +383,8 @@
     }
 
    /* Footer Styles */
-        footer {
+@media (max-width:599px) {
+            footer {
             background-color:rgb(236, 222, 222);
             color: white;
             padding: 3rem 2rem;
@@ -399,46 +400,7 @@
             text-align: left;
         }
 
-        .footer-column h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--secondary-color);
-        }
-
-        .footer-column p {
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-column ul li a {
-            color: var(--light-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-column ul li a:hover {
-            color: var(--secondary-color);
-        }
+       
 
         .social-links-footer {
             display: flex;
@@ -463,32 +425,8 @@
             transform: translateY(-3px);
         }
 
-        .copyright {
-            text-align: center;
-            padding-top: 2rem;
-            margin-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-        }
-
-        .quick-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .quick-links a {
-            color: var(--light-color);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-
-        .quick-links a:hover {
-            color: var(--secondary-color);
-        }
-
+}
+       
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -512,10 +450,7 @@
         }
 
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 1rem;
-            }
+         
 
             .logo {
                 margin-bottom: 1rem;
@@ -563,11 +498,7 @@
         }
 
         @media (max-width: 480px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-                gap: 0.5rem;
-            }
+           
 
             .motto {
                 grid-template-columns: 1fr;
@@ -594,19 +525,13 @@
     }
 
     @media (max-width: 768px) {
-        header {
-            flex-direction: column;
-            padding: 1rem;
-        }
+       
 
         .logo {
             margin-bottom: 1rem;
         }
 
-        nav ul {
-            gap: 1rem;
-        }
-
+      
         .contact-hero {
             padding: 4rem 1rem;
         }
@@ -743,6 +668,20 @@
  
     }
     /*header*/
+    @media (max-width:599px) {
+        /*animation*/
+.links nav ul li::after{
+    content: '';
+    display: block;
+    background-color:#3498db ;
+    height: 2px;
+    width: 0%;
+    transition: 0.8s;
+}
+.links nav ul li:hover::after{
+    width: 50%;
+}
+    }
 
             /*1*/
 @media (min-width:600px) {
@@ -753,7 +692,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: linear-gradient(white,pink);
+            background-color: white;
             height: 90px;
         }
         .logo{
@@ -787,9 +726,68 @@
           font-size: 20px;
           margin: 0 3%;
         }
+/*footer*/
+
+        footer {
+            background-color:rgb(236, 222, 222);
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+
+       
+
+        .social-links-footer {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color:  #3498db;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-links-footer a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
 
 
+        /*animation*/
+.links nav ul li::after{
+    content: '';
+    display: block;
+    background-color:#3498db ;
+    height: 2px;
+    width: 0%;
+    transition: 0.5s;
 }
+.links nav ul li:hover::after{
+    width: 100%;
+}
+}
+
+
+
     </style>
 
 </head>
@@ -926,8 +924,8 @@
             <p>Ready to pay us a visit? Follow the map below to find our campus.</p>
 
             <div class="map-container">
-                <iframe>
-                   src="https://satellites.pro/Google_plan/Pallisa_map"
+                <iframe
+                    src="https://satellites.pro/Google_plan/Pallisa_map"
                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>

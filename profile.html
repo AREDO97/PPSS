@@ -121,6 +121,7 @@
            grid-template-columns: 1fr 1fr;
            height: 85px;
            background-color: white;
+
         }
         .logo{
             display: flex;
@@ -163,6 +164,8 @@
             color: var(--text-light);
             font-size: 16px;
             font-weight: 600;
+                       
+
         }
 /*animation*/
 .links nav ul li::after{
@@ -389,8 +392,8 @@
         }
         /* Footer Styles */
         footer {
-           background: rgb(228, 219, 219);
-
+            background: rgb(228, 219, 219);
+            background-color: rgb(199, 223, 232);
             color: white;
             padding: 3rem 2rem;
             margin-top: 4rem;
@@ -774,6 +777,9 @@ margin: 2% 40%;
             color: white;
             padding: 3rem 2rem;
             margin-top: 4rem;
+          background-color: rgb(199, 223, 232);
+         
+
         }
 
         .footer-container {
@@ -821,6 +827,7 @@ margin: 2% 40%;
     .adminstrative{
        text-align: center;
         color: #3498db;
+        margin: 4% 0;
     }
 }
 
@@ -943,6 +950,8 @@ margin: 2% 40%;
 .nav2:hover {
 background: transparent;
 }
+
+   
 }
 
 /*big nav2*/
@@ -982,7 +991,12 @@ background: transparent;
   
 }
 /*image*/
-
+@media (max-width:599px) {
+     .badge img{
+      width: 150px;
+      object-fit: cover;
+}
+}
     </style>
 </head>
 <!--<img src="images/imalingat.jpg" alt="">
