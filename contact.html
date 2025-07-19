@@ -786,7 +786,32 @@
 }
 }
 
+/*reg*/
+   .ppss-type-heading {
+  font-size: 1.5rem;
+  color: #009688;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid rgba(0, 150, 136, 0.7);
+  width: 0;
+  animation: ppssCaretBlink 0.75s step-end infinite;
+  text-align: center;
+}
 
+@keyframes ppssCaretBlink {
+  from, to { border-color: transparent; }
+  50% { border-color: rgba(0, 150, 136, 0.7); }
+}
+
+@media (max-width: 599px) {
+  .ppss-type-heading {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 2% 10%;
+  }
+}
+/*reg last*/
 
     </style>
 
@@ -799,7 +824,7 @@
             <div class="logo">
     <img src="images/logo1-removebg.png" alt="">
     
-    <h3>Pallisa Progressive Secondary School</h3>
+<h3>Pallisa Progressive Secondary School</h3>
             </div>
            
             <div class="btn">
@@ -819,12 +844,20 @@
     
     </div>
   <!--header-->
+
     <div class="contact-hero">
         <h1>Visit Us Today</h1>
         <p>We'd love to hear from you. Contact us for inquiries or visit our campus for a tour.</p>
     </div>
 
+    <!--uneb-->
+    <div class="info-display-container">
+  <h2 id="animated-info-heading" class="info-typing-text">
+  </h2>
+    <!--uneb-->
     <div class="contact-container">
+                  <h2 id="ppssUniqueTyper" class="ppss-type-heading"></h2>
+
         <div class="contact-info">
             <div class="contact-details">
                 <h2>Contact Information</h2>
@@ -1122,6 +1155,47 @@ buttonElement.addEventListener('click',function(){
 links.classList.toggle('show');
 
 });
+
+//uneb
+ const ppssHeadingList = [
+    "LICENSE No.ME/32/6212",
+    "REG No.Pss/P/110",
+    "UNEB No.U4050",
+    "EMIS No.398010"
+  ];
+
+  const ppssTypingTarget = document.getElementById("ppssUniqueTyper");
+  let ppssCurrentChar = 0;
+  let ppssCurrentSlide = 0;
+
+  function ppssStartTyping() {
+    if (ppssCurrentChar < ppssHeadingList[ppssCurrentSlide].length) {
+      ppssTypingTarget.textContent += ppssHeadingList[ppssCurrentSlide].charAt(ppssCurrentChar);
+      ppssCurrentChar++;
+      ppssTypingTarget.style.width = (ppssCurrentChar + 1) + "ch";
+      setTimeout(ppssStartTyping, 100);
+    } else {
+      setTimeout(ppssEraseTyping, 9000);
+    }
+  }
+
+  function ppssEraseTyping() {
+    if (ppssCurrentChar > 0) {
+      ppssTypingTarget.textContent = ppssHeadingList[ppssCurrentSlide].substring(0, ppssCurrentChar - 1);
+      ppssCurrentChar--;
+      ppssTypingTarget.style.width = (ppssCurrentChar + 1) + "ch";
+      setTimeout(ppssEraseTyping, 70);
+    } else {
+      ppssCurrentSlide = (ppssCurrentSlide + 1) % ppssHeadingList.length;
+      setTimeout(ppssStartTyping, 900);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(ppssStartTyping, 900);
+  });
+
+//uneb last
     </script>
 </body>
 

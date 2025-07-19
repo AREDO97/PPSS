@@ -579,74 +579,6 @@
         @media (min-width:600px) {
 /*profile*/
 
-.staff-profiles {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem 4rem;
-        }
-
-        .profiles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .profile-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            opacity: 0;
-            transform: translateY(30px);
-            min-width: 120vh;
-            margin: 2% 50%;
-        }
-
-        .profile-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .profile-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .profile-image {
-            width: 100%;
-            height: 250px;
-            overflow: hidden;
-        }
-
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position:top;
-            transition: transform 0.5s ease;
-        }
-
-        .profile-card:hover .profile-image img {
-            transform: scale(1.05);
-        }
-
-        .profile-info {
-            padding: 1.5rem;
-            text-align: center;
-        }
-
-        .profile-info h2 {
-            font-size: 1.3rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .profile-info p {
-            color: var(--secondary-color);
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
 
 .buttons{
     margin: 2% 36%;
@@ -997,6 +929,262 @@ background: transparent;
       object-fit: cover;
 }
 }
+
+/*admins*/
+.ppss-staff-slider {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.ppss-image-wrap {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.ppss-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  object-position: top;
+}
+
+.ppss-staff-slider:hover .ppss-profile-img {
+  transform: scale(1.03);
+}
+
+.ppss-info-wrap {
+  margin-top: 20px;
+}
+
+.ppss-staff-name {
+  font-size: 1.5rem;
+  color: #009688;
+  margin-bottom: 0.5rem;
+}
+
+.ppss-staff-role {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.ppss-nav-buttons {
+  margin-top: 20px;
+}
+
+.ppss-btn {
+  background: #009688;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  margin: 0 10px;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.ppss-btn:hover {
+  background: #00796B;
+}
+
+@media (max-width: 599px) {
+  .ppss-staff-slider {
+    padding: 10px;
+  }
+
+  .ppss-staff-name {
+    font-size: 1.2rem;
+  }
+
+  .ppss-staff-role {
+    font-size: 0.9rem;
+  }
+
+  .ppss-btn {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
+/*admis*/
+
+/*lead teachers*/
+
+        .ppss-staff-carousel {
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+            overflow: hidden;
+            margin: 40px auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .ppss-carousel-wrapper {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .ppss-carousel-track {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .ppss-carousel-card {
+            flex: 0 0 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 20px;
+            box-sizing: border-box;
+        }
+
+        .ppss-carousel-card img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            border: 4px solid #fff;
+        }
+
+        .ppss-card-title {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+        }
+
+        .ppss-card-name {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .ppss-carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #ffffff;
+            border: none;
+            font-size: 2rem;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            background: transparent;
+            display: none;
+        }
+
+        .ppss-arrow-left {
+            left: 10px;
+        }
+
+        .ppss-arrow-right {
+            right: 10px;
+        }
+
+        .ppss-carousel-arrow:hover {
+            background-color: #f1f1f1;
+        }
+
+        @media (max-width: 480px) {
+            .ppss-carousel-card img {
+                width: 120px;
+                height: 120px;
+            }
+            .ppss-card-name {
+                font-size: 1.2rem;
+            }
+            .ppss-card-title {
+                font-size: 0.9rem;
+            }
+        }
+
+
+        /*counter*/
+ .counter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 35px 25px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+      max-width: 280px;
+      width: 90%;
+      text-align: center;
+      transition: transform 0.3s ease;
+      margin: 2% 15%;
+    }
+
+
+    @media (min-width:600px) {
+      .counter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 35px 25px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+      max-width: 280px;
+      width: 90%;
+      text-align: center;
+      transition: transform 0.3s ease;
+      margin: 2% 40%;
+    }
+
+    }
+    .counter:hover {
+      transform: translateY(-5px);
+    }
+
+    .counter h2 {
+      font-size: 3.5rem;
+      color: #004e98;
+      font-weight: 700;
+      margin-bottom: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .counter h4 {
+      font-size: 1.4rem;
+      color: #00aaff;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 600px) {
+      .counter {
+        padding: 25px 15px;
+      }
+
+      .counter h2 {
+        font-size: 2.8rem;
+      }
+
+      .counter h4 {
+        font-size: 1.2rem;
+      }
+    }
+        /*counter end*/
+/*lead teachers end*/
     </style>
 </head>
 <!--<img src="images/imalingat.jpg" alt="">
@@ -1038,34 +1226,29 @@ background: transparent;
         <h1>Our Dedicated Staff Members</h1>
     </div>
         <h2 class="adminstrative">Adminstrative Staff</h2>
-    <section class="staff-profiles">
-        <div class="profiles-grid">
-            <div class="profile-card">
-                <div class="profile-image">
-                    <img src="images/dos.jpeg" alt="Head Teacher" class="image">
-                </div>
-                <div class="profile-info">
-                    <h2 class="text">John Okware Agustus</h2>
-                    <p class="title">Head Teacher</p>
-                </div>
-                <div class="buttons">
-                    <button class="nav2 prev"> 
-                       &#10094;
-                
-                        </button>
-                    <button class="nav2 next">
-                  &#10095;
-                    </button>
-                </div>
-           
-                <!--
-                        <i class='bx bxs-chevrons-left'></i>
-                         <i class='bx bxs-chevrons-right'></i>
-                -->
+   <!--admin-->
+       <section class="ppss-staff-slider">
+  <div class="ppss-staff-card">
+    <div class="ppss-image-wrap">
+      <img src="images/dos.jpeg" alt="Staff Profile" class="ppss-profile-img" />
+    </div>
+    <div class="ppss-info-wrap">
+      <h2 class="ppss-staff-name">John Okware Agustus</h2>
+      <p class="ppss-staff-role">Head Teacher</p>
+    </div>
+    <div class="ppss-nav-buttons">
+      <button class="ppss-btn ppss-prev">&#10094;</button>
+      <button class="ppss-btn ppss-next">&#10095;</button>
+    </div>
+  </div>
+</section>     
+               
+   <!--Admin-->        
     </section>
     </div>        
     <h2 class="adminstrative">Heads of Department</h2>
-    <!--heads of department-->  <div class="staff-slider">
+    <!--heads of department-->
+      <div class="staff-slider">
     <button class="nav-arrow left">&#10094;</button>
     <div class="slider-container" id="slider-container">
       <!-- Staff profiles will be injected here -->
@@ -1073,6 +1256,26 @@ background: transparent;
     <button class="nav-arrow right">&#10095;</button>
   </div>
   <!--heads of department end  <img src="images/black-logo.jpg" alt="">-->
+<!--lead teachers-->
+    <h2 class="adminstrative">Class Teachers</h2>
+ <div class="ppss-staff-carousel">
+        <button class="ppss-carousel-arrow ppss-arrow-left" aria-label="Previous slide">&#10094;</button>
+        <div class="ppss-carousel-wrapper">
+            <div class="ppss-carousel-track" id="ppss-carousel-track"></div>
+        </div>
+        <button class="ppss-carousel-arrow ppss-arrow-right" aria-label="Next slide" >&#10095;</button>
+    </div>
+
+
+<!--lead teachers
+-->
+<!--counter-->
+ <div class="counter">
+    <h2 id="teacherCount">10+</h2>
+    <h4>Teachers</h4>
+  </div>
+
+<!--counter-->
 <footer>
     <div class="footer-container">
         <div class="footer-column">
@@ -1090,6 +1293,8 @@ background: transparent;
             </div>
         </div>
 
+
+        
 </footer>
 
     <script>
@@ -1151,86 +1356,6 @@ background: transparent;
         //windows
  
 
-        let content=[
-        {
-            img:"images/odeke-tall.jpg",
-            title:"RESIDENT DIRECTOR",
-            text:"Odeke john"
-        },
-           
-        {
-            id:1,
-            img:"images/waiswa4.jpg",
-            title:'HEAD-TEACHER',
-            text:"Waisa Fred"
-        },
-
-        {
-            id:1,
-            img:"images/cool (3).jpeg",
-            title:'DEPUTY HEAD-TEACHER',
-            text:"Oluka Ignatius"
-        },
-        {
-            id:1,
-            img:"images/sisye2.jpg",
-            title:' DOS A LEVEL',
-            text:"Mr Sisye Samson"
-        },
-        {
-            id:1,
-            img:"images/cool (3).jpeg",
-            title:'DOS O LEVEL',
-            text:"Mr Mubale Andrew"
-        },
-
-        {
-            id:1,
-            img:"images/cool (3).jpeg",
-            title:'SENIOR WOMAN TEACHER',
-            text:"Ms.Mudondo Nisura "
-        }
-
-       
-    ];
-
-      let image=document.querySelector('.image');
-      let title=document.querySelector('.title');
-      let text=document.querySelector('.text');
-      let prevButton=document.querySelector('.prev');
-      let nextButton=document.querySelector('.next');
-      
-      let current=0;
-      //load windows
-      window.addEventListener('DOMContentLoaded',function(){
-        showMe();
-      });
-
-      function showMe(){
-        let item=content[current];
-        image.src=item.img;
-        title.textContent=item.title;
-        text.textContent=item.text;
-
-
-      }
-      nextButton.addEventListener('click',function(){
-        current++;
-        if(current>content.length-1){
-            current=0;  
-        }
-        showMe();
-
-      });
-
-      prevButton.addEventListener('click',function(){
-        current++;
-        if(current<0){
-            current=content.length-1;  
-        }
-        showMe();
-
-      });
 
 
       //toggle
@@ -1340,6 +1465,153 @@ renderProfiles();
 updateSlider();
 //heads of department end
  
+
+//adminstration
+const ppssStaffList = [
+    {
+      img: "images/odeke-tall.jpg",
+      title: "RESIDENT DIRECTOR",
+      name: "Odeke John"
+    },
+    {
+      img: "images/waiswa4.jpg",
+      title: "HEAD TEACHER",
+      name: "Waisa Fred"
+    },
+    {
+      img: "images/cool (3).jpeg",
+      title: "DEPUTY HEAD TEACHER",
+      name: "Oluka Ignatius"
+    },
+    {
+      img: "images/sisye2.jpg",
+      title: "DOS A LEVEL",
+      name: "Mr. Sisye Samson"
+    },
+    {
+      img: "images/cool (3).jpeg",
+      title: "DOS O LEVEL",
+      name: "Mr. Mubale Andrew"
+    },
+    {
+      img: "images/cool (3).jpeg",
+      title: "SENIOR WOMAN TEACHER",
+      name: "Ms. Mudondo Nisura"
+    }
+  ];
+
+  let ppssCurrentStaff = 0;
+  const ppssImage = document.querySelector(".ppss-profile-img");
+  const ppssTitle = document.querySelector(".ppss-staff-role");
+  const ppssName = document.querySelector(".ppss-staff-name");
+  const ppssPrev = document.querySelector(".ppss-prev");
+  const ppssNext = document.querySelector(".ppss-next");
+
+  function ppssShowStaff() {
+    const staff = ppssStaffList[ppssCurrentStaff];
+    ppssImage.src = staff.img;
+    ppssTitle.textContent = staff.title;
+    ppssName.textContent = staff.name;
+  }
+
+  function ppssNextSlide() {
+    ppssCurrentStaff++;
+    if (ppssCurrentStaff >= ppssStaffList.length) {
+      ppssCurrentStaff = 0;
+    }
+    ppssShowStaff();
+  }
+
+  function ppssPrevSlide() {
+    ppssCurrentStaff--;
+    if (ppssCurrentStaff < 0) {
+      ppssCurrentStaff = ppssStaffList.length - 1;
+    }
+    ppssShowStaff();
+  }
+
+  ppssPrev.addEventListener("click", ppssPrevSlide);
+  ppssNext.addEventListener("click", ppssNextSlide);
+
+  // Auto slide every 5 seconds
+  setInterval(ppssNextSlide, 10000);
+
+  // Initial load
+  document.addEventListener("DOMContentLoaded", ppssShowStaff);
+//adminstration end
+
+//lead teachers
+     const ppssStaffProfiles = [
+            { name: "Mr. Mwesiga Musa", title: "H.O.D CHEMISTRY", image: "images/musa1.jpg" },
+            { name: "Mr. Maswe Charles", title: "H.O.D MATHEMATICS", image: "images/were.jpg" },
+            { name: "Mr.Kisakye Denis", title: "H.OD PHYSICS", image: "images/sisye2.jpg" },
+            { name: "Ms. Gashudo Muhamad", title: "H.O.D BIOLOGY", image: "https://via.placeholder.com/150?text=Emily+Davis" },
+            { name: "Mr.Kizito Lawrence", title: "H.O.D ENGLISH", image: "https://via.placeholder.com/150?text=Michael+Wilson" },
+            { name: "Mr.Misera Issa", title: "H.O.D ECONOMICS", image: "images/misera.jpg" },
+            { name: "Mr.Imalingat Alvin", title: "H.O.D ICT", image: "images/imalingat.jpg" },
+            { name: "Mr.Kambo Geofrey", title: "H.O.D GEOGRAPHY", image: "images/cool-3.jpeg" },
+            { name: "Mr Katula Yokosan", title: "H.O.D ENTREPRENEUR", image: "https://via.placeholder.com/150?text=Michael+Wilson" },
+            { name: "Ms.Amulen Lydia", title: "H.O.D AGRICULTURE", image: "https://via.placeholder.com/150?text=Michael+Wilson" }
+        ];
+
+        const ppssSliderTrack = document.getElementById('ppss-carousel-track');
+        let ppssCurrentSlideIndex = 0;
+
+        function ppssRenderProfiles() {
+            ppssSliderTrack.innerHTML = '';
+            ppssStaffProfiles.forEach(profile => {
+                const card = document.createElement('div');
+                card.classList.add('ppss-carousel-card');
+                card.innerHTML = `
+                    <img src="${profile.image}" alt="${profile.name}" />
+                    <div class="ppss-card-title">${profile.title}</div>
+                    <div class="ppss-card-name">${profile.name}</div>
+                `;
+                ppssSliderTrack.appendChild(card);
+            });
+        }
+
+        function ppssUpdateSlider() {
+            const offset = -ppssCurrentSlideIndex * 100;
+            ppssSliderTrack.style.transform = `translateX(${offset}%)`;
+        }
+
+        document.querySelector('.ppss-arrow-left').addEventListener('click', () => {
+            ppssCurrentSlideIndex = (ppssCurrentSlideIndex === 0) ? ppssStaffProfiles.length - 1 : ppssCurrentSlideIndex - 1;
+            ppssUpdateSlider();
+        });
+
+        document.querySelector('.ppss-arrow-right').addEventListener('click', () => {
+            ppssCurrentSlideIndex = (ppssCurrentSlideIndex === ppssStaffProfiles.length - 1) ? 0 : ppssCurrentSlideIndex + 1;
+            ppssUpdateSlider();
+        });
+
+        setInterval(() => {
+            ppssCurrentSlideIndex = (ppssCurrentSlideIndex + 1) % ppssStaffProfiles.length;
+            ppssUpdateSlider();
+        }, 5000);
+
+        ppssRenderProfiles();
+        ppssUpdateSlider();
+//end of lead teachers
+
+
+//counter
+const countEl = document.getElementById("teacherCount");
+    let count = 1;
+    const endCount = 50;
+    const duration = 20000;
+    const interval = Math.floor(duration / (endCount - count));
+
+    const counterInterval = setInterval(() => {
+      count++;
+      countEl.textContent = count + "+";
+      if (count >= endCount) {
+        clearInterval(counterInterval);
+        countEl.textContent = endCount + "+";
+      }
+    }, interval);
+//end of counter
     </script>
 </body>
 
