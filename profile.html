@@ -121,6 +121,8 @@
            grid-template-columns: 1fr 1fr;
            height: 85px;
            background-color: white;
+               background: linear-gradient(to right, white,  rgb(199, 223, 232));
+
 
         }
         .logo{
@@ -265,7 +267,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-         background: linear-gradient(white,pink);
+          background: linear-gradient(white, rgb(199, 223, 232));
+
             height: 95px;
         }
         .logo{
@@ -571,6 +574,7 @@
            
             border: none;
             background-color: white;
+             background: rgb(191, 231, 245);
         }
         .btn button i{
             color:blue;
@@ -1217,8 +1221,11 @@ background: transparent;
             </div>
     
     </div>
+
+    
     <!--
      <img src="images/sisye3.jpg" alt="">
+         <img src="images/kambo.jpg" alt="">
     -->
    
     
@@ -1257,7 +1264,7 @@ background: transparent;
   </div>
   <!--heads of department end  <img src="images/black-logo.jpg" alt="">-->
 <!--lead teachers-->
-    <h2 class="adminstrative">Class Teachers</h2>
+    <h2 class="adminstrative">Lead Teachers</h2>
  <div class="ppss-staff-carousel">
         <button class="ppss-carousel-arrow ppss-arrow-left" aria-label="Previous slide">&#10094;</button>
         <div class="ppss-carousel-wrapper">
@@ -1407,7 +1414,7 @@ const staffProfiles = [
   {
             name:"Mr.Kambo Geofrey ",
             title:'H.O.D GEOGRAPHY',
-            image:"images/cool (3).jpeg"
+            image:"images/kambo-geo.jpg"
         },
 
      {
@@ -1416,7 +1423,7 @@ const staffProfiles = [
     image: "https://via.placeholder.com/150?text=Michael+Wilson"
   }    ,
   {
-    name: "Ms.Amulen Lydia",
+    name: "Mr.Orone Moses",
     title: "H.O.D AGRICULTURE",
     image: "https://via.placeholder.com/150?text=Michael+Wilson"
   }
@@ -1542,16 +1549,16 @@ const ppssStaffList = [
 
 //lead teachers
      const ppssStaffProfiles = [
-            { name: "Mr. Mwesiga Musa", title: "H.O.D CHEMISTRY", image: "images/musa1.jpg" },
-            { name: "Mr. Maswe Charles", title: "H.O.D MATHEMATICS", image: "images/were.jpg" },
-            { name: "Mr.Kisakye Denis", title: "H.OD PHYSICS", image: "images/sisye2.jpg" },
-            { name: "Ms. Gashudo Muhamad", title: "H.O.D BIOLOGY", image: "https://via.placeholder.com/150?text=Emily+Davis" },
-            { name: "Mr.Kizito Lawrence", title: "H.O.D ENGLISH", image: "https://via.placeholder.com/150?text=Michael+Wilson" },
-            { name: "Mr.Misera Issa", title: "H.O.D ECONOMICS", image: "images/misera.jpg" },
-            { name: "Mr.Imalingat Alvin", title: "H.O.D ICT", image: "images/imalingat.jpg" },
-            { name: "Mr.Kambo Geofrey", title: "H.O.D GEOGRAPHY", image: "images/cool-3.jpeg" },
-            { name: "Mr Katula Yokosan", title: "H.O.D ENTREPRENEUR", image: "https://via.placeholder.com/150?text=Michael+Wilson" },
-            { name: "Ms.Amulen Lydia", title: "H.O.D AGRICULTURE", image: "https://via.placeholder.com/150?text=Michael+Wilson" }
+            { name: "Mr. Mapire Geofrey", title: " CHEMISTRY", image: "images/musa1.jpg" },
+            { name: "Mr. Maswe Charles", title: " MATHEMATICS", image: "images/were.jpg" },
+            { name: "Mr.Wakida Emmanuel", title: "PHYSICS", image: "images/sisye2.jpg" },
+            { name: "Mr. Gashudo Muhamad", title: " BIOLOGY", image: "https://via.placeholder.com/150?text=Emily+Davis" },
+            { name: "Mr.Kizito Lawrence", title: " ENGLISH", image: "https://via.placeholder.com/150?text=Michael+Wilson" },
+            { name: "Mr.Were Brian", title: "ECONOMICS", image: "images/misera.jpg" },
+            { name: "Mr.Imalingat Alvin", title: "ICT", image: "images/imalingat.jpg" },
+            { name: "Mr.Kirya Stephan", title: "GEOGRAPHY", image: "images/cool-3.jpeg" },
+            { name: "Mr Katula Yokosan", title: " ENTREPRENEUR", image: "https://via.placeholder.com/150?text=Michael+Wilson" },
+            { name: "Ms.Amulen Lydia", title: " AGRICULTURE", image: "https://via.placeholder.com/150?text=Michael+Wilson" }
         ];
 
         const ppssSliderTrack = document.getElementById('ppss-carousel-track');
