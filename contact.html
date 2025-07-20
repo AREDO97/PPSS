@@ -158,9 +158,14 @@
         color: var(--primary-color);
         transition: all 0.3s ease;
     }
+    .social-links a i{
+     color: var(--secondary-color);
+     font-weight: bold;
+
+    }
 
     .social-links a:hover {
-        background-color: var(--secondary-color);
+        background-color: transparent;
         color: white;
         transform: translateY(-3px);
     }
@@ -590,9 +595,9 @@
             margin-top: -15px;
         }
         .logo img{
-            width: 75px;
+            width: 80px;
            height: 88px;
-            border-radius: 40px;
+           border-radius: 1%;
             
             object-position: top;
             object-fit: cover;
@@ -662,8 +667,7 @@
 .btn button{
            
             border: none;
-            background-color: white;
-            background: rgb(199, 223, 232);
+            background: transparent;
         }
         .btn button i{
             color:blue;
@@ -705,9 +709,9 @@
             align-items: center;
         }
         .logo img{
-            width: 75px;
-            height: 88px;
-            border-radius: 30px;
+            width: 85px;
+            height: 90px;
+            border-radius: 1%;
         }
         .links nav .show li{
             list-style: none;
@@ -908,7 +912,7 @@
                 <div class="social-links">
                      <a href="https://www.facebook.com/profile.php?id=100066400460286" aria-label="Facebook" class="disturbed"><i
                         class='bx bxl-facebook'></i></a>
-                <a href="https://wa.me/256701705888" target="_blank"><i class='bx bxl-whatsapp'></i>
+                <a href="https://wa.me/256755035650" target="_blank"><i class='bx bxl-whatsapp'></i>
                     <a href="https://youtu.be/2wmHz4-qH4Y?si=HnfLzBJw8lEXqULo" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
 
                 <a href="https://www.tiktok.com/@pallisa.prog..sec?is_from_webapp=1&sender_device=pc"><i class='bx bxl-tiktok'></i></a>
@@ -1080,7 +1084,7 @@ contactForm.addEventListener('submit', function (e) {
     const encodedMessage = encodeURIComponent(whatsappMessage);
 
     // Replace leading zero with country code (assumed Kenya +254)
-    const rawPhone = "0701705888".replace(/^0/, "256");
+    const rawPhone = "0754391008".replace(/^0/, "256");
 
     const whatsappURL = `https://wa.me/${rawPhone}?text=${encodedMessage}`;
 
