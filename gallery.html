@@ -144,49 +144,7 @@
         }
 
         /* Footer Styles */
-        footer {
-          
-            color: white;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
-            background-color: rgb(243, 235, 235);
-            background-color: rgb(199, 223, 232);
-
-
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            text-align: left;
-        }
-
-    
-        .social-links-footer {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-links-footer a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: #3498db;
-            color: white;
-            transition: all 0.3s ease;
-        }
-
-        .social-links-footer a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-        }
+        
 
         
         @keyframes fadeIn {
@@ -236,20 +194,6 @@
                 padding: 2rem;
             }
 
-            .footer-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-
-            }
-
-            .footer-column h3::after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            .social-links-footer {
-                justify-content: center;
-            }
         }
 
         @media (max-width: 480px) {
@@ -316,133 +260,11 @@
                 font-size: 0.9rem;
             }
         }
-@media (max-width:599px) {
-    .phone-view{
-           display: grid;
-           grid-template-columns: 1fr 1fr;
-           height: 85px;
-        background-color: white;
-            background: linear-gradient(to right, white,  rgb(199, 223, 232));
-
-       
-        }
-        .logo{
-            display: flex;
-            align-items: center;
-            margin-top: -15px;
-        }
-        .logo img{
-            width: 80px;
-            height: 88px;
-            border-radius: 1%;
-            margin: 6% 5%;
-            margin-bottom: 12%;
-            object-position: top;
-            object-fit: cover;
-        }
-        
-        .btn{
-            margin: 12% 65%;
-        }
-
-        .btn button{
-           
-           border: none;   
-         background: transparent;
-       }
-       .btn button i{
-           color: blue;
-           font-size: 35px;
-       }
 
 
-        .links{
-            display: none;
-            background-color: white;
-            margin: 0 10%;
-            height: 300px;
-            margin: -28px 120%;
-           transition: 3s ease;
-         
-        }
-       
-        .links nav ul li{
-            list-style: none;
-            padding: 3% 3%;
-            margin: 3% 1%;
-        }
-        .links nav ul a{
-            
-            text-decoration: none;
-            color: var(--text-light);
-            font-size: 16px;
-            font-weight: 600;
-          
-        }
-        .show{
-            display: inline-block;
-            z-index: 2;
-            width: 100%;
-            transition: 3s ease;
-        
-          
-        }
-       .logo h2{
-            color: white;
-            margin: auto 5%;
-        }
-        .logo h3{
-            display: none;
-        }
-
-        .badge img{
-      width: 150px;
-      object-fit: cover;
-}  
-
-.social-links-footer a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color:white;
-            transition: all 0.3s ease;
-        }
-}
 
 
-@media (min-width:600px) {
-    
-.buttons{
-    margin: 2% 36%;
-}
 
-
-    .logo{
-            display: flex;
-            align-items: center;
-          margin-top: -20px;
-        }
-        .logo img{
-            width: 85px;
-            height: 90px;
-            border-radius: 1%;
-            margin: 10% 5%;
-            margin-bottom: 10%;
-            object-fit: cover;
-            object-position: top;
-        }
-/*animation*/
-.links nav ul li::after{
-    content: '';
-    display: block;
-    background-color:#3498db ;
-    height: 2px;
-    width: 0%;
-    transition: 0.5s;
-}
-.links nav ul li:hover::after{
-    width: 100%;
-}
 
 
   /*footer design*/
@@ -452,98 +274,256 @@
 margin: 2% 40%;
     }
 
-    .social-links-footer {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-            
-           
-        }
-
-        .social-links-footer a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color:white;
-            transition: all 0.3s ease;
-        }
+   
         
     .disturbed{
         margin-left: 38%;
     }
 
-    /*header*/
 
-    .btn{
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #003366;
+      color: white;
+      padding: 12px 20px;
+      position: relative;
+      z-index: 1001;
+      height: 100px;
+    background-color:  rgb(199, 223, 232);
+    background: linear-gradient(to right,white, rgb(199, 223, 232));
+
+    }
+
+    .logo img {
+      height: 95px;
+      width: 85px;
+    }
+
+    .btn .buttonElement {
+      background: none;
+      border: none;
+      color:  blue;
+      font-size: 35px;
+      cursor: pointer;
+    }
+
+    /* Mobile Overlay */
+    .menu-overlay {
+        margin-top: 10%;
+      position:absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 65%;
+      background-color: rgb(230, 216, 216);
+      background: #f9f9f9;
+
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 60px;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.7s ease-in-out;
+    }
+
+    .menu-overlay.active {
+      transform: scaleY(1);
+    }
+
+    .menu-container {
+      width: 80%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu-container nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .menu-container nav ul li a {
+      display: block;
+      width: 100%;
+      padding: 14px 20px;
+      background-color: rgb(230, 216, 216);
+      background: #f9f9f9;
+
+      border-radius: 8px;
+      font-size: 17px;
+      color: #003366;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+      transition: background 0.3s ease, color 0.3s ease;
+      font-weight: 400;
+    }
+
+    .menu-container nav ul li a:hover {
+      background-color: #eef4ff;
+      color: #002244;
+    }
+
+    /* Desktop Nav */
+    .desktop-nav {
+      display: none;
+    }
+
+    /* Larger Screens */
+    @media (min-width: 768px) {
+      .btn {
         display: none;
-    }   
-        .phone-view{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color:white;
-            height: 90px;
-            background: linear-gradient(white, rgb(199, 223, 232));
+      }
+
+      .desktop-nav {
+        display: flex;
+        gap: 20px;
+      }
+
+      .desktop-nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-size: 20px;
+        transition: background 0.3s ease;
+        color: #333;
+        font-weight: 600;
+      }
+
+      .desktop-nav a:hover {
+        background: rgba(78, 76, 76, 0.1);
+        border-bottom: 2px solid white;
+      }
+
+      .menu-overlay {
+        display: none;
+      }
+       .logo img {
+      height: 95px;
+      width: 85px;
+    }
+    }
 
 
-        }
-       
-        .links nav ul li{
-            list-style: none;
-            margin: 0 2%;
-            display: inline-block;
-        }
-        .links nav ul li a{
-            text-decoration: none;
-            color: black;
-            font-size: 20px;
-            font-weight: 600;
-        }
-        .links nav ul li a i{
-            display: none;
-        }
-        .logo h2{
-            display: none;
-        }
-        .logo h3{
-          color: black;
-          font-size: 20px;
-          margin: 0 3%;
-        }
+ :root {
+  --primary-color: rgb(199, 223, 232);
+  --secondary-color: rgb(97, 142, 168); /* Example secondary */
 }
 
-/*uneb*/
-        /* Typing Animation */
-    
-/*uneb last*/
+/* Footer Styles */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 3rem 1rem;
+  margin-top: 4rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-content-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Badge Image */
+.badge img {
+  width: 150px;
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Social Links */
+.social-links-footer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-links-footer a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  background-color:  #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 1.0rem;
+}
+
+.social-links-footer a:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive image spacing */
+@media (min-width: 768px) {
+  .badge img {
+    margin: 2% auto;
+  }
+}
+
+
     </style>
 </head>
 
 <body>
-    <div class="phone-view">
-       
-        <div class="logo">
-<img src="images/logo1-removebg.png" alt="">
+     <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="images/logo1-removebg.png" alt="Logo">
+    </div>
 
-<h3>Pallisa Progressive Secondary School</h3>
-        </div>
-       
-        <div class="btn">
-            <button class="buttonElement"> <i class='bx bx-menu'></i></button>
-        </div>
-        <div class="links">
-            <nav>
-                <ul class="show1">
-                    <li><a href="index.html"> <i class='bx bx-home'></i> Home</a></li>
-                    <li><a href="profile.html"> <i class='bx bx-user'></i> Staff Profile</a></li>
-                    <li><a href="gallery.html"> <i class='bx bxs-grid-alt'></i> Gallery</a></li>
-                    <li><a href="contact.html"><i class='bx bx-phone' ></i> Contact</a></li>
-                    <li><a href="faq.html"><i class='bx bx-search-alt-2'></i> FAQs</a></li>
-                </ul>
-            </nav>
-        </div>
+    <!-- Mobile button -->
+    <div class="btn">
+      <button class="buttonElement" onclick="toggleMenu()"> <i class='bx bx-menu'></i></button>
+    </div>
 
-</div>
+    <!-- Desktop nav -->
+    <nav class="desktop-nav">
+      <a href="index.html"><i class='bx bx-home'></i> Home</a>
+      <a href="profile.html"><i class='bx bx-user'></i> Staff Profile</a>
+      <a href="gallery.html">  <i class='bx bx-image'></i> Gallery</a>
+      <a href="contact.html"><i class='bx bx-phone'></i> Contact</a>
+      <a href="faq.html"><i class='bx bx-help-circle' ></i>FAQs</a>
+    </nav>
+  </header>
+
+  <!-- Mobile Overlay Navigation -->
+  <div class="menu-overlay" id="menuOverlay">
+    <div class="menu-container">
+      <nav>
+        <ul>
+          <li><a href="index.html"> Home</a></li>
+          <li><a href="profile.html"> Staff Profile</a></li>
+          <li><a href="gallery.html">   Gallery</a></li>
+          <li><a href="contact.html"> Contact</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>       
 
     <div class="gallery-hero">
         <h1>School Gallery</h1>
@@ -567,10 +547,22 @@ margin: 2% 40%;
             <div class="gallery-item" data-category="campus">
                 <img src="images/alevel-students.jpg" alt="School Library">
             </div>
+             <div class="gallery-item" data-category="campus">
+                <img src="images/campus3.jpg" alt="School Grounds">
+            </div>
+
             <div class="gallery-item" data-category="campus">
                 <img src="images/Libra5.jpeg" alt="School Grounds">
             </div>
-
+            <div class="gallery-item" data-category="campus">
+                <img src="images/campus-1.jpg" alt="School Grounds">
+            </div>
+            <div class="gallery-item" data-category="campus">
+                <img src="images/campus-2.jpg" alt="School Grounds">
+            </div>
+            <div class="gallery-item" data-category="campus">
+                <img src="images/campus-9.jpg" alt="School Grounds">
+            </div>
             <!-- Event Images -->
             <div class="gallery-item" data-category="events">
                 <img src="images/event-scroll.jpg" alt="Annual Science Fair">
@@ -634,26 +626,51 @@ margin: 2% 40%;
             </div>
         </div>
     </section>
+   <footer>
+  <div class="footer-container">
+    <div class="footer-content-center">
+      <div class="badge">
+        <img src="images/logo1-removebg.png" alt="School Logo">
+      </div>
 
-<footer>
-    <div class="footer-container">
-        <div class="footer-column">
-        
-           <div class="badge">
-            <img src="images/logo1-removebg.png" alt="">
-           </div>
-            <div class="social-links-footer">
-            <a href="https://www.facebook.com/profile.php?id=100066400460286" aria-label="Facebook" class="disturbed"><i
-                    class='bx bxl-facebook'></i></a>
-            <a href="https://wa.me/256701705888" target="_blank"><i class='bx bxl-whatsapp'></i>
-                <a href="https://youtu.be/2wmHz4-qH4Y?si=HnfLzBJw8lEXqULo" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
+      <div class="social-links-footer">
+        <a href="https://www.facebook.com/profile.php?id=100066400460286" aria-label="Facebook">
+          <i class='bx bxl-facebook'></i>
+        </a>
 
-            <a href="https://www.tiktok.com/@pallisa.prog..sec?is_from_webapp=1&sender_device=pc"><i class='bx bxl-tiktok'></i></a>
-            </div>
-        </div>
+        <a href="https://wa.me/256754391008" target="_blank" aria-label="WhatsApp">
+          <i class='bx bxl-whatsapp'></i>
+        </a>
+
+        <a href="https://youtu.be/2wmHz4-qH4Y?si=HnfLzBJw8lEXqULo" aria-label="YouTube">
+          <i class='bx bxl-youtube'></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@pallisa.prog..sec?is_from_webapp=1&sender_device=pc" aria-label="TikTok">
+          <i class='bx bxl-tiktok'></i>
+        </a>
+      </div>
+    </div>
+  </div>
 </footer>
 
     <script>
+       //toggle
+   //toggle
+const overlay = document.getElementById('menuOverlay');
+
+    function toggleMenu() {
+      overlay.classList.toggle('active');
+    }
+
+    // Close the menu when a mobile link is clicked
+    const linkss = document.querySelectorAll('.menu-container a');
+    linkss.forEach(link => {
+      link.addEventListener('click', () => {
+        overlay.classList.remove('active');
+      });
+    });
+    //end of toggle
         document.addEventListener('DOMContentLoaded', function () {
             // Gallery filter functionality
             const filterButtons = document.querySelectorAll('.category-btn');

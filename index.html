@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page - PPSS</title>
+    <title>Home page-PPSS</title>
     <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-   
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -22,119 +20,32 @@
             --text-light: #7f8c8d;
         }
 
+   /*      :root {
+  --primary-color: rgb(199, 223, 232);
+  --secondary-color: rgb(97, 142, 168); 
+*/
+
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-/*new*/
-header { 
-    margin-top: -118px;
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between;
-    padding: 0.5rem; 
-   background-color: white;
-   height: 120px;
-    background: linear-gradient(to right, white,  rgb(199, 223, 232));
-  
-}
-@media (min-width:600px) {
-    header { margin-top: -80px;
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between;
-    padding: 0.5rem; 
-    background: linear-gradient( white,  rgb(199, 223, 232));
-    height: 98px;
-}
-
-}
-/* Logo */
-.logo { display: flex; align-items: center; }
-.logo img { width: 80px; height: 88px; border-radius: 1%; object-fit: cover; object-position: top; margin-right: 0.5rem; }
-.logo h2 { font-size: 1.2rem; color: #333; }
-
-/* Hamburger Button */
-.menu-button { 
-  display: none;
-   background: none; border: none; cursor: pointer; 
-  }
-.menu-button .bar { 
-  display: block; width: 25px; height: 3px; margin: 4px 0;
-   background-color:rgba(0, 0, 255, 0.548); 
-   transition: transform 0.3s ease; 
-  }
-
-/* Navigation Menu (hidden by default) */
-.nav-menu {z-index: 2;
-     position: fixed; top: 0; left: 0; height: 70%; width: 0; overflow: hidden;
-      visibility: hidden;
-       background: rgba(255,255,255,0.95);
-        transition: width 0.4s ease, visibility 0.4s; 
-        padding-top: 6rem; }
-.nav-menu.visible { width: 250px; visibility: visible; }
-.nav-menu ul { list-style: none; padding: 0 1rem; }
-.nav-menu li { margin: 1rem 0; }
-.nav-menu a {
-   text-decoration: none;
-   color: #706d6d;
-  font-size: 1.1rem; 
-  font-weight: 560;
-  
-  }
-
-/* Close Button */
-.close-button { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 2rem; }
-
-/* Hover underline animation */
-.nav-menu a::after {
-  content: ''; display: block; height: 2px; width: 0; background: #3498db; transition: width 0.5s;
-}
-.nav-menu li:hover a::after { width: 40%; }
-@media (min-width:600px) {
-    .nav-menu li:hover a::after { width: 100%; }
-}
-/* Responsive */
-@media (max-width: 768px) {
-  .menu-button { display: block; }
-  .logo h2 { display: none; }
-}
-@media (min-width: 769px) {
-  .nav-menu { position: static; width: auto; visibility: visible; display: flex; background: none; padding: 0; }
-  .nav-menu ul { display: flex; gap: 1rem; }
-  .menu-button, .close-button { display: none; }
-}
-
-/*new*/
-        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-family: 'Poppins', sans-serif;
+
+        }
+
+        body {
+          
             color: var(--text-color);
             line-height: 1.6;
             background-color: #f9f9f9;
-            padding-top: 80px;
-            
+  
         }
 
-        @media (max-width:599px) {
-            
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/*new */
 
-/*badge var(--primary-color) rgb(255, 255, 255)*/
-.badge img{
-    width: 120px;
-   object-fit: cover;
-}
-
-       
-        
-        }
-
-
+ 
         main {
             max-width: 1200px;
             margin: 0 auto;
@@ -510,41 +421,6 @@ margin-top: 5%;
             text-align: left;
         }
 
-        /* Footer Styles   background-color: rgb(199, 199, 199); */
-        footer {
-            background-color: rgb(235, 225, 225);
-            color: white;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
-            background-color: rgb(199, 223, 232);
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            text-align: left;
-        }
-
-      
-        .social-links-footer a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            color: white;       
-            background-color:#3498db ; 
-            transition: all 0.3s ease;
-        }
-        
-        .social-links-footer a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-        }
 
 /*footer new style*/
 
@@ -594,51 +470,10 @@ margin-top: 5%;
                 width: 100%;
                 object-fit: cover;
             }
-
-          
-
-            .footer-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-         
-            .social-links-footer {
-                justify-content: center;
-            }
-            .social-links-footer a i{
-                color: white;
-            }
-        }
-@media (max-width:599px) {
-    .social-links-footer {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
         }
 
-        .social-links-footer a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            color: white;         
-            background-color:#3498db ;      /* #3498db  var(--secondary-color)*/
-            transition: all 0.3s ease;
-       
-        }
-         .social-links-footer a{
-            color: white;
-         }
-        
-        .social-links-footer a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-        }
 
-}
+
         @media (max-width: 480px) {
             body {
                 padding-top: 120px;
@@ -708,63 +543,9 @@ hr{
     margin: 2% 20%;
 }
 
-@media (min-width:600px) {
-    .logo{
-            display: flex;
-            align-items: center;
-          margin-top: -20px;
-        }
-        .logo img{
-            width: 80px;
-            height: 100px;
-            border-radius: 50px;
-            margin: 5% 5%;
-            margin-bottom: 10%;
-            object-fit: cover;
-            object-position: top;
-        }
-/*animation*/
-.links nav ul li::after{
-    content: '';
-    display: block;
-    background-color: #3498db;
-    height: 2px;
-    width: 0%;
-    transition: 0.5s;
-}
-.links nav ul li:hover::after{
-    width: 100%;
-}
 
 
-  /*footer design*/
-    .badge img{
-    width: 150px;
-   object-fit: cover;
-margin: 2% 40%;
-    }
 
-    .social-links-footer {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-            
-           
-        }
-
-        .social-links-footer a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color:white;
-            transition: all 0.3s ease;
-        }
-        
-    .disturbed{
-        margin-left: 38%;
-    }
-
-}
 
 /*picture*/
 
@@ -1249,13 +1030,7 @@ min-height: 20vh;
 
 /*footer again*/
 @media (max-width:599px) {
-     .social-links-footer a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color:white;
-            transition: all 0.3s ease;
-        }
+     
 
         /*no padding*/
           .homepage2 {
@@ -1506,40 +1281,402 @@ min-height: 20vh;
       }
     }
 /*end of testimonials*/
+
+/*form*/
+.download-box {
+      text-align: center;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .download-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .download-icon {
+      display: none;
+    }
+
+    .bx-download-icon {
+      font-size: 80px;
+      color: #3498db;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      color: #1f3c6e;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .download-btn {
+      padding: 12px 30px;
+      background-color: #3498db;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .download-btn:hover {
+      background-color:#3498db ;  /* #3498db*/
+      transform: scale(1.05);  /*#e8a722*/
+    }
+
+    @media (max-width: 600px) {
+      .download-box {
+        width: 90%;
+        padding: 1.5rem;
+      }
+      .bx-download-icon {
+        font-size: 60px;
+      }
+      .title {
+        font-size: 1rem;
+      }
+      .download-btn {
+        font-size: 0.9rem;
+      }
+    }   
+    
+/*new end*/
+     
+
+    /* Header */
+    header {
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #003366;
+      color: white;
+      padding: 12px 20px;
+      position: relative;
+      z-index: 1001;
+      height: 100px;
+    background-color:  rgb(199, 223, 232);
+    background: linear-gradient(to right,white, rgb(199, 223, 232));
+    }
+    @media (max-width:400px) {
+         header {
+      margin-top: -120px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #003366;
+      color: white;
+      padding: 12px 20px;
+      position: relative;
+      z-index: 1001;
+      height: 100px;
+    background-color:  rgb(199, 223, 232);
+  
+    }
+    }
+
+    .logo img {
+      height: 95px;
+      width: 95px;
+    }
+
+    .btn .buttonElement {
+      background: none;
+      border: none;
+      color:  blue;
+      font-size: 35px;
+      cursor: pointer;
+    }
+
+    /* Mobile Overlay */
+    .menu-overlay {
+        margin-top: 10%;
+      position:absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 65%;
+      background-color: rgb(230, 216, 216);
+      background: #f9f9f9;
+
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 60px;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.7s ease-in-out;
+    }
+
+    .menu-overlay.active {
+      transform: scaleY(1);
+    }
+
+    .menu-container {
+      width: 80%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu-container nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .menu-container nav ul li a {
+      display: block;
+      width: 100%;
+      padding: 14px 35%;
+      background-color: rgb(230, 216, 216);
+      background: #f9f9f9;
+
+      border-radius: 8px;
+      font-size: 18px;
+      color: #003366;
+      text-decoration: none;
+      text-align: left;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+      transition: background 0.3s ease, color 0.3s ease;
+      font-weight: 200;
+    }
+@media (max-width:400px) {
+  .menu-container nav ul li a {
+      display: block;
+      width: 100%;
+      padding: 12px 20%;
+            padding: 14px 20px;
+
+      background-color: rgb(230, 216, 216);
+      background: #f9f9f9;
+ 
+      border-radius: 8px;
+      font-size: 18px;
+      color: #003366;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+      transition: background 0.3s ease, color 0.3s ease;
+      font-weight: 400;
+    }
+}
+    .menu-container nav ul li a:hover {
+      background-color: #eef4ff;
+      color: #002244;
+    }
+
+    /* Desktop Nav */
+    .desktop-nav {
+      display: none;
+    }
+
+    /* Larger Screens */
+    @media (min-width: 768px) {
+      .btn {
+        display: none;
+      }
+
+      .desktop-nav {
+        display: flex;
+        gap: 20px;
+      }
+
+      .desktop-nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-size: 20px;
+        transition: background 0.3s ease;
+        color: #333;
+        font-weight: bold;
+      }
+
+      .desktop-nav a:hover {
+        background: rgba(78, 76, 76, 0.1);
+        border-bottom: 2px solid white;
+      }
+
+      .menu-overlay {
+        display: none;
+      }
+       .logo img {
+      height: 100px;
+      width: 95px;
+    }
+    }
+
+
+
+/* Footer Styles */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 3rem 1rem;
+  margin-top: 4rem;
+  background:  rgb(199, 223, 232);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-content-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Badge Image */
+.badge img {
+  width: 150px;
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Social Links */
+.social-links-footer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-links-footer a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  background-color:  #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 1.0rem;
+}
+
+.social-links-footer a:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive image spacing */
+@media (min-width: 768px) {
+  .badge img {
+    margin: 2% auto;
+  }
+}
+
+/*typing*/
+
+    .blazeTextZoneMain_993x {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #ffffffcc;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(0, 123, 255, 0.2);
+      max-width: 90%;
+      width: 600px;
+    }
+    @media (max-width:599px) {
+      
+    .blazeTextZoneMain_993x {
+      text-align: center;
+      padding: 30px 15px;
+      background-color: #ffffffcc;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(0, 123, 255, 0.2);
+      max-width: 90%;
+      width: 600px;
+      margin: 2% 6%;
+    }
+    }
+    @media (min-width:600px) {
+       .blazeTextZoneMain_993x {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #ffffffcc;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(0, 123, 255, 0.2);
+      max-width: 90%;
+      width: 600px;
+       margin: 2% 25%;
+
+    }
+    }
+
+    .blazeTextZoneMain_993x h2 {
+      font-size: 1.8rem;
+      color: #008cdd;
+      min-height: 50px;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    @media screen and (max-width: 600px) {
+      .blazeTextZoneMain_993x h2 {
+        font-size: 1.4rem;
+      }
+    }
+/*typing last*/
     </style>
 </head>
 
-
 <body>
-  <!--header-->
-<header>
-  <div class="logo">
-    <img src="images/logo1-removebg.png" alt="Pallisa Progressive Secondary School logo">
-    <h2>Pallisa Progressive Secondary School</h2>
-  </div>
+     <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="images/logo1-removebg.png" alt="Logo">
+    </div>
 
-  <button id="nav-toggle" class="menu-button"
-          aria-label="Show navigation menu"
-          aria-expanded="false"
-          aria-controls="nav-menu">
-    <span class="bar" aria-hidden="true"></span>
-    <span class="bar" aria-hidden="true"></span>
-    <span class="bar" aria-hidden="true"></span>
-  </button>
+    <!-- Mobile button -->
+    <div class="btn">
+      <button class="buttonElement" onclick="toggleMenu()"> <i class='bx bx-menu'></i></button>
+    </div>
 
-  <nav id="nav-menu" class="nav-menu" role="navigation" aria-labelledby="nav-toggle">
-    <button class="close-button" aria-label="Hide navigation menu">&times;</button>
-    <ul>
-       <li><a href="index.html"> <span class="my-icons"><i class='bx bx-home' ></i></span> Home</a></li>
-        <li><a href="profile.html"><span class="my-icons"> <i class='bx bx-user'></i> </span>Staff Profile</a></li>
-        <li><a href="gallery.html"> <span class="my-icons"><i class='bx bxs-grid-alt'></i></span> Gallery</a></li>
-        <li><a href="contact.html"> <span class="my-icons"><i class='bx bx-phone' ></i></span> Contact</a></li>
-        <li><a href="faq.html"><span class="my-icons"><i class='bx bx-search-alt-2'></i></span> FAQs</a></li>
-    </ul>
-  </nav>
-</header>  
-  <!--header-->
-    <section class="home-page1 visible">
+    <!-- Desktop nav -->
+    <nav class="desktop-nav">
+      <a href="index.html"><i class='bx bx-home'></i> Home</a>
+      <a href="profile.html"><i class='bx bx-user'></i> Staff Profile</a>
+      <a href="gallery.html">  <i class='bx bx-image'></i> Gallery</a>
+      <a href="contact.html"><i class='bx bx-phone'></i> Contact</a>
+      <a href="faq.html"><i class='bx bx-help-circle' ></i>FAQs</a>
+    </nav>
+  </header>
+
+  <!-- Mobile Overlay Navigation -->
+  <div class="menu-overlay" id="menuOverlay">
+    <div class="menu-container">
+      <nav>
+        <ul>
+          <li><a href="index.html"> Home</a></li>
+          <li><a href="profile.html"> Staff Profile</a></li>
+          <li><a href="gallery.html">   Gallery</a></li>
+          <li><a href="contact.html"> Contact</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>   
+  <!--middle -->    
+<section class="home-page1 visible">
         <div class="home-content">
             <h4 class="text1"> PALLISA PROGRESSIVE SECONDARY SCHOOL</h4>
             <p class="chanda">Nurturing curiosity,fostering growth, and guiding students towards their dreams.</p>
@@ -1554,10 +1691,11 @@ min-height: 20vh;
 
         
     </section>
-  
-    <h2 id="ppssUniqueTyper" class="ppss-type-heading"></h2>
+  <div class="blazeTextZoneMain_993x">
+    <h2 id="typerLiveTextNode_883z"></h2>
+  </div>
 
-    
+  
     <main>
  
 
@@ -1817,7 +1955,7 @@ min-height: 20vh;
     <div class="uin-year-range">2021–2024</div>
   </div>
   <div class="uin-slide">
-    <img src="images/icons.jpg" class="uin-photo" alt="Student photo">
+    <img src="images/odele-john2.jpg" class="uin-photo" alt="Student photo">
     <p class="uin-quote-text">The learning environment is enjoyable and the spiritual guidance kept me grounded.</p>
     <div class="uin-author">— Odele John</div>
     <div class="uin-year-range">2019–2023</div>
@@ -1878,31 +2016,118 @@ min-height: 20vh;
   ></video>
   <button id="ppssFullscreenBtn" class="ppss-campus-fullscreen">Fullscreen</button>
 </section>
+<!--form download-->
 
+  <div class="download-box">
+    <i class='bx bxs-download bx-download-icon'></i>
 
+    <!-- Hidden image just for reference -->
+    <img src="videos/application-form.png" alt="Download Icon" class="download-icon" id="hidden-image" />
+
+    <div class="title">DOWNLOAD APPLICATION FORM</div>
+
+    <button class="download-btn" onclick="downloadForm()">DOWNLOAD FORM</button>
+  </div>
+
+<!--form download-->
     </main>
-   
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-            
-               <div class="badge">
-                <img src="images/logo1-removebg.png" alt="">
-               </div>
-                <div class="social-links-footer">
-                    <a href="https://www.facebook.com/profile.php?id=100066400460286" aria-label="Facebook" class="disturbed"><i
-                            class='bx bxl-facebook'></i></a>
-                    <a href="https://wa.me/256754391008" target="_blank"><i class='bx bxl-whatsapp'></i>
-                        <a href="https://youtu.be/2wmHz4-qH4Y?si=HnfLzBJw8lEXqULo" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
-    
-                    <a href="https://www.tiktok.com/@pallisa.prog..sec?is_from_webapp=1&sender_device=pc"><i class='bx bxl-tiktok'></i></a>
-                </div>
-            </div>
+  <!--end of middle-->
+   <footer>
+  <div class="footer-container">
+    <div class="footer-content-center">
+      <div class="badge">
+        <img src="images/logo1-removebg.png" alt="School Logo">
+      </div>
 
-                
-    </footer>
+      <div class="social-links-footer">
+        <a href="https://www.facebook.com/profile.php?id=100066400460286" aria-label="Facebook">
+          <i class='bx bxl-facebook'></i>
+        </a>
+
+        <a href="https://wa.me/256754391008" target="_blank" aria-label="WhatsApp">
+          <i class='bx bxl-whatsapp'></i>
+        </a>
+
+        <a href="https://youtu.be/2wmHz4-qH4Y?si=HnfLzBJw8lEXqULo" aria-label="YouTube">
+          <i class='bx bxl-youtube'></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@pallisa.prog..sec?is_from_webapp=1&sender_device=pc" aria-label="TikTok">
+          <i class='bx bxl-tiktok'></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
 
     <script>
+//typing animation
+ const typingTextMaster_zz992 = [
+      "REG No. PSS/P/110",
+      "License No. ME/32/6212",
+      "UNEB No. M.U4050 O & A'LEVEL",
+      "EMIS No. 398010"
+    ];
+
+    const domTargetNode_zz883 = document.getElementById("typerLiveTextNode_883z");
+    let textIndexGlobal_xx = 0;
+    let charPositionLocal_yy = 0;
+    let erasingNowFlag_tt = false;
+    let typingDelayConst = 80;
+    let eraseDelayConst = 40;
+    let holdTextDurationBeforeErase = 10000;
+
+    function dynamicTyperFunction_zzShowHide() {
+      const currentTextItem = typingTextMaster_zz992[textIndexGlobal_xx];
+
+      if (!erasingNowFlag_tt) {
+        domTargetNode_zz883.textContent = currentTextItem.substring(0, charPositionLocal_yy + 1);
+        charPositionLocal_yy++;
+
+        if (charPositionLocal_yy < currentTextItem.length) {
+          setTimeout(dynamicTyperFunction_zzShowHide, typingDelayConst);
+        } else {
+          erasingNowFlag_tt = true;
+          setTimeout(dynamicTyperFunction_zzShowHide, holdTextDurationBeforeErase);
+        }
+
+      } else {
+        domTargetNode_zz883.textContent = currentTextItem.substring(0, charPositionLocal_yy - 1);
+        charPositionLocal_yy--;
+
+        if (charPositionLocal_yy > 0) {
+          setTimeout(dynamicTyperFunction_zzShowHide, eraseDelayConst);
+        } else {
+          erasingNowFlag_tt = false;
+          textIndexGlobal_xx = (textIndexGlobal_xx + 1) % typingTextMaster_zz992.length;
+          setTimeout(dynamicTyperFunction_zzShowHide, 500);
+        }
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(dynamicTyperFunction_zzShowHide, 500);
+    });
+//typing animation last
+
+       //toggle
+   //toggle
+const overlay = document.getElementById('menuOverlay');
+
+    function toggleMenu() {
+      overlay.classList.toggle('active');
+    }
+
+    // Close the menu when a mobile link is clicked
+    const linkss = document.querySelectorAll('.menu-container a');
+    linkss.forEach(link => {
+      link.addEventListener('click', () => {
+        overlay.classList.remove('active');
+      });
+    });
+    //end of toggle
+      
+
       // Scroll animation for sections
         document.addEventListener('DOMContentLoaded', function () {
             const
@@ -2173,35 +2398,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize
     showOurservicesSlide(ourservicesIndex);
     startOurservicesAutoSlide();
-    //toggle
-      document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.getElementById('nav-toggle');
-  const menu = document.getElementById('nav-menu');
-  const closeBtn = menu.querySelector('.close-button');
-
-  function openMenu() {
-    toggle.setAttribute('aria-expanded', 'true');
-    menu.classList.add('visible');
-    closeBtn.focus();
-  }
-
-  function closeMenu() {
-    toggle.setAttribute('aria-expanded', 'false');
-    menu.classList.remove('visible');
-    toggle.focus();
-  }
-
-  toggle.addEventListener('click', () => {
-    menu.classList.contains('visible') ? closeMenu() : openMenu();
-  });
-
-  closeBtn.addEventListener('click', closeMenu);
-
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && menu.classList.contains('visible')) closeMenu();
-  });
-});
-
+ 
 //what people say
   const slider = document.querySelector('.testimonial-slider');
 const prevBtn = document.getElementById('prevBtn');
@@ -2261,10 +2458,19 @@ nextBtn.addEventListener('click', () => {
   ppssObserver.observe(ppssVideoElem);
 //video end
 
-//uneb
+//uneb form
+ function downloadForm() {
+      const imageUrl = 'videos/application-form.png'; // Update if image is in another folder or hosted online
 
-//uneb
-        </script>
+      const a = document.createElement('a');
+      a.href = imageUrl;
+      a.download = 'S1_Application_Form.jpeg';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+//uneb form last
+    </script>
 </body>
 
 </html>

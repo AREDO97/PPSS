@@ -4,1208 +4,1040 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Location & Contact - pallisa progressive Secondary School</title>
-    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+    <title>Contact-PPSS</title>
+    <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
-    :root {
-        --primary-color: #2c3e50;
-        --secondary-color: #3498db;
-        --accent-color: #e74c3c;
-        --light-color: #ecf0f1;
-        --dark-color: #2c3e50;
-        --text-color: #333;
-        --text-light: #7f8c8d;
-    }
-    * {
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+          
             color: var(--text-color);
             line-height: 1.6;
             background-color: #f9f9f9;
-            padding-top: 20px;
-            
+            font-family: 'Poppins', sans-serif;
+
         }
 
-      
+  
 
-    /* Contact Hero Section */
-    .contact-hero {
-        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/Contact-Us.png');
-        background-size: cover;
-        background-position: center;
+
+
+  /*footer design*/
+    .badge img{
+    width: 150px;
+   object-fit: cover;
+margin: 2% 40%;
+    }
+
+   
+        
+    .disturbed{
+        margin-left: 38%;
+    }
+
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #003366;
+      color: white;
+      padding: 12px 20px;
+      position: relative;
+      z-index: 1001;
+      height: 100px;
+    background-color:  rgb(199, 223, 232);
+    background: linear-gradient(to right,white, rgb(199, 223, 232));
+
+    }
+
+    .logo img {
+      height: 95px;
+      width: 85px;
+    }
+
+    .btn .buttonElement {
+      background: none;
+      border: none;
+      color:  blue;
+      font-size: 35px;
+      cursor: pointer;
+    }
+
+    /* Mobile Overlay */
+    .menu-overlay {
+        margin-top: 10%;
+      position:absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 65%;
+      background-color: rgb(230, 216, 216);
+      background: #f9f9f9;
+
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 60px;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.7s ease-in-out;
+    }
+
+    .menu-overlay.active {
+      transform: scaleY(1);
+    }
+
+    .menu-container {
+      width: 80%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu-container nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .menu-container nav ul li a {
+      display: block;
+      width: 100%;
+      padding: 14px 20px;
+      background-color: rgb(230, 216, 216);
+      background: #f9f9f9;
+
+      border-radius: 8px;
+      font-size: 17px;
+      color: #003366;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+      transition: background 0.3s ease, color 0.3s ease;
+      font-weight: 400;
+    }
+
+    .menu-container nav ul li a:hover {
+      background-color: #eef4ff;
+      color: #002244;
+    }
+
+    /* Desktop Nav */
+    .desktop-nav {
+      display: none;
+    }
+
+    /* Larger Screens */
+    @media (min-width: 768px) {
+      .btn {
+        display: none;
+      }
+
+      .desktop-nav {
+        display: flex;
+        gap: 20px;
+      }
+
+      .desktop-nav a {
         color: white;
-        text-align: center;
-        padding: 6rem 2rem;
-        margin-bottom: 3rem;
-        background-attachment: fixed;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-size: 20px;
+        transition: background 0.3s ease;
+        color: #333;
+        font-weight: 600;
+      }
+
+      .desktop-nav a:hover {
+        background: rgba(78, 76, 76, 0.1);
+        border-bottom: 2px solid white;
+      }
+
+      .menu-overlay {
+        display: none;
+      }
+       .logo img {
+      height: 95px;
+      width: 85px;
+    }
+    }
+
+
+ :root {
+  --primary-color: rgb(199, 223, 232);
+  --secondary-color: rgb(97, 142, 168); /* Example secondary */
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 3rem 1rem;
+  margin-top: 4rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-content-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Badge Image */
+.badge img {
+  width: 150px;
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Social Links */
+.social-links-footer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-links-footer a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  background-color:  #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 1.0rem;
+}
+
+.social-links-footer a:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive image spacing */
+@media (min-width: 768px) {
+  .badge img {
+    margin: 2% auto;
+  }
+}
+
+/*background*/
+ .contact-hero {
+      height: 60vh;
+      min-height: 400px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+      position: relative;
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ), url('images/Contact-Us.png'); /* Replace with your actual image path */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     .contact-hero h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        animation: fadeInUp 1s ease both;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      animation: fadeInDown 1s ease-out;
     }
 
     .contact-hero p {
-        font-size: 1.2rem;
-        max-width: 700px;
-        margin: 0 auto;
+      font-size: 1.3rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
         opacity: 0;
-        animation: fadeInUp 1s ease 0.3s both;
-    }
-
-    /* Contact Content */
-    .contact-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 2rem 4rem;
-    }
-
-    .contact-info {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 3rem;
-        margin-bottom: 4rem;
-    }
-
-    .contact-details {
-        flex: 1;
-        min-width: 300px;
-        background: white;
-        padding: 2.5rem;
-        border-radius: 10px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.6s ease;
-    }
-
-    .contact-details.visible {
+        transform: translateY(-20px);
+      }
+      to {
         opacity: 1;
         transform: translateY(0);
+      }
     }
 
-    .contact-details h2 {
-        font-size: 1.8rem;
-        color: var(--primary-color);
-        margin-bottom: 1.5rem;
-        position: relative;
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    .contact-details h2::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -10px;
-        width: 70px;
-        height: 3px;
-        background-color: var(--secondary-color);
-    }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .contact-hero {
+        height: auto;
+        padding: 4rem 1rem;
+      }
 
-    .contact-info-item {
-        margin-bottom: 1.5rem;
-        display: flex;
-        align-items: flex-start;
-    }
+      .contact-hero h1 {
+        font-size: 2rem;
+      }
 
-    .contact-info-item i {
-        font-size: 1.5rem;
-        color: var(--secondary-color);
-        margin-right: 1.5rem;
-        margin-top: 3px;
-    }
-
-    .contact-info-content h3 {
+      .contact-hero p {
         font-size: 1.1rem;
-        margin-bottom: 0.3rem;
-        color: var(--primary-color);
+      }
     }
 
-    .contact-info-content p,
-    .contact-info-content a {
-        color: var(--text-light);
-        text-decoration: none;
-        transition: color 0.3s ease;
+    @media (max-width: 480px) {
+      .contact-hero h1 {
+        font-size: 1.7rem;
+      }
+
+      .contact-hero p {
+        font-size: 1rem;
+      }
+    }
+/*background end*/
+/*contact our office*/
+ :root {
+      --ppss-primary: #00bfa6;
+      --ppss-bg: #ffffff;
+      --ppss-text-dark: #222;
+      --ppss-text-light: #777;
+      --ppss-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
-    .contact-info-content a:hover {
-        color: var(--secondary-color);
-    }
-
-    .social-links {
-        display: flex;
-        gap: 1rem;
-        margin-top: 2rem;
-    }
-
-    .social-links a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: var(--light-color);
-        color: var(--primary-color);
-        transition: all 0.3s ease;
-    }
-    .social-links a i{
-     color: var(--secondary-color);
-     font-weight: bold;
+  #ppssContactSection {
+      padding: 60px 20px;
+      font-family: 'Poppins', sans-serif;
 
     }
 
-    .social-links a:hover {
-        background-color: transparent;
-        color: white;
-        transform: translateY(-3px);
+    #ppssContactBox {
+      max-width: 950px;
+      margin: auto;
+      background-color: var(--ppss-bg);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: var(--ppss-box-shadow);
+      transition: transform 0.3s ease;
+    }
+
+    #ppssContactBox:hover {
+      transform: translateY(-5px);
+    }
+
+    #ppssContactHeading {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--ppss-primary);
+      margin-bottom: 40px;
+    }
+
+    .ppssContactItem {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+
+    .ppssContactIcon {
+      font-size: 2rem;
+      color: var(--ppss-primary);
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+
+    .ppssContactContent h3 {
+      margin: 0 0 6px;
+      font-size: 1.1rem;
+      color: var(--ppss-text-dark);
+    }
+
+    .ppssContactContent p,
+    .ppssContactContent a {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--ppss-text-light);
+      text-decoration: none;
+    }
+
+    .ppssContactContent a:hover {
+      color: var(--ppss-primary);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .ppssContactItem {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .ppssContactIcon {
+        margin-bottom: 10px;
+      }
+
+      #ppssContactBox {
+        padding: 25px;
+      }
+
+      #ppssContactHeading {
+        font-size: 1.6rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #ppssContactBox {
+        padding: 20px;
+      }
+
+      .ppssContactContent p {
+        font-size: 0.95rem;
+      }
+    }
+/*end of our office*/
+
+/*contact form*/
+
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      min-height: 100vh;
     }
 
     .contact-form {
-        flex: 1;
-        min-width: 300px;
-        background: white;
-        padding: 2.5rem;
-        border-radius: 10px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.6s ease 0.2s;
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 16px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
     }
 
-    .contact-form.visible {
-        opacity: 1;
-        transform: translateY(0);
+    .contact-form h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 26px;
+      color: #1e1e2f;
     }
 
     .form-group {
-        margin-bottom: 1.5rem;
+      margin-bottom: 18px;
     }
 
     .form-group label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: 500;
-        color: var(--primary-color);
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #333;
     }
 
     .form-group input,
     .form-group textarea,
     .form-group select {
-        width: 100%;
-        padding: 0.8rem 1rem;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        font-family: 'Poppins', sans-serif;
-        transition: border-color 0.3s ease;
+      width: 100%;
+      padding: 12px 14px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: border-color 0.3s ease;
     }
 
     .form-group input:focus,
     .form-group textarea:focus,
     .form-group select:focus {
-        outline: none;
-        border-color: var(--secondary-color);
-    }
-
-    .form-group textarea {
-        min-height: 120px;
-        resize: vertical;
+      border-color: #007bff;
+      outline: none;
     }
 
     .submit-btn {
-        background-color: var(--secondary-color);
-        color: white;
-        border: none;
-        padding: 0.8rem 2rem;
-        font-size: 1rem;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s ease;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 14px;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
     .submit-btn:hover {
-        background-color: var(--primary-color);
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      background-color: #0056b3;
     }
 
-    /* Map Section */
-    .map-section {
-        margin-bottom: 4rem;
-        text-align: center;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.6s ease 0.4s;
+    @media (max-width: 600px) {
+      .contact-form {
+        padding: 25px 20px;
+      }
     }
-
-    .map-section.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .map-section h2 {
-        font-size: 2rem;
-        color: var(--primary-color);
-        margin-bottom: 1.5rem;
-    }
-
-    .map-section p {
-        color: var(--text-light);
-        margin-bottom: 2rem;
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .map-container {
-        position: relative;
-        padding-bottom: 56.25%;
-        /* 16:9 aspect ratio */
-        height: 0;
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .map-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
-
-    /* Business Hours */
-    .hours-section {
-        background: white;
-        padding: 2.5rem;
-        border-radius: 10px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        margin-bottom: 4rem;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.6s ease 0.6s;
-    }
-
-    .hours-section.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .hours-section h2 {
-        font-size: 1.8rem;
-        color: var(--primary-color);
-        margin-bottom: 1.5rem;
-        position: relative;
-    }
-
-    .hours-section h2::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -10px;
-        width: 70px;
-        height: 3px;
-        background-color: var(--secondary-color);
-    }
-
-    .hours-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 1.5rem;
-    }
-
-    .hour-item {
-        display: flex;
-        justify-content: space-between;
-        padding: 1rem;
-        background: var(--light-color);
-        border-radius: 5px;
-    }
-
-    .hour-item.active {
-        background: var(--secondary-color);
-        color: white;
-    }
-
-    .hour-item.active .day {
-        font-weight: 600;
-    }
-
-    /* Emergency Contact */
-    .emergency-contact {
-        background: var(--accent-color);
-        color: white;
-        padding: 2rem;
-        border-radius: 10px;
-        text-align: center;
-        margin-bottom: 4rem;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.6s ease 0.8s;
-    }
-
-    .emergency-contact.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .emergency-contact h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-    }
-
-    .emergency-contact p {
-        margin-bottom: 1.5rem;
-        font-size: 1.1rem;
-    }
-
-    .emergency-btn {
-        background: white;
-        color: var(--accent-color);
-        border: none;
-        padding: 0.8rem 2rem;
-        font-size: 1rem;
-        border-radius: 50px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .emergency-btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-   /* Footer Styles */
-@media (max-width:599px) {
-            footer {
-            background-color:rgb(236, 222, 222);
-            color: white;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
-            background: rgb(199, 223, 232);
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            text-align: left;
-        }
-
-       
-
-        .social-links-footer {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-links-footer a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color:  #3498db;
-            color: white;
-            transition: all 0.3s ease;
-        }
-
-        .social-links-footer a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-        }
-
-}
-       
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-         
-
-            .logo {
-                margin-bottom: 1rem;
-            }
-
-            nav ul {
-                gap: 1rem;
-            }
-
-            .home-page1 {
-                padding: 4rem 1rem;
-            }
-
-            .home-page1 h2 {
-                font-size: 1.8rem;
-            }
-
-            .homepage2 {
-                flex-direction: column;
-                padding: 2rem;
-            }
-
-            .homepage2 img,
-            .homepage2 .content {
-                width: 100%;
-            }
-
-            .welcome-message {
-                padding: 2rem;
-            }
-
-            .footer-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .footer-column h3::after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            .social-links-footer {
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-           
-
-            .motto {
-                grid-template-columns: 1fr;
-            }
-
-            .home-pictures {
-                grid-template-columns: 1fr;
-            }
-
-            .main-content {
-                grid-template-columns: 1fr;
-            }
-        }
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @media (max-width: 768px) {
-       
-
-        .logo {
-            margin-bottom: 1rem;
-        }
-
-      
-        .contact-hero {
-            padding: 4rem 1rem;
-        }
-
-        .contact-hero h1 {
-            font-size: 2rem;
-        }
-
-        .contact-info {
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .map-section h2 {
-            font-size: 1.5rem;
-        }
-    }
-
-    @media (max-width: 480px) {
-        nav ul {
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .contact-hero h1 {
-            font-size: 1.8rem;
-        }
-
-        .contact-details,
-        .contact-form {
-            padding: 1.5rem;
-        }
-
-        .hours-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    /*header*/
-    @media (max-width:599px) {
-        .phone-view{
-           margin-top: -10px;
-           display: grid;
-           grid-template-columns: 1fr 1fr;
-           height: 80px;
-           background-color: white;
-           background: linear-gradient(to right, white,  rgb(199, 223, 232));
-
-      
-        }
-        .logo{
-            display: flex;
-            align-items: center;
-            margin-top: -15px;
-        }
-        .logo img{
-            width: 80px;
-           height: 88px;
-           border-radius: 1%;
-            
-            object-position: top;
-            object-fit: cover;
-        }
-        
-        .btn{
-            margin: 12% 70%;
-        }
-
-        
-
-        .links{
-            display: none;
-            background-color: white;
-            margin: 0 10%;
-            height: 300px;
-            margin: -30px 120%;
-           transition: 3s ease;
-         
-        }
-       
-        .links nav ul li{
-            list-style: none;
-            padding: 3% 3%;
-            margin: 3% 1%;
-        }
-        .links nav ul a{
-            text-decoration: none;
-            color: var(--text-light);
-            font-size: 16px;
-            font-weight: 600;
-        }
-/*animation*/
-.links nav ul li::after{
-    content: '';
-    display: block;
-    background-color:#3498db;
-    height: 2px;
-    width: 0%;
-    transition: 0.5s;
-}
-.links nav ul li:hover::after{
-    width: 40%;
-}
-
-        .show{
-            display: inline-block;
-            z-index: 5;
-            width: 100%;
-            transition: 3s ease;
-        
-          
-        }
-       .logo h2{
-            color: white;
-            margin: auto 5%;
-        }
-        .logo h3{
-            display: none;
-        }
-
-        .badge img{
-      width: 150px;
-      object-fit: cover;
-}  
-
-.btn button{
-           
-            border: none;
-            background: transparent;
-        }
-        .btn button i{
-            color:blue;
-            font-size: 35px;
-        }
- 
-    }
-    /*header*/
-    @media (max-width:599px) {
-        /*animation*/
-.links nav ul li::after{
-    content: '';
-    display: block;
-    background-color:#3498db ;
-    height: 2px;
-    width: 0%;
-    transition: 0.8s;
-}
-.links nav ul li:hover::after{
-    width: 50%;
-}
-    }
-
-            /*1*/
-@media (min-width:600px) {
-    .btn{
-        display: none;
-    }   
-        .phone-view{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: white;
-            height: 90px;
-            background: linear-gradient(white,rgb(199, 223, 232));
-        }
-        .logo{
-            display: flex;
-            align-items: center;
-        }
-        .logo img{
-            width: 85px;
-            height: 90px;
-            border-radius: 1%;
-        }
-        .links nav .show li{
-            list-style: none;
-            margin: 0 2%;
-            display: inline-block;
-        }
-        .links nav .show li a{
-            text-decoration: none;
-            color:#333;
-            font-size: 20px;
-            font-weight: 600;
-        }
-        .links nav .show li a i{
-            display: none;
-        }
-        .logo h2{
-            display: none;
-        }
-        .logo h3{
-          color: black;
-          font-size: 20px;
-          margin: 0 3%;
-        }
-/*footer*/
-
-        footer {
-            background-color:rgb(236, 222, 222);
-            color: white;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
-            display: flex;
-            align-items: center;
-            background: rgb(199, 223, 232);
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            text-align: left;
-        }
-
-       
-
-        .social-links-footer {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-links-footer a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color:  #3498db;
-            color: white;
-            transition: all 0.3s ease;
-        }
-
-        .social-links-footer a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-        }
-
-
-        /*animation*/
-.links nav ul li::after{
-    content: '';
-    display: block;
-    background-color:#3498db ;
-    height: 2px;
-    width: 0%;
-    transition: 0.5s;
-}
-.links nav ul li:hover::after{
-    width: 100%;
-}
-}
-
-/*reg*/
-   .ppss-type-heading {
-  font-size: 1.5rem;
-  color: #009688;
-  font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid rgba(0, 150, 136, 0.7);
-  width: 0;
-  animation: ppssCaretBlink 0.75s step-end infinite;
-  text-align: center;
-}
-
-@keyframes ppssCaretBlink {
-  from, to { border-color: transparent; }
-  50% { border-color: rgba(0, 150, 136, 0.7); }
-}
-
-@media (max-width: 599px) {
-  .ppss-type-heading {
-    font-size: 1.2rem;
+/*contact form end*/
+
+.map-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 15px;
     text-align: center;
-    margin: 2% 10%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
   }
-}
-/*reg last*/
 
+  .map-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+
+  .map-section p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+
+  .map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+  }
+
+  /* Responsive tweaks for smaller devices */
+  @media (max-width: 768px) {
+    .map-section h2 {
+      font-size: 1.8rem;
+    }
+    .map-section p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .map-section {
+      margin: 30px 10px;
+    }
+    .map-section h2 {
+      font-size: 1.5rem;
+    }
+    .map-section p {
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
+  }
+  /*get in touch*/
+    /* Unique section container */
+  .u_c_s_contact_section_001 {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    position: relative;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #2e3a59;
+  }
+  .u_c_s_contact_title_001 {
+    color: #1a237e;
+    font-weight: 800;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+  }
+  .u_c_s_contact_intro_001 {
+    font-size: 1.05rem;
+    color: #505f79;
+    line-height: 1.5;
+    max-width: 440px;
+    margin: 0 auto 2rem;
+    font-weight: 500;
+  }
+  .u_c_s_office_hours_001 {
+    border-left: 5px solid #3949ab;
+    padding-left: 1.25rem;
+    margin-bottom: 2.5rem;
+    text-align: left;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+    color: #344563;
+  }
+  .u_c_s_office_hours_001 p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+  }
+  .u_c_s_office_hours_note_001 {
+    display: block;
+    margin-top: 0.6rem;
+    font-style: italic;
+    color: #6b7a99;
+    font-weight: 400;
+    font-size: 0.95rem;
+  }
+  .u_c_s_contact_buttons_001 {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+  .u_c_s_contact_button_call_001 {
+    background-color: #3949ab !important;
+    color: white !important;
+    text-decoration: none !important;
+    padding: 0.75rem 1.3rem !important;
+    font-size: 1rem !important;
+    border-radius: 7px !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.65rem !important;
+    box-shadow: 0 3px 8px rgba(57, 73, 171, 0.3) !important;
+    transition: background-color 0.25s ease !important;
+    user-select: none !important;
+    min-width: 120px !important;
+    font-weight: 600 !important;
+    position: relative !important;
+    border: none !important;
+  }
+  .u_c_s_contact_button_call_001:hover,
+  .u_c_s_contact_button_call_001:focus {
+    background-color: #283593 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 4px #a3b0ff !important;
+  }
+  .u_c_s_contact_button_icon_call_001 {
+    width: 22px !important;
+    height: 22px !important;
+    fill: currentColor !important;
+  }
+  .u_c_s_tooltip_call_001 {
+    position: absolute !important;
+    bottom: 100% !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(-8px) !important;
+    background-color: #3949ab !important;
+    color: white !important;
+    padding: 0.3rem 0.7rem !important;
+    font-size: 0.85rem !important;
+    border-radius: 4px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity 0.3s ease !important;
+    white-space: nowrap !important;
+    z-index: 10 !important;
+  }
+  .u_c_s_tooltip_call_001.u_c_s_tooltip_show_001 {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+  @media (max-width: 480px) {
+    .u_c_s_contact_buttons_001 {
+      flex-direction: column !important;
+      gap: 0.75rem !important;
+    }
+    .u_c_s_contact_button_call_001 {
+      min-width: unset !important;
+      width: 100% !important;
+      padding: 0.6rem 1rem !important;
+      font-size: 0.9rem !important;
+      justify-content: center !important;
+    }
+    .u_c_s_office_hours_001 {
+      max-width: 100% !important;
+    }
+  }
+ 
+  /*get in touch last*/
     </style>
-
 </head>
 
 <body>
-  <!--header-->
-<div class="phone-view">
-       
-            <div class="logo">
-    <img src="images/logo1-removebg.png" alt="">
-    
-<h3>Pallisa Progressive Secondary School</h3>
-            </div>
-           
-            <div class="btn">
-                <button class="buttonElement"> <i class='bx bx-menu'></i></button>
-            </div>
-            <div class="links">
-                <nav>
-                    <ul class="show">
-                        <li><a href="index.html"> <i class='bx bx-home'></i> Home</a></li>
-                        <li><a href="profile.html"> <i class='bx bx-user'></i> Staff Profile</a></li>
-                        <li><a href="gallery.html"> <i class='bx bxs-grid-alt'></i> Gallery</a></li>
-                        <li><a href="contact.html"><i class='bx bx-phone' ></i> Contact</a></li>
-                        <li><a href="faq.html"><i class='bx bx-search-alt-2'></i> FAQs</a></li>
-                    </ul>
-                </nav>
-            </div>
-    
-    </div>
-  <!--header-->
-
-    <div class="contact-hero">
-        <h1>Visit Us Today</h1>
-        <p>We'd love to hear from you. Contact us for inquiries or visit our campus for a tour.</p>
+     <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="images/logo1-removebg.png" alt="Logo">
     </div>
 
-    <!--uneb-->
-    <div class="info-display-container">
-  <h2 id="animated-info-heading" class="info-typing-text">
-  </h2>
-    <!--uneb-->
-    <div class="contact-container">
-                  <h2 id="ppssUniqueTyper" class="ppss-type-heading"></h2>
-
-        <div class="contact-info">
-            <div class="contact-details">
-                <h2>Contact Information</h2>
-
-                <div class="contact-info-item">
-                    <i class='bx bx-map'></i>
-                    <div class="contact-info-content">
-                        <h3>Address</h3>
-                        <p>Komolo 'A',Olok Road<br>
-                            P.O Box 179, Pallisa (U)</p>
-                    </div>
-                </div>
-
-                <div class="contact-info-item">
-                    <i class='bx bx-phone'></i>
-                    <div class="contact-info-content">
-                        <h3>Phone</h3>
-                          <p><a href="tel:+256 782620783">+256 754391008/
-                            +256 782620783</a></p>                    </div>
-                </div>
-
-                <div class="contact-info-item">
-                    <i class='bx bx-envelope'></i>
-                    <div class="contact-info-content">
-                        <h3>Email</h3>
-                        <p><a href="mailto:pallisaprogressivess@gmail.com">
-                            pallisaprogressivess@gmail.com</a></p>
-                        <p><a href="mailto:pallisaprogressivess@gmail.com">
-                            Odekejohn29@gmail.com</a></p>
-                    </div>
-                </div>
-
-                <div class="contact-info-item">
-                    <i class='bx bx-time'></i>
-                    <div class="contact-info-content">
-                        <h3>Office Hours</h3>
-                        <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
-                        <p>Saturday: 9:00 AM - 1:00 PM</p>
-                    </div>
-                </div>
-
-                <div class="social-links">
-                     <a href="https://www.facebook.com/profile.php?id=100066400460286" aria-label="Facebook" class="disturbed"><i
-                        class='bx bxl-facebook'></i></a>
-                <a href="https://wa.me/256755035650" target="_blank"><i class='bx bxl-whatsapp'></i>
-                    <a href="https://youtu.be/2wmHz4-qH4Y?si=HnfLzBJw8lEXqULo" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
-
-                <a href="https://www.tiktok.com/@pallisa.prog..sec?is_from_webapp=1&sender_device=pc"><i class='bx bxl-tiktok'></i></a>
-                </div>
-            </div>
-
-            <div class="contact-form">
-                <h2>Send Us a Message</h2>
-                <form id="contactForm" action="https://formsubmit.co/mentorss2015@gmail.com" method="POST">
-                    <input type="hidden" name="_subject" value="New Contact Form Submission">
-                    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-                    <input type="hidden" name="_captcha" value="false">
-
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <select id="subject" name="subject">
-                            <option value="general">General Inquiry</option>
-                            <option value="admission">Admission Inquiry</option>
-                            <option value="feedback">Feedback/Suggestion</option>
-                            <option value="complaint">Complaint</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
-        </div>
-
-        <div class="map-section">
-            <h2>Our Location</h2>
-            <p>Ready to pay us a visit? Follow the map below to find our campus.</p>
-
-            <div class="map-container">
-                <iframe
-                    src="https://satellites.pro/Google_plan/Pallisa_map"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-
-        <div class="hours-section">
-            <h2>Business Hours</h2>
-            <div class="hours-grid">
-                <div class="hour-item">
-                    <span class="day">Monday</span>
-                    <span class="time">8:00 AM - 5:00 PM</span>
-                </div>
-                <div class="hour-item">
-                    <span class="day">Tuesday</span>
-                    <span class="time">8:00 AM - 5:00 PM</span>
-                </div>
-                <div class="hour-item">
-                    <span class="day">Wednesday</span>
-                    <span class="time">8:00 AM - 5:00 PM</span>
-                </div>
-                <div class="hour-item">
-                    <span class="day">Thursday</span>
-                    <span class="time">8:00 AM - 5:00 PM</span>
-                </div>
-                <div class="hour-item">
-                    <span class="day">Friday</span>
-                    <span class="time">8:00 AM - 5:00 PM</span>
-                </div>
-                <div class="hour-item">
-                    <span class="day">Saturday</span>
-                    <span class="time">9:00 AM - 1:00 PM</span>
-                </div>
-                <div class="hour-item active">
-                    <span class="day">Sunday</span>
-                    <span class="time">Closed</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="emergency-contact">
-            <h2>Emergency Contact</h2>
-            <p>For urgent matters outside of business hours, please call:</p>
-            <button class="emergency-btn"><a href="tel:   +256 782620783">+256 782620783</a></button>
-        </div>
+    <!-- Mobile button -->
+    <div class="btn">
+      <button class="buttonElement" onclick="toggleMenu()"> <i class='bx bx-menu'></i></button>
     </div>
 
-    <footer>
-    <div class="footer-container">
-        <div class="footer-column">
-        
-           <div class="badge">
-            <img src="images/logo1-removebg.png" alt="">
-           </div>
-            <div class="social-links-footer">
-             <a href="https://www.facebook.com/profile.php?id=100066400460286" aria-label="Facebook" class="disturbed"><i
-                    class='bx bxl-facebook'></i></a>
-            <a href="https://wa.me/256701705888" target="_blank"><i class='bx bxl-whatsapp'></i>
-                <a href="https://youtu.be/2wmHz4-qH4Y?si=HnfLzBJw8lEXqULo" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
+    <!-- Desktop nav -->
+    <nav class="desktop-nav">
+      <a href="index.html"><i class='bx bx-home'></i> Home</a>
+      <a href="profile.html"><i class='bx bx-user'></i> Staff Profile</a>
+      <a href="gallery.html">  <i class='bx bx-image'></i> Gallery</a>
+      <a href="contact.html"><i class='bx bx-phone'></i> Contact</a>
+      <a href="faq.html"><i class='bx bx-help-circle' ></i>FAQs</a>
+    </nav>
+  </header>
 
-            <a href="https://www.tiktok.com/@pallisa.prog..sec?is_from_webapp=1&sender_device=pc"><i class='bx bxl-tiktok'></i></a>
-            </div>
+  <!-- Mobile Overlay Navigation -->
+  <div class="menu-overlay" id="menuOverlay">
+    <div class="menu-container">
+      <nav>
+        <ul>
+          <li><a href="index.html"> Home</a></li>
+          <li><a href="profile.html"> Staff Profile</a></li>
+          <li><a href="gallery.html">   Gallery</a></li>
+          <li><a href="contact.html"> Contact</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>       
+<!--with background-->
+
+  <div class="contact-hero">
+    <div>
+      <h1 id="contactTitle">Connect With Us</h1>
+      <p id="contactText">Have questions or need assistance? Reach out or stop by our campus — we’re here to help.</p>
+    </div>
+  </div>
+
+<!--end of background-->
+<!--contact our office-->
+<section id="ppssContactSection">
+    <div id="ppssContactBox">
+      <h2 id="ppssContactHeading">Contact Our Office</h2>
+
+      <div class="ppssContactItem">
+        <i class='bx bx-map ppssContactIcon'></i>
+        <div class="ppssContactContent">
+          <h3>Address</h3>
+          <p>Komolo 'A', Olok Road</p>
+          <p>P.O Box 179, Pallisa (U)</p>
         </div>
+      </div>
 
+      <div class="ppssContactItem">
+        <i class='bx bx-phone ppssContactIcon'></i>
+        <div class="ppssContactContent">
+          <h3>Phone</h3>
+          <p><a href="tel:+256754391008">+256 754 391 008</a> / 
+             <a href="tel:+256782620783">+256 782 620 783</a></p>
+        </div>
+      </div>
+
+      <div class="ppssContactItem">
+        <i class='bx bx-envelope ppssContactIcon'></i>
+        <div class="ppssContactContent">
+          <h3>Email</h3>
+          <p><a href="mailto:pallisaprogressivess@gmail.com">pallisaprogressivess@gmail.com</a></p>
+          <p><a href="mailto:odekejohn29@gmail.com">odekejohn29@gmail.com</a></p>
+        </div>
+      </div>
+
+      <div class="ppssContactItem">
+        <i class='bx bx-time ppssContactIcon'></i>
+        <div class="ppssContactContent">
+          <h3>Office Hours</h3>
+          <p>Monday – Friday: 8:00 AM – 5:00 PM</p>
+          <p>Saturday: 9:00 AM – 1:00 PM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--end of our office-->
+<!--form-->
+<div class="contact-container">
+  <form class="contact-form" id="whatsappForm">
+    <h2>Contact Our School</h2>
+
+    <div class="form-group">
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" />
+    </div>
+
+    <div class="form-group">
+      <label for="subject">Subject *</label>
+      <select id="subject" name="subject" required>
+        <option value="General Inquiry">General Inquiry</option>
+        <option value="Admission">Admission</option>
+        <option value="Fees">Fees & Payment</option>
+        <option value="Visit">School Visit</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+</div>
+
+<!--form end-->
+<div class="map-section">
+  <h2>Our Location</h2>
+  <p>Planning a visit? Use the map below to find us easily.</p>
+
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3995.123456789!2d33.709602!3d1.146234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177a06c555555555%3A0x123456789abcdef!2sPallisa%20Progressive%20Secondary%20School!5e0!3m2!1sen!2sug!4v1234567890"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      aria-label="Map showing location of Pallisa Progressive Secondary School">
+    </iframe>
+  </div>
+</div>
+<!--get in touch-->
+<section class="u_c_s_contact_section_001" aria-label="School contact information and office hours unique section">
+  <h1 class="u_c_s_contact_title_001">Get in Touch</h1>
+  <p class="u_c_s_contact_intro_001">
+    We value open communication with students, parents, and the community. Reach out during office hours or via our quick contact option below — we’re here to assist you promptly and professionally.
+  </p>
+
+  <div class="u_c_s_office_hours_001" aria-live="polite">
+    <p><strong>Office Hours:</strong> Monday – Friday: 8:00 AM – 5:00 PM</p>
+    <p>Saturday: 9:00 AM – 1:00 PM | Sunday: Closed</p>
+    <span class="u_c_s_office_hours_note_001">Our team strives to respond within 24 hours during office hours.</span>
+  </div>
+
+  <nav class="u_c_s_contact_buttons_001" role="navigation" aria-label="Quick contact option unique">
+    <a
+      id="u_c_s_call_link_001"
+      class="u_c_s_contact_button_call_001"
+      href="tel:+256767222023"
+      aria-label="Call our school office phone number"
+      >
+      <!-- Unique Call SVG Icon -->
+      <svg
+        class="u_c_s_contact_button_icon_call_001"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.36 11.36 0 003.55.57 1 1 0 011 1v3.39a1 1 0 01-1 1A16 16 0 014 5a1 1 0 011-1h3.4a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.21 1.11z"/>
+      </svg>
+      Call
+      <span
+        class="u_c_s_tooltip_call_001"
+        role="tooltip"
+        id="u_c_s_tooltip_call_001"
+        >Dialing phone...</span
+      >
+    </a>
+  </nav>
+</section>
+  <!--get in touch last-->
+   <footer>
+  <div class="footer-container">
+    <div class="footer-content-center">
+      <div class="badge">
+        <img src="images/logo1-removebg.png" alt="School Logo">
+      </div>
+
+      <div class="social-links-footer">
+        <a href="https://www.facebook.com/profile.php?id=100066400460286" aria-label="Facebook">
+          <i class='bx bxl-facebook'></i>
+        </a>
+
+        <a href="https://wa.me/256754391008" target="_blank" aria-label="WhatsApp">
+          <i class='bx bxl-whatsapp'></i>
+        </a>
+
+        <a href="https://youtu.be/2wmHz4-qH4Y?si=HnfLzBJw8lEXqULo" aria-label="YouTube">
+          <i class='bx bxl-youtube'></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@pallisa.prog..sec?is_from_webapp=1&sender_device=pc" aria-label="TikTok">
+          <i class='bx bxl-tiktok'></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  
 </footer>
 
-
     <script>
-  //form submission
-    document.addEventListener('DOMContentLoaded', function() {
-        // Scroll animations
-        const animateOnScroll = () => {
-            const elements = document.querySelectorAll(
-                '.contact-details, .contact-form, .map-section, .hours-section, .emergency-contact');
 
-            elements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
+        //get in touch
+(function uniqueCallTooltipModule001() {
+    const uniqueCallLinkElem001 = document.getElementById('u_c_s_call_link_001');
+    const uniqueTooltipElem001 = uniqueCallLinkElem001.querySelector('.u_c_s_tooltip_call_001');
 
-                if (elementPosition < windowHeight - 100) {
-                    element.classList.add('visible');
-                }
-            });
-        };
+    uniqueCallLinkElem001.addEventListener('click', () => {
+      uniqueTooltipElem001.classList.add('u_c_s_tooltip_show_001');
+      setTimeout(() => {
+        uniqueTooltipElem001.classList.remove('u_c_s_tooltip_show_001');
+      }, 2000);
+    });
+  })();
+        //get in touch last
+          document.addEventListener("DOMContentLoaded", () => {
+      const contactBox = document.getElementById("ppssContactBox");
+      contactBox.style.opacity = 0;
+      contactBox.style.transform = "translateY(20px)";
+      setTimeout(() => {
+        contactBox.style.transition = "all 0.6s ease";
+        contactBox.style.opacity = 1;
+        contactBox.style.transform = "translateY(0)";
+      }, 200);
+    });
+       //toggle
+   //toggle
+const overlay = document.getElementById('menuOverlay');
 
-        // Run once on load
-        animateOnScroll();
+    function toggleMenu() {
+      overlay.classList.toggle('active');
+    }
 
-        // Run on scroll
-        window.addEventListener('scroll', animateOnScroll);
+    // Close the menu when a mobile link is clicked
+    const linkss = document.querySelectorAll('.menu-container a');
+    linkss.forEach(link => {
+      link.addEventListener('click', () => {
+        overlay.classList.remove('active');
+      });
+    });
+    //end of toggle
+         const title = document.getElementById('contactTitle');
+    const text = document.getElementById('contactText');
 
-        // Form submission
-         //form script
-         const contactForm = document.getElementById('contactForm');
+    const fullTitle = "Connect With Us";
+    const fullText = "Have questions or need assistance? Reach out or stop by our campus — we’re here to help.";
 
-contactForm.addEventListener('submit', function (e) {
+    let titleIndex = 0;
+    let textIndex = 0;
+
+    function typeTitle() {
+      if (titleIndex < fullTitle.length) {
+        title.textContent += fullTitle.charAt(titleIndex);
+        titleIndex++;
+        setTimeout(typeTitle, 60);
+      } else {
+        typeText();
+      }
+    }
+
+    function typeText() {
+      if (textIndex < fullText.length) {
+        text.textContent += fullText.charAt(textIndex);
+        textIndex++;
+        setTimeout(typeText, 25);
+      }
+    }
+
+    // Clear existing text and start typing effect
+    title.textContent = "";
+    text.textContent = "";
+    typeTitle(); 
+
+
+// Typing animation logic
+  
+    // Simple Image Carousel
+    const track = document.querySelector('.carousel-track');
+    let slideIndex=0;
+    setInterval(() => {
+      slideIndex=++slideIndex % track.children.length;
+      track.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }, 5000);
+//uneb last
+
+//form
+document.getElementById("whatsappForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value.trim();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value.trim();
 
-    // Build the WhatsApp message
-    const whatsappMessage = `
-        *New Contact Form Submission*
-        👤 Name: ${name}
-        📧 Email: ${email}
-        📱 Phone: ${phone || "N/A"}
-        📝 Subject: ${subject}
-        💬 Message: ${message}
-    `.trim();
-
-    const encodedMessage = encodeURIComponent(whatsappMessage);
-
-    // Replace leading zero with country code (assumed Kenya +254)
-    const rawPhone = "0754391008".replace(/^0/, "256");
-
-    const whatsappURL = `https://wa.me/${rawPhone}?text=${encodedMessage}`;
-
-    // Open WhatsApp in a new tab
-    window.open(whatsappURL, '_blank');
-
-    // Optional: Reset the form
-    contactForm.reset();
-});
-
-
-        //form script  
-
-
-        //form   
-//end of form submission
-        // Highlight current day in business hours
-        const highlightCurrentDay = () => {
-            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-            const today = new Date().getDay();
-            const currentDay = days[today];
-
-            const hourItems = document.querySelectorAll('.hour-item');
-            hourItems.forEach(item => {
-                item.classList.remove('active');
-                if (item.querySelector('.day').textContent === currentDay) {
-                    item.classList.add('active');
-                }
-            });
-        };
-
-        highlightCurrentDay();
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-         // Header scroll behavior
-        let lastScroll = 0;
-        const header = document.querySelector('header');
-        const headerHeight = header.offsetHeight;
-
-        window.addEventListener('scroll', function () {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll <= 0) { // At top of page, always show header
-                header.classList.remove('hidden'); return;
-            } if (currentScroll > lastScroll &&
-                !header.classList.contains('hidden')) {
-                // Scrolling down
-                header.classList.add('hidden');
-            } else if (currentScroll < lastScroll && header.classList.contains('hidden')) { // Scrolling
-                upheader.classList.remove('hidden');
-            } lastScroll = currentScroll;
-        });
-    }); 
-    
-
-    //toggle
-
-     //toggle
-let buttonElement=document.querySelector('.btn');
-let links=document.querySelector('.links');
-buttonElement.addEventListener('click',function(){
-links.classList.toggle('show');
-
-});
-
-//uneb
- const ppssHeadingList = [
-    "LICENSE No.ME/32/6212",
-    "REG No.Pss/P/110",
-    "UNEB No.U4050",
-    "EMIS No.398010"
-  ];
-
-  const ppssTypingTarget = document.getElementById("ppssUniqueTyper");
-  let ppssCurrentChar = 0;
-  let ppssCurrentSlide = 0;
-
-  function ppssStartTyping() {
-    if (ppssCurrentChar < ppssHeadingList[ppssCurrentSlide].length) {
-      ppssTypingTarget.textContent += ppssHeadingList[ppssCurrentSlide].charAt(ppssCurrentChar);
-      ppssCurrentChar++;
-      ppssTypingTarget.style.width = (ppssCurrentChar + 1) + "ch";
-      setTimeout(ppssStartTyping, 100);
-    } else {
-      setTimeout(ppssEraseTyping, 9000);
+    if (!name || !email || !subject || !message) {
+      alert("Please fill in all required fields.");
+      return;
     }
-  }
 
-  function ppssEraseTyping() {
-    if (ppssCurrentChar > 0) {
-      ppssTypingTarget.textContent = ppssHeadingList[ppssCurrentSlide].substring(0, ppssCurrentChar - 1);
-      ppssCurrentChar--;
-      ppssTypingTarget.style.width = (ppssCurrentChar + 1) + "ch";
-      setTimeout(ppssEraseTyping, 70);
-    } else {
-      ppssCurrentSlide = (ppssCurrentSlide + 1) % ppssHeadingList.length;
-      setTimeout(ppssStartTyping, 900);
-    }
-  }
+    const phoneNumber = "+256701705888"; // 🔁 Replace with your real WhatsApp number
+    const fullMessage = `Hello, I'm ${name}.
+Subject: ${subject}
+Email: ${email}
+Phone: ${phone ? phone : 'N/A'}
+Message: ${message}`;
 
-  document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(ppssStartTyping, 900);
+    const whatsappURL = `https://wa.me/${phoneNumber.replace(/\D/g, '')}?text=${encodeURIComponent(fullMessage)}`;
+    window.open(whatsappURL, "_blank");
   });
-
-//uneb last
     </script>
 </body>
 
