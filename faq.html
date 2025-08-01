@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQs - Pallisa Progressive Secondary School</title>
+    <title>FAQS - PPSS</title>
     <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
     <style>
-        :root {
+       :root {
             --primary-color: #2c3e50;
             --secondary-color: #3498db;
             --accent-color: #e74c3c;
@@ -21,7 +25,26 @@
         }
 
 
-        /*small phone-header*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        body {
+          
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #f9f9f9;
+  
+        }
+
+/*new */
+  /*small phone-header*/
 
         .staff-profiles h2{
             margin: 3% 20%;
@@ -470,24 +493,197 @@ color: var(--text-light);
           }
             
      /*new design*/
+/*end of new*/
+
+ 
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .home-page1 {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), 
+            rgba(0, 0, 0, 0.8)), url('images/pp4.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+            padding: 8rem 4rem;
+            text-align: left;
+            min-height: 20vh;
+            margin-bottom: 4rem;
+            width: 100%;
+            transition: background-image 1s ease-in-out;
+        }
+
+        .home-page1 p {
+            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+            animation: fadeInUp 1s ease 0.3s both;
+            margin-left: 50px;
+        }
+        .home-page1 h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease 0.6s both;
+            margin-left: 50px;
+            margin-top: -120px;
+        }
 
 
-  /*footer design*/
-    .badge img{
-    width: 150px;
-   object-fit: cover;
-margin: 2% 40%;
-    }
+        .home-page1 h4 SPAN {
+            font-size: 2.0rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease 0.6s both;
+            color: rgb(59, 162, 202);
+        }
 
-   
+        .home-content {
+            padding: 9rem 0 0 0;
+        }
+
+        .button1 {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeIn 1s ease 0.9s both;
+        }
+
+        .button1:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .button1 a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .motto {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+/* background: linear-gradient(to right,white,pink);*/
+/* background-color: rgb(199, 223, 232);*/
+        .motto1 {
+            background-color: rgb(199, 223, 232);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+            margin: 2% 5%;
+        }
+
+        .motto1:hover {
+            transform: translateY(-20px);
+        }
+
+        .motto1 i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .motto1 h1 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .motto1 p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+           font-weight: 900;
+        }
+
         
-    .disturbed{
-        margin-left: 38%;
-    }
 
+        .homepage2 {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            background-color: white;
+            padding: 0rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+           
+        }
+
+        .homepage2 img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            height: 400px;
+        }
+
+        .homepage2 .content {
+            width: 50%;
+        }
+
+        .homepage2 h2 {
+            font-size: 2rem;
+            color: 
+            skyblue;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .homepage2 p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            padding: 0 4%;
+        }
+
+        .button2 {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 1% 25%;
+        }
+
+        .button2:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .button2 a {
+            color: white;
+            text-decoration: none;
+        }
+   
+   
 
     /* Header */
     header {
+
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -499,11 +695,26 @@ margin: 2% 40%;
       height: 100px;
     background-color:  rgb(199, 223, 232);
     background: linear-gradient(to right,white, rgb(199, 223, 232));
-
+    }
+    @media (max-width:400px) {
+         header {
+     
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #003366;
+      color: white;
+      padding: 12px 20px;
+      position: relative;
+      z-index: 1001;
+      height: 100px;
+    background-color:  rgb(199, 223, 232);
+  
+    }
     }
 
     .logo img {
-      height: 99px;
+      height: 95px;
       width: 95px;
     }
 
@@ -558,12 +769,31 @@ margin: 2% 40%;
     .menu-container nav ul li a {
       display: block;
       width: 100%;
-      padding: 14px 20px;
+      padding: 14px 35%;
       background-color: rgb(230, 216, 216);
       background: #f9f9f9;
 
       border-radius: 8px;
-      font-size: 17px;
+      font-size: 18px;
+      color: #003366;
+      text-decoration: none;
+      text-align: left;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+      transition: background 0.3s ease, color 0.3s ease;
+      font-weight: 200;
+    }
+@media (max-width:400px) {
+  .menu-container nav ul li a {
+      display: block;
+      width: 100%;
+      padding: 12px 20%;
+            padding: 14px 20px;
+
+      background-color: rgb(230, 216, 216);
+      background: #f9f9f9;
+ 
+      border-radius: 8px;
+      font-size: 18px;
       color: #003366;
       text-decoration: none;
       text-align: center;
@@ -571,7 +801,7 @@ margin: 2% 40%;
       transition: background 0.3s ease, color 0.3s ease;
       font-weight: 400;
     }
-
+}
     .menu-container nav ul li a:hover {
       background-color: #eef4ff;
       color: #002244;
@@ -600,7 +830,7 @@ margin: 2% 40%;
         font-size: 20px;
         transition: background 0.3s ease;
         color: #333;
-        font-weight: 600;
+        font-weight: bold;
       }
 
       .desktop-nav a:hover {
@@ -612,24 +842,20 @@ margin: 2% 40%;
         display: none;
       }
        .logo img {
-      height: 95px;
-      width: 85px;
+      height: 100px;
+      width: 95px;
     }
     }
 
-
- /* Example secondary  :root {
-  --primary-color: rgb(199, 223, 232);
-  --secondary-color: rgb(97, 142, 168);*/
 
 
 /* Footer Styles */
 footer {
   background-color: var(--primary-color);
-  background:  rgb(199, 223, 232);
   color: white;
   padding: 3rem 1rem;
   margin-top: 4rem;
+  background:  rgb(199, 223, 232);
 }
 
 .footer-container {
@@ -689,13 +915,101 @@ footer {
     margin: 2% auto;
   }
 }
-     /*new design end*/
 
+/*typing*/
+
+    .blazeTextZoneMain_993x {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #ffffffcc;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(0, 123, 255, 0.2);
+      max-width: 90%;
+      width: 600px;
+    }
+    @media (max-width:599px) {
+      
+    .blazeTextZoneMain_993x {
+      text-align: center;
+      padding: 30px 15px;
+      background-color: #ffffffcc;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(0, 123, 255, 0.2);
+      max-width: 90%;
+      width: 600px;
+      margin: 2% 6%;
+    }
+    }
+    @media (min-width:600px) {
+       .blazeTextZoneMain_993x {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #ffffffcc;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(0, 123, 255, 0.2);
+      max-width: 90%;
+      width: 600px;
+       margin: 2% 25%;
+
+    }
+    }
+
+    .blazeTextZoneMain_993x h2 {
+      font-size: 1.8rem;
+      color: #008cdd;
+      min-height: 50px;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    @media screen and (max-width: 600px) {
+      .blazeTextZoneMain_993x h2 {
+        font-size: 1.4rem;
+      }
+    }
+/*typing last*/
+
+/* Developer credit */
+.developer-credit {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #333;
+  opacity: 0.85;
+  transition: color 0.3s ease;
+}
+
+.developer-credit strong {
+  font-weight: 600;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.developer-credit:hover strong {
+  color: #3498db;
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+  .footer-content-center {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-content-center {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+  
     </style>
 </head>
 
 <body>
-     <!-- Header -->
+   <!-- Header -->
   <header>
     <div class="logo">
       <img src="images/logo1-removebg.png" alt="Logo">
@@ -705,7 +1019,6 @@ footer {
     <div class="btn">
       <button class="buttonElement" onclick="toggleMenu()"> <i class='bx bx-menu'></i></button>
     </div>
-
     <!-- Desktop nav -->
     <nav class="desktop-nav">
       <a href="index.html"><i class='bx bx-home'></i> Home</a>
@@ -722,16 +1035,17 @@ footer {
       <nav>
         <ul>
           <li><a href="index.html"> Home</a></li>
-          <li><a href="profile.html"> Staff Profile</a></li>
+          <li><a href="profile.html"> Staff profile </a></li>
           <li><a href="gallery.html">   Gallery</a></li>
           <li><a href="contact.html"> Contact</a></li>
           <li><a href="faq.html">FAQs</a></li>
         </ul>
       </nav>
     </div>
-  </div>       
-
-    <div class="faq-hero">
+  </div>   
+  <!--middle -->  
+  <!--main-->
+<div class="faq-hero">
         <h1>Frequently Asked Questions</h1>
         <p>Find answers to common questions about Pallisa Progressive Secondary School</p>
     </div>
@@ -889,7 +1203,7 @@ footer {
                     <ul>
                         <li><strong>Phone:</strong>+256 754391008 (Office hours: 8:00 AM - 5:00 PM)</li>
                         <li><strong>Email:</strong> pallisaprogressivess@gmail.com</li>
-                        <li><strong>Admissions:</strong> Odekejohn29@gmail.com</li>
+                        <li><strong>Admissions:</strong> waiswa@gmail.com</li>
                         <li><strong>Visit:</strong> Komolo 'A', Olok Road, Pallisa Town Council,Pallisa District</li>
                     </ul>
                     <p>For more contact options, please visit our <a href="contact.html">Contact Us page</a>.</p>
@@ -953,7 +1267,10 @@ footer {
         </div>
     </main>
 
-    <footer>
+<!--end od main-->
+  
+
+  <footer>
   <div class="footer-container">
     <div class="footer-content-center">
       <div class="badge">
@@ -977,13 +1294,17 @@ footer {
           <i class='bx bxl-tiktok'></i>
         </a>
       </div>
+      <!--designer-->
+ <div class="developer-credit" id="developer-credit">
+        <span>Designed & Developed by <strong>Ivan Aredo</strong>, Computer Scientist</span>
+      </div>
     </div>
   </div>
-</footer>       
+</footer>
 
     <script>
-     //toggle
-   //toggle
+
+        //toggle
 const overlay = document.getElementById('menuOverlay');
 
     function toggleMenu() {
@@ -999,7 +1320,7 @@ const overlay = document.getElementById('menuOverlay');
     });
     //end of toggle
 
-        document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
             // FAQ Accordion Functionality
             const faqQuestions = document.querySelectorAll('.faq-question');
 
@@ -1090,10 +1411,17 @@ const overlay = document.getElementById('menuOverlay');
             });
         });
 
-      
 
-
-
+        //designer
+  document.addEventListener("DOMContentLoaded", function () {
+    const credit = document.getElementById("developer-credit");
+    credit.addEventListener("mouseover", () => {
+      credit.innerHTML = `<span>© ${new Date().getFullYear()} — Proudly crafted by <strong>Ivan Aredo</strong></span>`;
+    });
+    credit.addEventListener("mouseout", () => {
+      credit.innerHTML = `<span>Designed & Developed by <strong>Ivan Aredo</strong>, Computer Scientist</span>`;
+    });
+  });
     </script>
 </body>
 

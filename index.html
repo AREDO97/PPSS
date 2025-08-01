@@ -78,6 +78,22 @@
             width: 100%;
             transition: background-image 1s ease-in-out;
         }
+        @media (min-width:600px) {
+           .home-page1 {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), 
+            rgba(0, 0, 0, 0.8)), url('images/pp4.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+            padding: 8rem 4rem;
+            text-align: left;
+            margin-bottom: 4rem;
+            height: 420px;
+            width: 100%;
+            transition: background-image 1s ease-in-out;
+        }
+        }
 
         .home-page1 p {
             font-size: 1.2rem;
@@ -994,7 +1010,8 @@ color: var(--text-light);
         margin: 2% 30%;
     }
     .spans{
-         margin: 2% 30%;
+         margin: 1% 41%;
+         align-items: center;
     }
 }
 @media (min-width:600px) {
@@ -1005,14 +1022,16 @@ min-height: 20vh;
             font-size: 1.2rem;
             margin-bottom: 0.4rem;
             animation: fadeInUp 1s ease 0.3s both;
-            margin-left: 120px;
+            margin-left: 200px;
+            text-align: center;
         }
         .home-page1 h4 {
             font-size: 1.3rem;
             margin-bottom: 1rem;
             animation: fadeInUp 1s ease 0.6s both;
-            margin-left: 120px;
+            margin-left: 260px;
             margin-top: -120px;
+            text-align: center;
         }
 
 
@@ -1344,6 +1363,9 @@ min-height: 20vh;
       .download-btn {
         font-size: 0.9rem;
       }
+      .spans{
+        align-items: center;
+      }
     }   
     
 /*new end*/
@@ -1586,28 +1608,39 @@ footer {
 
 /*typing*/
 
-    .blazeTextZoneMain_993x {
-      text-align: center;
-      padding: 30px 20px;
-      background-color: #ffffffcc;
-      border-radius: 16px;
-      box-shadow: 0 12px 40px rgba(0, 123, 255, 0.2);
-      max-width: 90%;
-      width: 600px;
-    }
-    @media (max-width:599px) {
-      
-    .blazeTextZoneMain_993x {
-      text-align: center;
-      padding: 30px 15px;
-      background-color: #ffffffcc;
-      border-radius: 16px;
-      box-shadow: 0 12px 40px rgba(0, 123, 255, 0.2);
-      max-width: 90%;
-      width: 600px;
-      margin: 2% 6%;
-    }
-    }
+
+    /*type*/
+/* Parent wrapper */
+.bodyWrapperCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px; /* Optional: Prevents clipping on very small screens */
+  background-color: #f5f7fa; /* Optional background */
+  box-sizing: border-box;
+}
+
+/* Main content box */
+.blazeTextZoneMain_993x {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #ffffffcc;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 123, 255, 0.2);
+  max-width: 90%;
+  width: 600px;
+}
+
+/* Responsive adjustment for smaller devices */
+@media (max-width: 599px) {
+  .blazeTextZoneMain_993x {
+    padding: 30px 15px;
+    width: 100%;
+    margin: 0 6%;
+  }
+}
+    /*end of type*/
     @media (min-width:600px) {
        .blazeTextZoneMain_993x {
       text-align: center;
@@ -1636,6 +1669,53 @@ footer {
       }
     }
 /*typing last*/
+
+/* Developer credit */
+.developer-credit {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #333;
+  opacity: 0.85;
+  transition: color 0.3s ease;
+}
+
+.developer-credit strong {
+  font-weight: 600;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.developer-credit:hover strong {
+  color: #3498db;
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+  .footer-content-center {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-content-center {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media (min-width:600px) {
+  #academic{
+    object-fit: cover;
+    object-position: top;
+  }
+#cancel{
+  object-fit: cover;
+  object-position: top;
+}
+}
+
+/*end of hero section*/
     </style>
 </head>
 
@@ -1686,16 +1766,12 @@ footer {
             <span class="span1">.</span>
             <span class="span2">.</span>
             <span class="span3">.</span>
-
         </div>
-
-        
     </section>
   <div class="blazeTextZoneMain_993x">
     <h2 id="typerLiveTextNode_883z"></h2>
   </div>
 
-  
     <main>
  
 
@@ -1732,7 +1808,7 @@ footer {
 <div class="carousel-container">
   <div class="carousel-track">
     <img src="images/pp4.jpeg" alt="" class="slide">
-    <img src="images/alevel-students.jpg" alt="" class="slide" >
+    <img src="images/alevel-students.jpg" alt="" class="slide" id="cancel" >
     <img src="images/scroll1.jpg" class="slide">
     <img src="images/scroll2.jpg" class="slide">
     <img src="images/scroll3.jpg" class="slide">
@@ -1744,7 +1820,7 @@ footer {
 <!--sliding images-->
 
 
-       <!--welcome text               <img src="images/science-fair.jpg" alt="Academic Excellence" class="gud">
+       <!--welcome text  <img src="images/science-fair.jpg" alt="Academic Excellence" class="gud">
 -->
         
          <section class="homepage9">
@@ -1765,7 +1841,7 @@ footer {
         </section>
 <!--welcome text-->
         <section class="homepage2">
-            <img src="images/alevel-students.jpg" alt="Academic Excellence" class="gud">
+            <img src="images/alevel-students.jpg" alt="Academic Excellence" class="gud" id="academic">
 
             <div class="content">
                 <h2 class="academic-excellence">Academic Excellence</h2>
@@ -1838,7 +1914,7 @@ footer {
 
         <section class="hompage4">
             <div class="homepage4-text">
-                <h2>Innovative Education Programs   <i class='bx bxs-hand-down'></i></h2>
+                <h2>Innovative Education Programs </h2>
                 <p>Explore the diverse range of programs designed 
                     to enhance learning and personal growth</p>
             </div>
@@ -1975,7 +2051,7 @@ footer {
 
            
                
-        <h2 class="what-people">What People Say</h2>
+        <h2 class="what-people" style="text-align: center;">What People Say</h2>
 <!--what people say-->
 <div class="testimonial-slider">
   <div class="testimonial">
@@ -1985,7 +2061,7 @@ footer {
   <!-- Additional testimonials -->
   <div class="testimonial">
     <p class="quote">“The school performs consistently well in exams; many students qualify for good institutions after completing here.”</p>
-    <h4 class="author">Mrs. Aanyu Stella</h4>
+    <h4 class="author">Mr.Balunywa Abubakar</h4>
   </div>
   <!--added-->
 <div class="testimonial">
@@ -2056,6 +2132,10 @@ footer {
           <i class='bx bxl-tiktok'></i>
         </a>
       </div>
+<!--designer-->
+ <div class="developer-credit" id="developer-credit">
+        <span>Designed & Developed by <strong>Ivan Aredo</strong>, Computer Scientist</span>
+      </div>
     </div>
   </div>
 </footer>
@@ -2065,7 +2145,7 @@ footer {
  const typingTextMaster_zz992 = [
       "REG No. PSS/P/110",
       "License No. ME/32/6212",
-      "UNEB No. M.U4050 O & A'LEVEL",
+      "UNEB No.U4050 O & A'LEVEL",
       "EMIS No. 398010"
     ];
 
@@ -2470,6 +2550,17 @@ nextBtn.addEventListener('click', () => {
       document.body.removeChild(a);
     }
 //uneb form last
+
+//designer
+  document.addEventListener("DOMContentLoaded", function () {
+    const credit = document.getElementById("developer-credit");
+    credit.addEventListener("mouseover", () => {
+      credit.innerHTML = `<span>© ${new Date().getFullYear()} — Proudly crafted by <strong>Ivan Aredo</strong></span>`;
+    });
+    credit.addEventListener("mouseout", () => {
+      credit.innerHTML = `<span>Designed & Developed by <strong>Ivan Aredo</strong>, Computer Scientist</span>`;
+    });
+  });
     </script>
 </body>
 
