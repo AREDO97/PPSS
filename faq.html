@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact-PPSS</title>
+    <title>FAQS - PPSS</title>
     <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
     <style>
-        :root {
+       :root {
             --primary-color: #2c3e50;
             --secondary-color: #3498db;
             --accent-color: #e74c3c;
@@ -20,11 +24,15 @@
             --text-light: #7f8c8d;
         }
 
+
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
+
         }
 
         body {
@@ -32,318 +40,8 @@
             color: var(--text-color);
             line-height: 1.6;
             background-color: #f9f9f9;
-            font-family: 'Poppins', sans-serif;
-
-        }
-
   
-
-
-
-  /*footer design*/
-    .badge img{
-    width: 150px;
-   object-fit: cover;
-margin: 2% 40%;
-    }
-
-   
-        
-    .disturbed{
-        margin-left: 38%;
-    }
-
-
-    /* Header */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #003366;
-      color: white;
-      padding: 12px 20px;
-      position: relative;
-      z-index: 1001;
-      height: 100px;
-    background-color:  rgb(199, 223, 232);
-    background: linear-gradient(to right,white, rgb(199, 223, 232));
-
-    }
-
-    .logo img {
-      height: 95px;
-      width: 85px;
-    }
-
-    .btn .buttonElement {
-      background: none;
-      border: none;
-      color:  blue;
-      font-size: 35px;
-      cursor: pointer;
-    }
-
-    /* Mobile Overlay */
-    .menu-overlay {
-        margin-top: 10%;
-      position:absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 65%;
-      background-color: rgb(230, 216, 216);
-      background: #f9f9f9;
-
-      z-index: 1000;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding-top: 60px;
-      transform: scaleY(0);
-      transform-origin: top;
-      transition: transform 0.7s ease-in-out;
-    }
-
-    .menu-overlay.active {
-      transform: scaleY(1);
-    }
-
-    .menu-container {
-      width: 80%;
-      max-width: 500px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .menu-container nav ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .menu-container nav ul li a {
-      display: block;
-      width: 100%;
-      padding: 14px 20px;
-      background-color: rgb(230, 216, 216);
-      background: #f9f9f9;
-
-      border-radius: 8px;
-      font-size: 17px;
-      color: #003366;
-      text-decoration: none;
-      text-align: center;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-      transition: background 0.3s ease, color 0.3s ease;
-      font-weight: 400;
-    }
-
-    .menu-container nav ul li a:hover {
-      background-color: #eef4ff;
-      color: #002244;
-    }
-
-    /* Desktop Nav */
-    .desktop-nav {
-      display: none;
-    }
-
-    /* Larger Screens */
-    @media (min-width: 768px) {
-      .btn {
-        display: none;
-      }
-
-      .desktop-nav {
-        display: flex;
-        gap: 20px;
-      }
-
-      .desktop-nav a {
-        color: white;
-        text-decoration: none;
-        padding: 10px 15px;
-        font-size: 20px;
-        transition: background 0.3s ease;
-        color: #333;
-        font-weight: 600;
-      }
-
-      .desktop-nav a:hover {
-        background: rgba(78, 76, 76, 0.1);
-        border-bottom: 2px solid white;
-      }
-
-      .menu-overlay {
-        display: none;
-      }
-       .logo img {
-      height: 95px;
-      width: 85px;
-    }
-    }
-
-
- :root {
-  --primary-color: rgb(199, 223, 232);
-  --secondary-color: rgb(97, 142, 168); /* Example secondary */
-}
-
-/* Footer Styles */
-footer {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 3rem 1rem;
-  margin-top: 4rem;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.footer-content-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-/* Badge Image */
-.badge img {
-  width: 150px;
-  object-fit: cover;
-  margin: 20px auto;
-  display: block;
-}
-
-/* Social Links */
-.social-links-footer {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.social-links-footer a {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--secondary-color);
-  background-color:  #3498db;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  font-size: 1.0rem;
-}
-
-.social-links-footer a:hover {
-  transform: translateY(-3px);
-}
-
-/* Responsive image spacing */
-@media (min-width: 768px) {
-  .badge img {
-    margin: 2% auto;
-  }
-}
-
-
-    .blazeTextZoneMain_993x {
-      text-align: center;
-      padding: 30px 20px;
-      background-color: #ffffffcc;
-      border-radius: 16px;
-      box-shadow: 0 12px 40px rgba(0, 123, 255, 0.2);
-      max-width: 90%;
-      width: 600px;
-    }
-    @media (max-width:599px) {
-      
-    .blazeTextZoneMain_993x {
-      text-align: center;
-      padding: 30px 15px;
-      background-color: #ffffffcc;
-      border-radius: 16px;
-      box-shadow: 0 12px 40px rgba(0, 123, 255, 0.2);
-      max-width: 90%;
-      width: 600px;
-      margin: 2% 6%;
-    }
-    }
-    @media (min-width:600px) {
-       .blazeTextZoneMain_993x {
-      text-align: center;
-      padding: 30px 20px;
-      background-color: #ffffffcc;
-      border-radius: 16px;
-      box-shadow: 0 12px 40px rgba(0, 123, 255, 0.2);
-      max-width: 90%;
-      width: 600px;
-       margin: 2% 25%;
-
-    }
-    }
-
-    .blazeTextZoneMain_993x h2 {
-      font-size: 1.8rem;
-      color: #008cdd;
-      min-height: 50px;
-      letter-spacing: 1px;
-      font-weight: 600;
-    }
-
-    @media screen and (max-width: 600px) {
-      .blazeTextZoneMain_993x h2 {
-        font-size: 1.4rem;
-      }
-    }
-/*typing last*/
-
-/* Developer credit */
-.developer-credit {
-  margin-top: 2rem;
-  font-size: 0.95rem;
-  font-weight: 300;
-  color: #333;
-  opacity: 0.85;
-  transition: color 0.3s ease;
-}
-
-.developer-credit strong {
-  font-weight: 600;
-  color: #000;
-  transition: color 0.3s ease;
-}
-
-.developer-credit:hover strong {
-  color: #3498db;
-}
-
-/* Responsive layout */
-@media (min-width: 768px) {
-  .footer-content-center {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .footer-content-center {
-    flex-direction: column;
-    gap: 2rem;
-  }
-}
-
+        }
 
 /*new */
   /*small phone-header*/
@@ -471,7 +169,7 @@ footer {
         .faq-question {
             padding: 1.5rem;
             font-size: 1.1rem;
-        
+            color: var(--primary-color);
             cursor: pointer;
             display: flex;
             justify-content: space-between;
@@ -981,11 +679,337 @@ color: var(--text-light);
             text-decoration: none;
         }
    
+   
+
+    /* Header */
+    header {
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #003366;
+      color: white;
+      padding: 12px 20px;
+      position: relative;
+      z-index: 1001;
+      height: 100px;
+    background-color:  rgb(199, 223, 232);
+    background: linear-gradient(to right,white, rgb(199, 223, 232));
+    }
+    @media (max-width:400px) {
+         header {
+     
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #003366;
+      color: white;
+      padding: 12px 20px;
+      position: relative;
+      z-index: 1001;
+      height: 100px;
+    background-color:  rgb(199, 223, 232);
+  
+    }
+    }
+
+    .logo img {
+      height: 95px;
+      width: 95px;
+    }
+
+    .btn .buttonElement {
+      background: none;
+      border: none;
+      color:  blue;
+      font-size: 35px;
+      cursor: pointer;
+    }
+
+    /* Mobile Overlay */
+    .menu-overlay {
+        margin-top: 10%;
+      position:absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 65%;
+      background-color: rgb(230, 216, 216);
+      background: #f9f9f9;
+
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 60px;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.7s ease-in-out;
+    }
+
+    .menu-overlay.active {
+      transform: scaleY(1);
+    }
+
+    .menu-container {
+      width: 80%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu-container nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .menu-container nav ul li a {
+      display: block;
+      width: 100%;
+      padding: 14px 35%;
+      background-color: rgb(230, 216, 216);
+      background: #f9f9f9;
+
+      border-radius: 8px;
+      font-size: 18px;
+      color: #003366;
+      text-decoration: none;
+      text-align: left;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+      transition: background 0.3s ease, color 0.3s ease;
+      font-weight: 200;
+    }
+@media (max-width:400px) {
+  .menu-container nav ul li a {
+      display: block;
+      width: 100%;
+      padding: 12px 20%;
+            padding: 14px 20px;
+
+      background-color: rgb(230, 216, 216);
+      background: #f9f9f9;
+ 
+      border-radius: 8px;
+      font-size: 18px;
+      color: #003366;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+      transition: background 0.3s ease, color 0.3s ease;
+      font-weight: 400;
+    }
+}
+    .menu-container nav ul li a:hover {
+      background-color: #eef4ff;
+      color: #002244;
+    }
+
+    /* Desktop Nav */
+    .desktop-nav {
+      display: none;
+    }
+
+    /* Larger Screens */
+    @media (min-width: 768px) {
+      .btn {
+        display: none;
+      }
+
+      .desktop-nav {
+        display: flex;
+        gap: 20px;
+      }
+
+      .desktop-nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-size: 20px;
+        transition: background 0.3s ease;
+        color: #333;
+        font-weight: bold;
+      }
+
+      .desktop-nav a:hover {
+        background: rgba(78, 76, 76, 0.1);
+        border-bottom: 2px solid white;
+      }
+
+      .menu-overlay {
+        display: none;
+      }
+       .logo img {
+      height: 100px;
+      width: 95px;
+    }
+    }
+
+
+
+/* Footer Styles */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 3rem 1rem;
+  margin-top: 4rem;
+  background:  rgb(199, 223, 232);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-content-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Badge Image */
+.badge img {
+  width: 150px;
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Social Links */
+.social-links-footer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-links-footer a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  background-color:  #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 1.0rem;
+}
+
+.social-links-footer a:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive image spacing */
+@media (min-width: 768px) {
+  .badge img {
+    margin: 2% auto;
+  }
+}
+
+/*typing*/
+
+    .blazeTextZoneMain_993x {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #ffffffcc;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(0, 123, 255, 0.2);
+      max-width: 90%;
+      width: 600px;
+    }
+    @media (max-width:599px) {
+      
+    .blazeTextZoneMain_993x {
+      text-align: center;
+      padding: 30px 15px;
+      background-color: #ffffffcc;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(0, 123, 255, 0.2);
+      max-width: 90%;
+      width: 600px;
+      margin: 2% 6%;
+    }
+    }
+    @media (min-width:600px) {
+       .blazeTextZoneMain_993x {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #ffffffcc;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(0, 123, 255, 0.2);
+      max-width: 90%;
+      width: 600px;
+       margin: 2% 25%;
+
+    }
+    }
+
+    .blazeTextZoneMain_993x h2 {
+      font-size: 1.8rem;
+      color: #008cdd;
+      min-height: 50px;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    @media screen and (max-width: 600px) {
+      .blazeTextZoneMain_993x h2 {
+        font-size: 1.4rem;
+      }
+    }
+/*typing last*/
+
+/* Developer credit */
+.developer-credit {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #333;
+  opacity: 0.85;
+  transition: color 0.3s ease;
+}
+
+.developer-credit strong {
+  font-weight: 600;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.developer-credit:hover strong {
+  color: #3498db;
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+  .footer-content-center {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-content-center {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+  
     </style>
 </head>
 
 <body>
-     <!-- Header -->
+   <!-- Header -->
   <header>
     <div class="logo">
       <img src="images/logo1-removebg.png" alt="Logo">
@@ -995,7 +1019,6 @@ color: var(--text-light);
     <div class="btn">
       <button class="buttonElement" onclick="toggleMenu()"> <i class='bx bx-menu'></i></button>
     </div>
-
     <!-- Desktop nav -->
     <nav class="desktop-nav">
       <a href="index.html"><i class='bx bx-home'></i> Home</a>
@@ -1012,15 +1035,16 @@ color: var(--text-light);
       <nav>
         <ul>
           <li><a href="index.html"> Home</a></li>
-          <li><a href="profile.html"> Staff Profile</a></li>
+          <li><a href="profile.html"> Staff profile </a></li>
           <li><a href="gallery.html">   Gallery</a></li>
           <li><a href="contact.html"> Contact</a></li>
           <li><a href="faq.html">FAQs</a></li>
         </ul>
       </nav>
     </div>
-  </div>       
-
+  </div>   
+  <!--middle -->  
+  <!--main-->
 <div class="faq-hero">
         <h1>Frequently Asked Questions</h1>
         <p>Find answers to common questions about Pallisa Progressive Secondary School</p>
@@ -1243,8 +1267,10 @@ color: var(--text-light);
         </div>
     </main>
 
+<!--end od main-->
+  
 
-   <footer>
+  <footer>
   <div class="footer-container">
     <div class="footer-content-center">
       <div class="badge">
@@ -1268,15 +1294,17 @@ color: var(--text-light);
           <i class='bx bxl-tiktok'></i>
         </a>
       </div>
+      <!--designer-->
+ <div class="developer-credit" id="developer-credit">
+        <span>Designed & Developed by <strong>Ivan Aredo</strong>, Computer Scientist</span>
+      </div>
     </div>
   </div>
-
-  
 </footer>
 
     <script>
 
-   //toggle
+        //toggle
 const overlay = document.getElementById('menuOverlay');
 
     function toggleMenu() {
@@ -1292,7 +1320,6 @@ const overlay = document.getElementById('menuOverlay');
     });
     //end of toggle
 
-    
     document.addEventListener('DOMContentLoaded', function () {
             // FAQ Accordion Functionality
             const faqQuestions = document.querySelectorAll('.faq-question');
