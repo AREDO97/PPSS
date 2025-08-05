@@ -1289,6 +1289,7 @@ footer {
 <body>
    <!-- Header -->
   <header>
+   
     <div class="logo">
       <img src="images/logo1-removebg.png" alt="Logo">
     </div>
@@ -1322,7 +1323,8 @@ footer {
     </div>
   </div>   
   <!--middle -->  
-   
+  
+ 
     <!-- 1. Banner with Background Image -->
   <section class="pulsar-staff-banner">
     <h1>Welcome to the Pulse of Excellence — <br> Our Teaching Staff</h1>
@@ -1387,7 +1389,6 @@ footer {
     </div>
   </div>
 </footer>
-
     <script>
 //conclusion text
  // Reveal animation when in view (using IntersectionObserver)
@@ -1409,7 +1410,7 @@ footer {
           const pulsarCountEl = document.getElementById("pulsarTeacherCount");
     let currentCount = 0;
     const finalCount = 50;
-    const countSpeed = 50;
+    const countSpeed = 300;
 
     function animatePulsarCount() {
       if (currentCount < finalCount) {
@@ -1512,15 +1513,10 @@ const staffProfiles = [
     title: "HEAD-TEACHER",
     image: "images/waiswa3.jpg"
   },
-   {
-      name: "Mr.Oluka Ignatius",
-      title: "DEPUTY HEAD TEACHER",
-     image: "images/cool (3).jpeg",
-
-    },
+   
      {
       name: "Mr. Sisye Samson",
-      title: "D.O.S A'Level",
+      title: "D.O.S A'LEVEL",
      image: "images/sisye-rea.jpg",
 
     },
@@ -1531,7 +1527,7 @@ const staffProfiles = [
   },
     {
     name: "Mr. Mwesiga Musa",
-    title: "H.O.D CHEMISTRY",
+    title: " CHEMISTRY",
     image: "images/musa1.jpg"
   },
   {
@@ -1539,48 +1535,25 @@ const staffProfiles = [
     title: "H.O.D MATHEMATICS",
     image: "images/maswe-1 (1).jpg"
   },
+ 
+ 
   {
-    name: "Mr.Kisakye Denis",
-    title: "H.OD PHYSICS",
-    image: "images/sisye2.jpg"
-  },
-  
-  {
-    name: "Ms. Gashudo Muhamad",
-    title: "H.O.D BIOLOGY",
-    image: "images/cool (3).jpeg"
-  },
-  {
-    name: "Mr.Kizito Lawrence",
-    title: "H.O.D ENGLISH",
-    image: "images/cool (3).jpeg"
-  }, {
     name: "Mr.Were Brian",
-    title: "H.O.D ECONOMICS",
-    image: "images/were.jpg"
+    title: " ECONOMICS",
+    image: "images/cool-were.jpg"
   }, 
   {
     name: "Mr.Imalingat Alvin",
-    title: "H.O.D   ICT",
+    title: " ICT",
     image: "images/imalingat.jpg"
   },
   {
             name:"Mr.Kambo Geofrey ",
             title:'H.O.D GEOGRAPHY',
-            image:"images/kambo-geo.jpg"
+            image:"videos/kambo.jpg"
         },
 
-     {
-    name: "Mr Katula Yokosan",
-    title: "H.O.D ENTREPRENEUR",
-    image: "images/cool (3).jpeg"
-   
-  }    ,
-  {
-    name: "Mr.Orone Moses",
-    title: "H.O.D AGRICULTURE",
-    image: "images/cool (3).jpeg"
-  }
+ 
 ];
 
 // Reference to the slider container
@@ -1627,72 +1600,6 @@ updateSlider();
 //heads of department end
  
 
-//adminstration
-const ppssStaffList = [
-    {
-      img: "images/odeke-tall.jpg",
-      title: "RESIDENT DIRECTOR",
-      name: "Odeke John"
-    },
-    {
-      img: "images/waiswa4.jpg",
-      title: "HEAD TEACHER",
-      name: "Waisa Fred"
-    },
-    {
-      img: "images/cool (3).jpeg",
-      title: "DEPUTY HEAD TEACHER",
-      name: "Oluka Ignatius"
-    },
-    {
-      img: "images/sisye2.jpg",
-      title: "DOS A LEVEL",
-      name: "Mr. Sisye Samson"
-    },
-    {
-      img: "images/cool (3).jpeg",
-      title: "DOS O LEVEL",
-      name: "Mr. Mubale Andrew"
-    },
-    {
-      img: "images/cool (3).jpeg",
-      title: "SENIOR WOMAN TEACHER",
-      name: "Ms. Mudondo Nisura"
-    }
-  ];
-
-  let ppssCurrentStaff = 0;
-  const ppssImage = document.querySelector(".ppss-profile-img");
-  const ppssTitle = document.querySelector(".ppss-staff-role");
-  const ppssName = document.querySelector(".ppss-staff-name");
-  const ppssPrev = document.querySelector(".ppss-prev");
-  const ppssNext = document.querySelector(".ppss-next");
-
-  function ppssShowStaff() {
-    const staff = ppssStaffList[ppssCurrentStaff];
-    ppssImage.src = staff.img;
-    ppssTitle.textContent = staff.title;
-    ppssName.textContent = staff.name;
-  }
-
-  function ppssNextSlide() {
-    ppssCurrentStaff++;
-    if (ppssCurrentStaff >= ppssStaffList.length) {
-      ppssCurrentStaff = 0;
-    }
-    ppssShowStaff();
-  }
-
-  function ppssPrevSlide() {
-    ppssCurrentStaff--;
-    if (ppssCurrentStaff < 0) {
-      ppssCurrentStaff = ppssStaffList.length - 1;
-    }
-    ppssShowStaff();
-  }
-
-  ppssPrev.addEventListener("click", ppssPrevSlide);
-  ppssNext.addEventListener("click", ppssNextSlide);
 
   // Auto slide every 5 seconds
   setInterval(ppssNextSlide, 10000);
@@ -1701,60 +1608,6 @@ const ppssStaffList = [
   document.addEventListener("DOMContentLoaded", ppssShowStaff);
 //adminstration end
 
-//lead teachers
-     const ppssStaffProfiles = [
-            { name: "Mr. Mapire Geofrey", title: " CHEMISTRY", image: "images/musa1.jpg" },
-            { name: "Mr. Maswe Charles", title: " MATHEMATICS", image: "images/were.jpg" },
-            { name: "Mr.Wakida Emmanuel", title: "PHYSICS", image: "images/sisye2.jpg" },
-            { name: "Mr. Gashudo Muhamad", title: " BIOLOGY", image: "https://via.placeholder.com/150?text=Emily+Davis" },
-            { name: "Mr.Kizito Lawrence", title: " ENGLISH", image: "https://via.placeholder.com/150?text=Michael+Wilson" },
-            { name: "Mr.Were Brian", title: "ECONOMICS", image: "images/misera.jpg" },
-            { name: "Mr.Imalingat Alvin", title: "ICT", image: "images/imalingat.jpg" },
-            { name: "Mr.Kirya Stephan", title: "GEOGRAPHY", image: "images/cool-3.jpeg" },
-            { name: "Mr Katula Yokosan", title: " ENTREPRENEUR", image: "https://via.placeholder.com/150?text=Michael+Wilson" },
-            { name: "Ms.Amulen Lydia", title: " AGRICULTURE", image: "https://via.placeholder.com/150?text=Michael+Wilson" }
-        ];
-
-        const ppssSliderTrack = document.getElementById('ppss-carousel-track');
-        let ppssCurrentSlideIndex = 0;
-
-        function ppssRenderProfiles() {
-            ppssSliderTrack.innerHTML = '';
-            ppssStaffProfiles.forEach(profile => {
-                const card = document.createElement('div');
-                card.classList.add('ppss-carousel-card');
-                card.innerHTML = `
-                    <img src="${profile.image}" alt="${profile.name}" />
-                    <div class="ppss-card-title">${profile.title}</div>
-                    <div class="ppss-card-name">${profile.name}</div>
-                `;
-                ppssSliderTrack.appendChild(card);
-            });
-        }
-
-        function ppssUpdateSlider() {
-            const offset = -ppssCurrentSlideIndex * 100;
-            ppssSliderTrack.style.transform = `translateX(${offset}%)`;
-        }
-
-        document.querySelector('.ppss-arrow-left').addEventListener('click', () => {
-            ppssCurrentSlideIndex = (ppssCurrentSlideIndex === 0) ? ppssStaffProfiles.length - 1 : ppssCurrentSlideIndex - 1;
-            ppssUpdateSlider();
-        });
-
-        document.querySelector('.ppss-arrow-right').addEventListener('click', () => {
-            ppssCurrentSlideIndex = (ppssCurrentSlideIndex === ppssStaffProfiles.length - 1) ? 0 : ppssCurrentSlideIndex + 1;
-            ppssUpdateSlider();
-        });
-
-        setInterval(() => {
-            ppssCurrentSlideIndex = (ppssCurrentSlideIndex + 1) % ppssStaffProfiles.length;
-            ppssUpdateSlider();
-        }, 5000);
-
-        ppssRenderProfiles();
-        ppssUpdateSlider();
-//end of lead teachers
 
 
 

@@ -77,6 +77,7 @@
             margin-bottom: 4rem;
             width: 100%;
             transition: background-image 1s ease-in-out;
+            overflow: hidden;
         }
         @media (min-width:600px) {
            .home-page1 {
@@ -92,6 +93,7 @@
             height: 420px;
             width: 100%;
             transition: background-image 1s ease-in-out;
+            overflow: hidden;
         }
         }
 
@@ -120,6 +122,91 @@
         .home-content {
             padding: 9rem 0 0 0;
         }
+
+/*home page new*/
+.home-page1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.8)), url('images/pp4.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+    padding: 8rem 4rem;
+    text-align: left;
+    min-height: 20vh;
+    margin-bottom: 4rem;
+    width: 100%;
+    transition: background-image 1s ease-in-out;
+    overflow: hidden;
+}
+
+/* Small phones - default (already works well) */
+/* No change needed for <600px */
+
+/* Medium devices: tablets and small laptops (600px - 991px) */
+@media (min-width: 600px) and (max-width: 991px) {
+    .home-page1 {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.8)), url('images/pp4.jpeg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        color: white;
+        padding: 8rem 3rem;
+        text-align: left;
+        margin-bottom: 4rem;
+        height: auto;
+        width: 100%;
+        transition: background-image 1s ease-in-out;
+        overflow: hidden;
+    }
+}
+
+/* Large screens: laptops and desktops (992px and above) */
+@media (min-width: 992px) {
+    .home-page1 {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.8)), url('images/pp4.jpeg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        color: white;
+        padding: 8rem 4rem;
+        text-align: left;
+        margin-bottom: 4rem;
+        height: 420px;
+        width: 100%;
+        transition: background-image 1s ease-in-out;
+        overflow: hidden;
+    }
+}
+
+.home-page1 p {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+    animation: fadeInUp 1s ease 0.3s both;
+    margin-left: 50px;
+}
+
+.home-page1 h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease 0.6s both;
+    margin-left: 50px;
+    margin-top: -120px;
+}
+
+.home-page1 h4 span {
+    font-size: 2.0rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease 0.6s both;
+    color: rgb(59, 162, 202);
+}
+
+.home-content {
+    padding: 9rem 0 0 0;
+}
+/*home page new last*/
 
         .button1 {
             background-color: var(--secondary-color);
@@ -1371,6 +1458,89 @@ min-height: 20vh;
 /*new end*/
      
 
+/*form*/
+.download-box {
+  text-align: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  /* Center horizontally */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Ensure it doesn’t overflow on large screens */
+  width: 100%;
+  max-width: 500px;
+}
+
+.download-box:hover {
+  transform: translateY(-5px);
+}
+
+.download-icon {
+  display: none;
+}
+
+.bx-download-icon {
+  font-size: 80px;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 1.2rem;
+  color: #1f3c6e;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.download-btn {
+  padding: 12px 30px;
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #3498db;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .download-box {
+    width: 90%;
+    padding: 1.5rem;
+
+    /* Maintain centering on mobile */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bx-download-icon {
+    font-size: 60px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .download-btn {
+    font-size: 0.9rem;
+  }
+
+  .spans {
+    align-items: center;
+  }
+}
+
     /* Header */
     header {
 
@@ -1653,6 +1823,9 @@ footer {
        margin: 2% 25%;
 
     }
+    #long,#head{
+      object-position: top;
+    }
     }
 
     .blazeTextZoneMain_993x h2 {
@@ -1774,7 +1947,6 @@ footer {
 
     <main>
  
-
         <section class="motto">
             <div class="motto1">
                 <i class='bx bxl-telegram'></i>
@@ -1807,21 +1979,20 @@ footer {
 <!--sliding images-->
 <div class="carousel-container">
   <div class="carousel-track">
-    <img src="images/pp4.jpeg" alt="" class="slide">
-    <img src="images/alevel-students.jpg" alt="" class="slide" id="cancel" >
+    <img src="images/debate-hp.jpg" alt="" class="slide" id="head">
+     <img src="videos/all-uniform-alevel.jpg" alt="" class="slide">
+        <img src="videos/uniform-olevel.jpg" class="slide">
     <img src="images/scroll1.jpg" class="slide">
     <img src="images/scroll2.jpg" class="slide">
     <img src="images/scroll3.jpg" class="slide">
     <img src="images/students.jpg" alt="" class="slide">
-   
+    <img src="images/alevel-students.jpg" alt="" class="slide" id="cancel" >
+
 
   </div>
 </div>
-<!--sliding images-->
+<!--sliding images -->
 
-
-       <!--welcome text  <img src="images/science-fair.jpg" alt="Academic Excellence" class="gud">
--->
         
          <section class="homepage9">
             <div class="content">
@@ -1856,7 +2027,6 @@ footer {
         </section>
 
         <section class="homepage3">
-        
 
             <div class="home-pictures">
 
@@ -1889,12 +2059,15 @@ footer {
                      </span>
                 </div>
 
+<!--
+<img src="images/pp-class.jpeg" alt="">
+<img src="images/pp-lab.jpeg" alt="">
+-->
             
         </section>
-
 <!--facilities-->
 <section class="homepage2">
-    <img src="images/science-fair.jpg" alt="Science Fair" class="path">
+    <img src="images/pp-class.jpeg" alt="Science Fair" class="path" id="pathed">
     <div class="content">
         <h2>Our Facilities</h2>
         <p> Our school is equipped with essential learning facilities
@@ -1935,7 +2108,7 @@ footer {
                 </div>
 
                 <div class="eduction-programs">
-                    <img src="images/playground1.jpeg" alt="Sports and Wellness">
+                    <img src="videos/sports.jpg" alt="Sports and Wellness">
                     <div class="eduction-programs-content">
                         <h2>Sports and Wellness</h2>
                         <p>Our sports and wellness program focuses on 
@@ -1955,7 +2128,7 @@ footer {
            
             <div class="main-content">
                 <div class="eduction-programs">
-                    <img src="images/ror (2).jpg" alt="DEBATES IMAGE">
+                    <img src="images/debate-hp.jpg" alt="DEBATES IMAGE" id="long">
                     
                     <div class="eduction-programs-content">
                         <h2>School Debates</h2>
@@ -2043,7 +2216,6 @@ footer {
     <span class="uin-dot" data-uin-index="2">•</span>
   </div>
 </div>
- 
 
           
         </section>
@@ -2145,7 +2317,7 @@ footer {
  const typingTextMaster_zz992 = [
       "REG No. PSS/P/110",
       "License No. ME/32/6212",
-      "UNEB No.U4050 O & A'LEVEL",
+      "UNEB CENTER No.U4050 O & A'LEVEL",
       "EMIS No. 398010"
     ];
 
@@ -2307,10 +2479,9 @@ const overlay = document.getElementById('menuOverlay');
 
     
 
-let myImages=["images/library6.jpeg",
-  "images/lib2.jpeg", "images/library 8.jpeg","images/lab4.jpeg",
-  "images/lib3.jpeg"
-
+let myImages=["images/lab4.jpeg","images/pp-lab.jpeg",
+  "images/lib2.jpeg","images/campus-2.jpg",
+"images/media1.jpg"
 ];
  let path=document.querySelector('.path');
  let index=0;
